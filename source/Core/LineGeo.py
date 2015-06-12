@@ -3,7 +3,7 @@
 ############################################################################
 #   
 #   Copyright (C) 2008-2014
-#    Christian Kohlöffel
+#    Christian Kohlï¿½ffel
 #    Vinzenz Schulz
 #    Jean-Paul Schouwstra
 #   
@@ -56,7 +56,7 @@ class LineGeo(QtCore.QObject):
     def __deepcopy__(self, memo):
         return LineGeo(copy.deepcopy(self.Pa, memo),
                        copy.deepcopy(self.Pe, memo))
-
+        
     def __str__(self):
         """ 
         Standard method to print the object
@@ -79,6 +79,15 @@ class LineGeo(QtCore.QObject):
         Reverses the direction of the arc (switch direction).
         """ 
         self.Pa, self.Pe = self.Pe, self.Pa
+        
+    def fragment(self, fromStart, length):
+        if fromStart:
+            fragStart = self.Pa
+            fragEnd = self.Pa + length * self.Pa.unit_vector(self.Pe) 
+        else:
+            fragEnd = self.Pe
+            fragStart = self.Pe - length * self.Pa.unit_vector(self.Pe)
+        return LineGeo(fragStart, fragEnd)
 
     def tr(self, string_to_translate):
         """

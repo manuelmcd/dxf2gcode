@@ -83,7 +83,7 @@ class HoleGeo(QtCore.QObject):
         parent. If reverse 1 is given the geometry may be reversed.
         @param parent: The parent of the geometry (EntitieContentClass)
         @param reverse: If 1 the geometry direction will be switched.
-        @return: A new LineGeoClass will be returned.
+        @return: A new HoleGeo will be returned.
         """ 
         
         Pa = self.Pa.rot_sca_abs(parent=parent)

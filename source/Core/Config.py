@@ -41,7 +41,7 @@ from PyQt4 import QtGui, QtCore
 import logging
 logger = logging.getLogger("Core.Config")
 
-CONFIG_VERSION = "9.3"
+CONFIG_VERSION = "9.4"
 """
 version tag - increment this each time you edit CONFIG_SPEC
 
@@ -88,8 +88,8 @@ CONFIG_SPEC = str('''
     default_SplitEdges = boolean(default = False)
     default_AutomaticCutterCompensation = boolean(default = False)
     machine_type = option('milling', 'drag_knife', 'lathe', default = 'milling')
-    lead_in_move = option('none','radius','radius2','line', default = 'radius')
-    lead_out_move = option('none','add_first','line', default = 'none')
+    lead_in_move = option('none','inline','radius','radius2','line', default = 'inline')
+    lead_out_move = option('none','inline','line', default = 'inline')
     
     [Drag_Knife_Options]
     dragAngle = float(default = 20)

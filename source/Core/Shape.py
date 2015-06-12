@@ -550,6 +550,7 @@ class ShapeClass(QtGui.QGraphicsItem):
         
         # This might be one point to implement it.
         self.stmove.updateCutCor(self.cut_cor)
+        self.exmove.updateCutCor(self.cut_cor)
         
     def updateCCplot(self):
         """
@@ -717,13 +718,7 @@ class ShapeClass(QtGui.QGraphicsItem):
             # Calculate the contour values - with cutter radius compensation and without
             ende, en_angle = self.get_st_en_points(1)
             
-            if g.config.vars.General['lead_out_move'] == "line":
-                exstr += self.exmove.Write_GCode(PostPro=PostPro)                
-            # closed shape => create exit move: redo first geo (https://sourceforge.net/p/dxf2gcode/tickets/61/)
-            elif (self.closed == 1) & (g.config.vars.General['lead_out_move'] == "add_first"):   
-                exstr += self.geos[0].Write_GCode(self.parent, PostPro)
-
-            
+            exstr += self.exmove.Write_GCode(PostPro=PostPro)                
             exstr += PostPro.deactivate_cut_cor(ende)        
 
         # Initial value of direction restored if necessary

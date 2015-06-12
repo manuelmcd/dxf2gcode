@@ -39,6 +39,7 @@ from Core.Point import Point
 from Gui.WpZero import WpZero
 from Gui.Arrow import Arrow
 from Gui.RadiusMove import RadiusMove
+from Gui.InlineMove import InlineMove
 from Gui.RouteText import RouteText
 #import math
 import Core.Globals as g
@@ -606,6 +607,8 @@ class MyGraphicsScene(QtGui.QGraphicsScene):
         start, start_ang = shape.get_st_en_points(0)
         if g.config.vars.General['lead_in_move'] == "line":
             stmove = PerpendicularMove(start, start_ang, QtGui.QColor(50, 100, 255), shape,self.EntitiesRoot, True)
+        elif g.config.vars.General['lead_in_move'] == "inline":
+            stmove = InlineMove(start, start_ang, QtGui.QColor(50, 100, 255), shape,self.EntitiesRoot, True)
         else:
             stmove = RadiusMove(start, start_ang, QtGui.QColor(50, 100, 255), shape,self.EntitiesRoot)
         stmove.hide()
@@ -620,6 +623,8 @@ class MyGraphicsScene(QtGui.QGraphicsScene):
         start, start_ang = shape.get_st_en_points(0)
         if g.config.vars.General['lead_out_move'] == "line":
             exmove = PerpendicularMove(start, start_ang, QtGui.QColor(50, 100, 255), shape,self.EntitiesRoot, False)
+        elif g.config.vars.General['lead_out_move'] == "inline":
+            exmove = InlineMove(start, start_ang, QtGui.QColor(50, 100, 255), shape,self.EntitiesRoot, False)
         else:
             exmove = RadiusMove(start, start_ang, QtGui.QColor(50, 100, 255), shape,self.EntitiesRoot)
         exmove.hide()

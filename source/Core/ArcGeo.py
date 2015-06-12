@@ -3,9 +3,10 @@
 ############################################################################
 #   
 #   Copyright (C) 2008-2014
-#    Christian Kohlöffel
+#    Christian KohlÃ¶ffel
 #    Vinzenz Schulz
 #    Jean-Paul Schouwstra
+#    Robert Lichtenberger
 #   
 #   This file is part of DXF2GCODE.
 #   
@@ -99,7 +100,7 @@ class ArcGeo(QtCore.QObject):
                 self.O.x += lo * cos(arc) * d
                 
                 
-        # Falls nicht übergeben Mittelpunkt ausrechnen
+        # Falls nicht ï¿½bergeben Mittelpunkt ausrechnen
         # Compute centre...
             elif (type(self.s_ang) != type(None)) and (type(self.e_ang) != type(None)):
                 self.O.x = self.Pa.x - r * cos(self.s_ang)
@@ -107,7 +108,7 @@ class ArcGeo(QtCore.QObject):
             else:
                 logger.error(self.tr("Missing value for Arc Geometry"))
         
-        #Falls nicht übergeben dann Anfangs- und Endwinkel ausrechen
+        #Falls nicht ï¿½bergeben dann Anfangs- und Endwinkel ausrechen
         #Calculate start and end angles
         if type(self.s_ang) == type(None):
             self.s_ang = self.O.norm_angle(Pa)
@@ -147,6 +148,20 @@ class ArcGeo(QtCore.QObject):
                ("\nO  : %s; r: %0.3f" % (self.O, self.r)) + \
                ("\next  : %0.5f; length: %0.5f" % (self.ext, self.length))
     
+    def fragment(self, fromStart, length):
+        if (fromStart):
+            beta = (pi * self.r * self.s_ang) - (180 * length) / pi / self.r; 
+            fragStart = self.Pa
+            fragEnd = self.O.get_arc_point(beta, self.r)
+        else:
+            alpha = (pi * self.r * self.e_ang) + (180 * length) / pi / self.r;
+            fragStart = self.O.get_arc_point(alpha, self.r)
+            fragEnd = self.Pe
+            
+        x = ArcGeo(Pa=fragStart, Pe=fragEnd, O = self.O, r = self.r, drag = self.drag)
+        #x = ArcGeo(Pa=fragStart, Pe=fragEnd, O = self.O, r = self.r, direction=self.direction, drag=self.drag)
+        return x
+             
     
     def add2path(self, papath = None, parent = None, layerContent=None):
         """
