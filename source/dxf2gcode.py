@@ -55,6 +55,8 @@ from gui.aboutdialog import AboutDialog
 
 from dxfimport.importer import ReadDXF
 
+from imgimport.imgimporter import ReadIMG
+
 from postpro.postprocessor import MyPostProcessor
 from postpro.tspoptimisation import TspOptimization
 
@@ -732,10 +734,12 @@ class MainWindow(QMainWindow):
         self.filename, _ = getOpenFileName(self,
                                            title,
                                            g.config.vars.Paths['import_dir'],
-                                           self.tr("All supported files (*.dxf *.ps *.pdf *%s);;"
+                                           self.tr("All supported files (*.dxf *.ps *.pdf *.jpg *.png *%s);;"
                                                    "DXF files (*.dxf);;"
                                                    "PS files (*.ps);;"
                                                    "PDF files (*.pdf);;"
+                                                   "JPG files (*.jpg);;"
+                                                   "PNG files (*.png);;"
                                                    "Project files (*%s);;"
                                                    "All types (*.*)") % (c.PROJECT_EXTENSION, c.PROJECT_EXTENSION))
 
@@ -767,7 +771,48 @@ class MainWindow(QMainWindow):
             self.loadProject(self.filename)
             return True  # kill this load operation - we opened a new one
 
-        if ext.lower() == ".ps" or ext.lower() == ".pdf":
+        elif ext.lower() == ".jpg" or ext.lower()== ".png":
+            logger.debug(self.tr("Loading image file"))
+            
+             # Output the information in the text window
+            logger.info(self.tr('Loaded layers: %s') % len(self.valuesDXF.layers))
+            logger.info(self.tr('Loaded blocks: %s') % len(self.valuesDXF.blocks.Entities))
+            for i in range(len(self.valuesDXF.blocks.Entities)):
+                layers = self.valuesDXF.blocks.Entities[i].get_used_layers()
+                logger.info(self.tr('Block %i includes %i Geometries, reduced to %i Contours, used layers: %s')
+                            % (i, len(self.valuesDXF.blocks.Entities[i].geo), len(self.valuesDXF.blocks.Entities[i].cont), layers))
+            layers = self.valuesDXF.entities.get_used_layers()
+            insert_nr = self.valuesDXF.entities.get_insert_nr()
+            logger.info(self.tr('Loaded %i entity geometries; reduced to %i contours; used layers: %s; number of inserts %i')
+                        % (len(self.valuesDXF.entities.geo), len(self.valuesDXF.entities.cont), layers, insert_nr))
+    
+            if g.config.metric == 0:
+                logger.info(self.tr("Drawing units: inches"))
+                distance = self.tr("[in]")
+                speed = self.tr("[IPM]")
+            else:
+                logger.info(self.tr("Drawing units: millimeters"))
+                distance = self.tr("[mm]")
+                speed = self.tr("[mm/min]")
+            self.ui.unitLabel_3.setText(distance)
+            self.ui.unitLabel_4.setText(distance)
+            self.ui.unitLabel_5.setText(distance)
+            self.ui.unitLabel_6.setText(distance)
+            self.ui.unitLabel_7.setText(distance)
+            self.ui.unitLabel_8.setText(speed)
+            self.ui.unitLabel_9.setText(speed)
+    
+            self.makeShapes()
+            if plot:
+                self.plot()
+            
+            return True
+            
+            
+            
+            
+
+        elif ext.lower() == ".ps" or ext.lower() == ".pdf":
             logger.info(self.tr("Sending Postscript/PDF to pstoedit"))
 
             # Create temporary file which will be read by the program
