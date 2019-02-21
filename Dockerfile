@@ -21,8 +21,9 @@
 # To run, assuming that your DXF input files are in the current
 # directory:
 #   xhost +localhost
-#   docker run -ti --net=host -e DISPLAY \
+#   docker run -ti -u $(id -u) --net=host -e DISPLAY \
 #     -v $HOME/.Xauthority:/root/.Xauthority:rw -v $(pwd):$(pwd):rw \
+#     -v $HOME/.config:/.config \
 #     -w $(pwd) dxf2gcode:latest
 #
 
@@ -40,4 +41,4 @@ RUN python3 make_tr.py
 RUN python3 make_py_uic.py
 RUN python3 st-setup.py build && python3 st-setup.py install
 
-CMD dxf2gcode
+ENTRYPOINT [ "/usr/local/bin/dxf2gcode" ]
