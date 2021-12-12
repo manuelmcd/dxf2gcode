@@ -9,7 +9,7 @@ import sys
 from cx_Freeze import Executable, setup
 
 
-version = "20201101"
+version = "20211212"
 
 base = 'Console'
 if sys.platform == 'win32':
@@ -52,11 +52,15 @@ executables = [
     Executable(script='dxf2gcode.py',
                base=base,
                icon="images\\DXF2GCODE-001.ico",
-               targetName="dxf2gcode.exe",
-               shortcutName="DXF to G-Code Converter",
-               shortcutDir="ProgramMenuFolder"
+               target_name="dxf2gcode.exe",
+               shortcut_name="DXF to G-Code Converter",
+               shortcut_dir="ProgramMenuFolder"
                )
 ]
+
+#If you want to run the script directly uncomment the following.
+#sys.argv.append("bdist_msi")
+
 
 setup(name='DXF2GCODE',
       version=version[0:4] + "." + version[4:6] + "." + version[6:8],  # converts YYYYMMDD -> YYYY.MM.DD
