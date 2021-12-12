@@ -494,6 +494,8 @@ class offShapeClass(Shape):
         """
         val = 2000
         # self.counter = 0
+        SPoint=self.segments[forward].Ps
+
         L1_status, L2_status = "full", "full"
         # Repeat until we reached the Partial-interfering-relation
         while not(L1_status == "partial" and L2_status == "partial"):
@@ -595,7 +597,7 @@ class offShapeClass(Shape):
 
             # If The begin end point is the end end point we are done.
             if L1_status is None and L2_status is None:
-                # logger.debug("Begin = End; Remove all")
+                logger.debug("Begin = End; Remove all; SPoint: %s", SPoint)
                 return len(self.segments) - 1, 0
 
             # logger.debug(self.counter)

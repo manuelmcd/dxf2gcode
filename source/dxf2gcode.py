@@ -59,8 +59,7 @@ from dxf2gcode.postpro.tspoptimisation import TspOptimization
 from PyQt5.QtWidgets import QMainWindow, QGraphicsView, QFileDialog, QApplication, QMessageBox
 from PyQt5.QtGui import QSurfaceFormat
 from PyQt5 import QtCore
-getOpenFileName = QFileDialog.getOpenFileName
-getSaveFileName = QFileDialog.getSaveFileName
+
 
 logger = logging.getLogger()
 
@@ -313,6 +312,7 @@ class MainWindow(QMainWindow):
                     MyFormats = MyFormats + name + format_
                 filename = self.showSaveDialog(self.tr('Export to file'), MyFormats)
                 save_filename = qstr_encode(filename[0])
+
             else:
                 filename = [None, None]
                 save_filename = saveas
@@ -321,6 +321,19 @@ class MainWindow(QMainWindow):
             if not save_filename:
                 self.unsetCursor()
                 return
+
+
+            # for i in range(len(self.MyPostProcessor.output_format)):
+            #     name = "%s " % (self.MyPostProcessor.output_text[i])
+            #     format_ = "(*%s)" % (self.MyPostProcessor.output_format[i])
+            #     myformat =  name + format_
+            #
+            #
+            #     if filename[1]==myformat:
+            #         logger.debug("Selected Filter => Postprocessor Nr: %i" %(i))
+            #         self.MyPostProcessor.getPostProVars(i)
+
+
 
             (beg, ende) = os.path.split(save_filename)
             (fileBaseName, fileExtension) = os.path.splitext(ende)
@@ -336,9 +349,11 @@ class MainWindow(QMainWindow):
                 if not QtCore.QFile.exists(save_filename):
                     save_filename += self.MyPostProcessor.output_format[pp_file_nr]
 
+            logger.debug("File Ending => Postprocessor Nr: %i" % (pp_file_nr))
             self.MyPostProcessor.getPostProVars(pp_file_nr)
         else:
             save_filename = ""
+            logger.debug("EMC Integration => Postprocessor Nr: %i" % (0))
             self.MyPostProcessor.getPostProVars(0)
 
         """
@@ -507,11 +522,12 @@ class MainWindow(QMainWindow):
         default_name = os.path.join(g.config.vars.Paths['output_dir'], fileBaseName)
 
         selected_filter = self.MyPostProcessor.output_format[0]
-        filename = getSaveFileName(self,
+        filename = QFileDialog.getSaveFileName(self,
                                    title, default_name,
                                    MyFormats, selected_filter)
 
         logger.info(self.tr("File: %s selected") % filename[0])
+        logger.info(self.tr("Filter: %s selected") % filename[1])
         logger.info("<a href='%s'>%s</a>" % (filename[0], filename[0]))
         return filename
 
@@ -749,7 +765,7 @@ class MainWindow(QMainWindow):
             self.load()
 
     def OpenFileDialog(self, title):
-        self.filename, _ = getOpenFileName(self,
+        self.filename, _ = QFileDialog. getOpenFileName(self,
                                            title,
                                            g.config.vars.Paths['import_dir'],
                                            self.tr("All supported files (*.dxf *.DXF *.ps *.PS *.pdf *.PDF *%s);;"
