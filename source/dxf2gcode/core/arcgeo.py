@@ -102,6 +102,8 @@ class ArcGeo(object):
                 self.O.y = self.Ps.y - self.r * sin(self.s_ang)
             else:
                 logger.error(self.tr("Missing value for Arc Geometry"))
+        else:
+            self.r = self.O.distance(self.Ps)
 
         # Calculate start and end angles
         if self.s_ang is None:
