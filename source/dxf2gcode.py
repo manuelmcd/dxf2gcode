@@ -310,7 +310,8 @@ class MainWindow(QMainWindow):
                     name = "%s " % (self.MyPostProcessor.output_text[i])
                     format_ = "(*%s);;" % (self.MyPostProcessor.output_format[i])
                     MyFormats = MyFormats + name + format_
-                filename = self.showSaveDialog(self.tr('Export to file'), MyFormats)
+
+                filename = self.showSaveDialog(self.tr('Export to file'), MyFormats, g.config.vars.Paths['output_dir'])
                 save_filename = qstr_encode(filename[0])
 
             else:
@@ -322,18 +323,12 @@ class MainWindow(QMainWindow):
                 self.unsetCursor()
                 return
 
-
-            # for i in range(len(self.MyPostProcessor.output_format)):
-            #     name = "%s " % (self.MyPostProcessor.output_text[i])
-            #     format_ = "(*%s)" % (self.MyPostProcessor.output_format[i])
-            #     myformat =  name + format_
-            #
-            #
-            #     if filename[1]==myformat:
-            #         logger.debug("Selected Filter => Postprocessor Nr: %i" %(i))
-            #         self.MyPostProcessor.getPostProVars(i)
-
-
+            # If automatic save paths is checked keep it up to date.
+            if g.config.vars.Paths['autosave_path']:
+                logger.debug("Save output_dir")
+                g.config.var_dict["Paths"]["output_dir"]=os.path.dirname(save_filename)
+                g.config.update_config()
+                g.config.save_varspace()
 
             (beg, ende) = os.path.split(save_filename)
             (fileBaseName, fileExtension) = os.path.splitext(ende)
@@ -509,7 +504,7 @@ class MainWindow(QMainWindow):
             isinstance(outerShape, CustomGCode) and\
             shape.BB.iscontained(outerShape.BB)
 
-    def showSaveDialog(self, title, MyFormats):
+    def showSaveDialog(self, title, MyFormats, save_to_folder):
         """
         This function is called by the menu "Export/Export Shapes" of the main toolbar.
         It creates the selection dialog for the exporter
@@ -519,17 +514,25 @@ class MainWindow(QMainWindow):
         (beg, ende) = os.path.split(self.filename)
         (fileBaseName, fileExtension) = os.path.splitext(ende)
 
-        default_name = os.path.join(g.config.vars.Paths['output_dir'], fileBaseName)
+        default_name = os.path.join(save_to_folder, fileBaseName)
+        logger.debug("default_name: %s", default_name)
 
         selected_filter = self.MyPostProcessor.output_format[0]
         filename = QFileDialog.getSaveFileName(self,
                                    title, default_name,
                                    MyFormats, selected_filter)
 
-        logger.info(self.tr("File: %s selected") % filename[0])
-        logger.info(self.tr("Filter: %s selected") % filename[1])
-        logger.info("<a href='%s'>%s</a>" % (filename[0], filename[0]))
-        return filename
+
+        logger.debug(filename)
+        # If there is something to load then call the load function callback
+        if filename:
+            #filename = qstr_encode(filename)
+            logger.info(self.tr("File: %s selected") % filename[0])
+            logger.info(self.tr("Filter: %s selected") % filename[1])
+            logger.info("<a href='%s'>%s</a>" % (filename[0], filename[0]))
+            return filename
+        else:
+            return False
 
     def about(self):
         """
@@ -775,10 +778,23 @@ class MainWindow(QMainWindow):
                                                    "Project files (*%s);;"
                                                    "All types (*.*)") % (c.PROJECT_EXTENSION, c.PROJECT_EXTENSION))
 
+
         # If there is something to load then call the load function callback
-        if self.filename:
-            self.filename = qstr_encode(self.filename)
-            logger.info(self.tr("File: %s selected") % self.filename)
+        if not(self.filename):
+            return
+
+        # If automatic save paths is checked keep it up to date.
+        if g.config.vars.Paths['autosave_path']:
+            logger.debug("Save import_dir")
+            g.config.var_dict["Paths"]["import_dir"] = os.path.dirname(self.filename)
+            g.config.update_config()
+            g.config.save_varspace()
+
+        self.filename = qstr_encode(self.filename)
+        logger.info(self.tr("File: %s selected") % self.filename)
+
+
+
 
     def load(self, plot=True):
         """
@@ -1102,12 +1118,22 @@ class MainWindow(QMainWindow):
         """
         Save all variables to file
         """
-        prj_filename = self.showSaveDialog(self.tr('Save project to file'), "Project files (*%s)" % c.PROJECT_EXTENSION)
+        prj_filename = self.showSaveDialog(self.tr('Save project to file'),
+                                           "Project files (*%s)" % c.PROJECT_EXTENSION,
+                                           g.config.vars.Paths['project_dir'])
+
         save_prj_filename = qstr_encode(prj_filename[0])
 
         # If Cancel was pressed
         if not save_prj_filename:
             return
+
+        # If automatic save paths is checked keep it up to date.
+        if g.config.vars.Paths['autosave_path']:
+            logger.debug("Save project_dir")
+            g.config.var_dict["Paths"]["project_dir"] = os.path.dirname(prj_filename[0])
+            g.config.update_config()
+            g.config.save_varspace()
 
         (beg, ende) = os.path.split(save_prj_filename)
         (fileBaseName, fileExtension) = os.path.splitext(ende)

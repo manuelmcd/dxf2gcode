@@ -2,7 +2,7 @@
 
 ############################################################################
 #
-#   Copyright (C) 2009-2016
+#   Copyright (C) 2009-2021
 #    Christian Kohlöffel
 #    Jean-Paul Schouwstra
 #    Xavier Izard
@@ -46,7 +46,7 @@ from PyQt5 import QtCore
 
 logger = logging.getLogger("Core.Config")
 
-CONFIG_VERSION = "9.10"
+CONFIG_VERSION = "9.11"
 """
 version tag - increment this each time you edit CONFIG_SPEC
 
@@ -59,12 +59,14 @@ if "linux" in sys.platform.lower() or "unix" in sys.platform.lower():
     #Declare here the path that are specific to Linux
     IMPORT_DIR = "~/Documents"
     OUTPUT_DIR = "~/Documents"
+    PROJECT_DIR= "~/Documents"
     PDFTOPS_CMD = "/usr/bin/pdftops"
     PSTOEDIT_CMD = "/usr/bin/pstoedit"
 else:
     #Declare here the path that are specific to Windows
     IMPORT_DIR = "D:/Eclipse_Workspace/DXF2GCODE/trunk/dxf"
     OUTPUT_DIR = "D:"
+    PROJECT_DIR= "D:"
     # Xpdf Tools from http://www.xpdfreader.com/download.html
     PDFTOPS_CMD = "C:/xpdf-tools-win-4.00/bin64/pdftops.exe"
     # pstoedit from https://sourceforge.net/projects/pstoedit/
@@ -117,6 +119,12 @@ CONFIG_SPEC = str('''
 
     # Export generated gcode by default to this directory.
     output_dir = string(default = "''' + OUTPUT_DIR + '''")
+    
+    # Save project files by default to this directory.
+    project_dir = string(default = "''' + PROJECT_DIR + '''")
+    
+    # Automatic save last path to config file. Therefore open with last path
+    autosave_path =  boolean(default = True)
 
     [Filters]
     # pstoedit is an external tool to convert PDF files to PS (postscript) files, which can be further processed by pstoedit tool.
@@ -471,7 +479,10 @@ class MyConfig(object):
             ('Paths', OrderedDict([
                 ('__section_title__', self.tr("Software config")),
                 ('import_dir', CfgLineEdit(self.tr('By default look for DXF files in:'))),
-                ('output_dir', CfgLineEdit(self.tr('By default export generated G-Code to:')))
+                ('output_dir', CfgLineEdit(self.tr('By default export generated G-Code to:'))),
+                ('project_dir', CfgLineEdit(self.tr('By default save Project files to:'))),
+                ('autosave_path', CfgCheckBox(self.tr('Update paths with last used path: ')))
+
             ])),
             ('Filters', OrderedDict([
                 ('__section_title__', self.tr("Software config")),
