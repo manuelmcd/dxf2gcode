@@ -310,12 +310,10 @@ class MainWindow(QMainWindow):
                     name = "%s " % (self.MyPostProcessor.output_text[i])
                     format_ = "(*%s);;" % (self.MyPostProcessor.output_format[i])
                     MyFormats = MyFormats + name + format_
-
-                filename = self.showSaveDialog(self.tr('Export to file'), MyFormats, g.config.vars.Paths['output_dir'])
+                filename = self.showSaveDialog(self.tr('Export to file'), MyFormats)
                 save_filename = qstr_encode(filename[0])
-
             else:
-                filename = [None, None]
+                filename = [None, post_pro]
                 save_filename = saveas
 
             # If Cancel was pressed
@@ -369,12 +367,12 @@ class MainWindow(QMainWindow):
         if g.config.vars.General['write_to_stdout']:
             self.close()
 
-    def optimizeAndExportShapes(self):
+    def optimizeAndExportShapes(self, saveas=None, post_pro=None):
         """
         Optimize the tool path, then export the shapes
         """
         self.optimizeTSP()
-        self.exportShapes()
+        self.exportShapes(None, saveas, post_pro)
 
     def updateExportRoute(self):
         """
@@ -423,11 +421,11 @@ class MainWindow(QMainWindow):
                     shapes_fixed_order.append(shape_nr)
 
                 shapes_to_write.append(shape_nr)
-                if self.shapes[layerContent.exp_order[shape_nr]].Pocket == True: 
+                if self.shapes[layerContent.exp_order[shape_nr]].Pocket == True:
                     shapes_st_en_points.append(self.shapes[layerContent.exp_order[shape_nr]].get_start_end_points(PPocket=True))
                 else:
                     shapes_st_en_points.append(self.shapes[layerContent.exp_order[shape_nr]].get_start_end_points())
-                    
+
             # Perform Export only if the Number of shapes to export is bigger than 0
             if len(shapes_to_write) > 0:
                 # Errechnen der Iterationen
@@ -1226,14 +1224,18 @@ if __name__ == "__main__":
 
     parser.add_argument("filename", nargs="?")
 
-#    parser.add_argument("-f", "--file", dest = "filename",
-#                        help = "read data from FILENAME")
+    #    parser.add_argument("-f", "--file", dest = "filename",
+    #                        help = "read data from FILENAME")
     parser.add_argument("-e", "--export", dest="export_filename",
                         help="export data to FILENAME")
+    parser.add_argument("-p", "--postpro", dest="post_pro",
+                        help="Post Processor to use")
+    parser.add_argument("-o", "--optimize", action="store_true",
+                        dest="optimize", help="optimize before export")
     parser.add_argument("-q", "--quiet", action="store_true",
                         dest="quiet", help="no GUI")
-#    parser.add_option("-v", "--verbose",
-#                      action = "store_true", dest = "verbose")
+    #    parser.add_option("-v", "--verbose",
+    #                      action = "store_true", dest = "verbose")
     options = parser.parse_args()
     g.quiet = options.quiet
 
