@@ -310,7 +310,7 @@ class MainWindow(QMainWindow):
                     name = "%s " % (self.MyPostProcessor.output_text[i])
                     format_ = "(*%s);;" % (self.MyPostProcessor.output_format[i])
                     MyFormats = MyFormats + name + format_
-                filename = self.showSaveDialog(self.tr('Export to file'), MyFormats)
+                filename = self.showSaveDialog(self.tr('Export to file'), MyFormats, g.config.vars.Paths['output_dir'])
                 save_filename = qstr_encode(filename[0])
             else:
                 filename = [None, post_pro]
@@ -372,7 +372,7 @@ class MainWindow(QMainWindow):
         Optimize the tool path, then export the shapes
         """
         self.optimizeTSP()
-        self.exportShapes(None, saveas, post_pro)
+        self.exportShapes( saveas, post_pro)
 
     def updateExportRoute(self):
         """
