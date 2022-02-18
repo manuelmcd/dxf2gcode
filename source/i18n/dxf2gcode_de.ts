@@ -17,7 +17,7 @@
     </message>
     <message>
         <source>renamed bad varspace %s to &apos;%s&apos;</source>
-        <translation type="obsolete">Falsche Konfigurationsdatei wurde umzubennen von %s zu %s</translation>
+        <translation type="obsolete">Falsche Konfigurationsdatei wurde umbenannt von %s zu %s</translation>
     </message>
     <message>
         <source>created default varspace &apos;%s&apos;</source>
