@@ -38,15 +38,31 @@ def include_OpenGL():
 shutil.rmtree("build", ignore_errors=True)
 shutil.rmtree("dist", ignore_errors=True)
 
+
+
+includefiles = ['COPYING',
+                'README.txt',
+                ('i18n\dxf2gcode_de.qm', 'i18n\dxf2gcode_de.qm'),
+                ('i18n\dxf2gcode_fr.qm', 'i18n\dxf2gcode_fr.qm'),
+                ('i18n\dxf2gcode_ru.qm', 'i18n\dxf2gcode_ru.qm')
+                ]
+includes = []
+excludes = []
+
+
+
 options = {
     'build_exe': {
         # 'packages': '' ,
-        # 'includes': '',
-        # 'excludes': '',
+        'includes':includes,
+        'excludes':excludes,
+        'include_files':includefiles,
         'zip_includes': include_OpenGL(),
         'silent': True
     }
 }
+
+
 
 executables = [
     Executable(script='dxf2gcode.py',
