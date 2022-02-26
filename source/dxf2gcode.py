@@ -551,7 +551,7 @@ class MainWindow(QMainWindow):
                           "please visit "
                           "<a href='http://sourceforge.net/projects/dxf2gcode/'>http://sourceforge.net/projects/dxf2gcode/</a><br>"
                           "For any questions on how to use dxf2gcode please use the "
-                          "<a href='https://groups.google.com/forum/?fromgroups#!forum/dxf2gcode-users'>mailing list</a><br>"
+                          "<a href='https://www.ltspiceusers.ch/forums/english-section.67/'>https://www.ltspiceusers.ch/forums/english-section.67/</a><br>"
                           "To log bugs, or request features please use the "
                           "<a href='http://sourceforge.net/p/dxf2gcode/tickets/'>issue tracking system</a><br>"
                           "<h2>License and copyright:</h2>"
