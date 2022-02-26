@@ -42,7 +42,7 @@ from PyQt5 import QtCore
 APPNAME = "DXF2GCODE"
 VERSION = "Py%s PyQt%s" % (platform.python_version(), QtCore.PYQT_VERSION_STR)
 
-DATE     =  "$Date: Fri Oct 25 20:45:56 2019 +0200 $"
+DATE     =  "$Date:  $"
 REVISION =  "$Revision: cd19f2420da8d0845363d0fb120edc130ddf50a5 $"
 AUTHOR   = u"$Author: Damian Wrobel <dwrobel@ertelnet.rybnik.pl> $"
 

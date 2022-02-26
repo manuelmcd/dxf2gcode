@@ -55,8 +55,6 @@ Prerequisites
 
     C:\> pip3 install sip PyQt5 PyOpenGL pyqt5-tools cx-Freeze configobj
 
-    Note: Please do not install python3 version 3.7.x as at the time of writing
-    there is no pyqt5-tools package available for this version of the python.
 
   - Runtime dependencies:
     - python3   (>=3.6.2),
@@ -195,6 +193,7 @@ Authors
   Vinzenz Schulz,
   Robert Lichtenberger,
   Damian Wrobel
+  Daniel Luginbühl
 
 
 License

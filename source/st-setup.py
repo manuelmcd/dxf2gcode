@@ -45,17 +45,17 @@ if platform.system() == 'Darwin':
 setup(
     name='dxf2gcode',
 
-    version='2020-11-01 Development',
+    version='2022-02-26 Release Candidate 1',
 
     description='2D drawings to CNC machine compatible G-Code converter..',
 
     long_description=('DXF2GCODE is a tool for converting 2D (dxf, pdf, ps)'
                        ' drawings to CNC machine compatible GCode.'
-                       ' Beta version based on development branch'),
+                       ' Release Candidate based on development branch'),
 
     url='https://sourceforge.net/p/dxf2gcode/wiki/Home/',
 
-    author='Christian Kohloffel',
+    author='Christian Kohloeffel',
 
     author_email='christian.kohloeffel@googlemail.com',
 
