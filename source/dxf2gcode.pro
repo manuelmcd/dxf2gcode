@@ -21,6 +21,8 @@ SOURCES += \
     dxf2gcode/core/intersect.py \
     dxf2gcode/core/layercontent.py \
     dxf2gcode/core/linegeo.py \
+    dxf2gcode/core/pocketmill.py \
+    dxf2gcode/core/pocketmove.py \
     dxf2gcode/core/point3d.py \
     dxf2gcode/core/project.py \
     dxf2gcode/core/shape.py \
@@ -79,6 +81,6 @@ FORMS += \
     dxf2gcode.ui
 
 TRANSLATIONS += \
-    i18n/dxf2gcode_de_DE.ts \
+    i18n/dxf2gcode_de.ts \
     i18n/dxf2gcode_fr.ts \
     i18n/dxf2gcode_ru.ts
