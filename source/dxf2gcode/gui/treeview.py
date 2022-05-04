@@ -40,6 +40,8 @@ from PyQt5.QtGui import QStandardItemModel
 from PyQt5 import QtCore
 from PyQt5.QtCore import QByteArray
 
+import logging
+logger = logging.getLogger("DxfImport.myCanvasClass")
 
 class TreeView(QTreeView):
     """
@@ -95,6 +97,8 @@ class TreeView(QTreeView):
         self.dragged_element = True
         event.acceptProposedAction()
 
+        logger.debug("Starting to drag")
+
     def elementPressed(self, element_model_index):
         """
         This function is called when an element (Shape, ...) is pressed
@@ -126,19 +130,24 @@ class TreeView(QTreeView):
         """
 
         if self.dragged_element and self.dragged_element_model_index:
-            #print("action proposee = {0}".format(event.proposedAction()))
+            logger.debug("action proposee = {0}".format(event.proposedAction()))
             event.setDropAction(QtCore.Qt.IgnoreAction)
             event.accept()
 
             drag_item = self.dragged_element_model_index.model().itemFromIndex(self.dragged_element_model_index)
             items_parent = drag_item.parent()
+            logger.debug("drag_item: %s", drag_item)
+            logger.debug("items_parent: %s",  items_parent)
+
             if not items_parent:
                 #parent is 0, so we need to get the root item of the tree as parent...
                 items_parent = drag_item.model().invisibleRootItem()
             drop_model_index = self.indexAt(event.pos())
+            logger.debug("drop_model_index: %s", drop_model_index)
             # Get the insert position related to the drop item:
             # OnItem, AboveItem, BelowItem, OnViewport...
             relative_position = self.dropIndicatorPosition()
+            logger.debug("relative_position: %s", relative_position)
 
             #compute the new position of the layer or the shape
             if drop_model_index.isValid() and relative_position != QTreeView.OnViewport:
@@ -151,7 +160,7 @@ class TreeView(QTreeView):
                     drag_row = self.dragged_element_model_index.row() #original row
                     #destination row (+1 if relative pos is below the drop element)...
                     drop_row = drop_model_index.row() + (1 if relative_position == QTreeView.BelowItem else 0)
-                    #print("\033[32;1mACCEPTED!\033[m\n")
+                    logger.debug("\033[32;1mACCEPTED!\033[m\n")
 
                 elif (drag_item.parent() == drop_item or not drop_item.parent()\
                   and drag_item.parent() == drop_item.model().invisibleRootItem().child(drop_item.row(), 0))\
@@ -164,7 +173,7 @@ class TreeView(QTreeView):
                     drag_row = self.dragged_element_model_index.row()
                     # destination row is 0 because item is dropped on the parent...
                     drop_row = 0
-                    #print("\033[32;1mACCEPTED ON PARENT!\033[m\n")
+                    logger.debug("\033[32;1mACCEPTED ON PARENT!\033[m\n")
                 elif (not drop_item.parent() and self.dragged_element_model_index.parent().sibling(self.dragged_element_model_index.parent().row()+1, 0) == drop_item.model().invisibleRootItem().child(drop_item.row(), 0).index())\
                  and (relative_position == QTreeView.AboveItem or relative_position == QTreeView.OnItem):
                     #we are on next parent item => insert at end of the dragged item's layer
@@ -172,23 +181,23 @@ class TreeView(QTreeView):
                     drag_row = self.dragged_element_model_index.row()
                     # insert at end...
                     drop_row = items_parent.rowCount()
-                    #print("\033[32;1mACCEPTED ON NEXT PARENT!\033[m\n")
+                    logger.debug("\033[32;1mACCEPTED ON NEXT PARENT!\033[m\n")
 
                 else:
                     #we are in the wrong branch of the tree,
                     # item can't be pasted here
                     drop_row = -1
-                    #print("\033[31;1mREFUSED!\033[m\n")
+                    logger.debug("\033[31;1mREFUSED!\033[m\n")
 
             else:
                 #We are below any tree element => insert at end
                 drag_row = self.dragged_element_model_index.row() #original row
                 drop_row = items_parent.rowCount() #insert at end
-                #print("\033[32;1mACCEPTED AT END!\033[m\n")
+                logger.debug("\033[32;1mACCEPTED AT END!\033[m\n")
 
             #effectively move the item
             if drop_row >= 0:
-                #print("from row {0} to row {1}".format(drag_row, drop_row))
+                logger.debug("from row {0} to row {1}".format(drag_row, drop_row))
 
                 item_to_be_moved = items_parent.takeRow(drag_row)
                 if drop_row > drag_row:
@@ -205,6 +214,7 @@ class TreeView(QTreeView):
             self.dragged_element = False
         else:
             event.ignore()
+            logger.debug("Event is ignored")
 
     def moveUpCurrentItem(self):
         """

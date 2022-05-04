@@ -3,7 +3,7 @@
 
 ############################################################################
 #
-#   Copyright (C) 2010-2016
+#   Copyright (C) 2010-2022
 #    Christian Kohlöffel
 #    Jean-Paul Schouwstra
 #
