@@ -3,7 +3,7 @@
 ############################################################################
 #
 #   Copyright (C) 2012-2014
-#    Xavier Izard
+#   Xavier Izard
 #
 #   This file is part of DXF2GCODE.
 #
@@ -129,6 +129,137 @@ class TreeView(QTreeView):
         print("\033[32mdropEvent {0} at pos({1}).{3}, index = {2}\033[m\n".format(event, event.pos(), self.indexAt(event.pos()).parent().internalId(), self.dropIndicatorPosition()))
         """
 
+        logger.debug("\033[32mdropEvent {0} at pos({1}).{3}, index = {2}\033[m\n".format(event, event.pos(), self.indexAt(event.pos()).parent().internalId(), self.dropIndicatorPosition()))
+
+        # Check if a element has been started to drag and if a index of the dragged element is given otherwise return
+        if self.dragged_element and self.dragged_element_model_index:
+            logger.debug("proposedAction = {0}".format(event.proposedAction()))
+            event.setDropAction(QtCore.Qt.IgnoreAction) #Ignore since completely reimplemented.
+            event.accept()
+        else:
+            event.ignore()
+            logger.debug("Event is ignored")
+            return
+
+        # Get the drag_item itself and its parent
+        drag_item = self.dragged_element_model_index.model().itemFromIndex(self.dragged_element_model_index)
+        drag_row = self.dragged_element_model_index.row()
+        drag_item_parent = drag_item.parent()
+        drag_item_level = 1
+        # parent is 0, so we need to get the root item of the tree as parent...
+        if not drag_item_parent:
+            drag_item_parent = drag_item.model().invisibleRootItem()
+            drag_item_level = 0
+            drag_parent_row = -1
+        else:
+            drag_parent_row = self.drag_item.parent()
+
+        logger.debug("drag_item_level: {0}, drag_row: {1}, drag_parent_row: {2}"\
+                     .format(drag_item_level, drag_row, drag_parent_row))
+
+        #logger.debug("drag item: {0}, drag_item_partent: {1}, drag_item_level: {2}".format(drag_item, \
+        #                                                                                 drag_item_parent, \
+        #                                                                                 drag_item_level))
+
+        drop_model_index = self.indexAt(event.pos())
+        logger.debug("drop_model_index: %s", drop_model_index)
+
+        # Get the insert position related to the drop item:
+        # OnItem (0), AboveItem (1), BelowItem (2), OnViewport (3)...
+        relative_position = self.dropIndicatorPosition()
+        logger.debug("relative_position: %s", relative_position)
+
+        # Check if the item is dropped on a valid item and not on the Viewport.
+        if drop_model_index.isValid() and relative_position != QTreeView.OnViewport:
+            # drop position is computable from a real element
+            drop_item = drop_model_index.model().itemFromIndex(drop_model_index)
+            logger.debug("drop_item: %s", drop_item)
+
+        # If dropped on the Viewport just return
+        # TODO: May be changed if dropping of last item on viewport ist possible.
+        else:
+            event.ignore()
+            logger.debug("Event is ignored")
+            return
+            # We are below any tree element => insert at end
+            # drag_row = self.dragged_element_model_index.row()  # original row
+            # drop_row = items_parent.rowCount()  # insert at end
+            # logger.debug("\033[32;1mACCEPTED AT END!\033[m\n")
+
+        # dropped element is on the same tree branch as dragged element...
+        if drag_item.parent() == drop_item.parent():
+            drag_row = self.dragged_element_model_index.row()  # original row
+            # destination row (+1 if relative pos is below the drop element)...
+            drop_row = drop_model_index.row() + (1 if relative_position == QTreeView.BelowItem else 0)
+            logger.debug("\033[32;1mACCEPTED!\033[m drag_row: {0}, drop_row: {1}\n".format(drag_row, drop_row))
+
+
+        # we are on parent item (second test takes the first column
+        # of the drop_item's row. First column is where child are
+        # inserted, so we must compare with this col)
+        elif (drag_item.parent() == drop_item or not drop_item.parent() \
+              and drag_item.parent() == drop_item.model().invisibleRootItem().child(drop_item.row(), 0)) \
+              and (relative_position == QTreeView.BelowItem or relative_position == QTreeView.OnItem):
+
+            # original row...
+            drag_row = self.dragged_element_model_index.row()
+            # destination row is 0 because item is dropped on the parent...
+            drop_row = 0
+            logger.debug("\033[32;1mACCEPTED ON PARENT!\033[m drag_row: {0}, drop_row: {1}\n".format(drag_row, drop_row))
+
+        # we are on next parent item => insert at end of the dragged item's layer
+        elif (not drop_item.parent() and \
+              self.dragged_element_model_index.parent().sibling(self.dragged_element_model_index.parent().row() + 1, 0) \
+              == drop_item.model().invisibleRootItem().child(drop_item.row(), 0).index()) \
+             and (relative_position == QTreeView.AboveItem or relative_position == QTreeView.OnItem):
+              # original row...
+              drag_row = self.dragged_element_model_index.row()
+              # insert at end...
+              drop_row = drag_item.parent().rowCount()
+              logger.debug("\033[32;1mACCEPTED ON BELOW PARENT!\033[m drag_row: {0}, drop_row: {1}\n".format(drag_row, drop_row))
+
+        # we are in the wrong branch of the tree, item can't be pasted here
+        else:
+            drag_row = self.dragged_element_model_index.row()
+            drop_row = drop_item.parent().rowCount()
+
+            drop_row = -1
+            logger.debug("\033[31;1mREFUSED!\033[m drag_row: {0}, drop_row: {1}\n".format(drag_row, drop_row))
+
+        # effectively move the item
+        if drop_row >= 0:
+            logger.debug("from row {0} to row {1}".format(drag_row, drop_row))
+            item_to_be_moved = drag_item_parent.takeRow(drag_row)
+
+            # we have one less item in the list, so if the item is dragged below its original position, we must
+            # correct its insert position
+            if drop_row > drag_row:
+                drop_row -= 1
+            drag_item_parent.insertRow(drop_row, item_to_be_moved)
+
+            # Signal that the order of the TreeView has changed...
+            if not self.signals_blocked:
+                self.exportOrderUpdateCallback()
+                self.dragged_element = False
+
+    def dropEventOld(self, event):
+        """
+        This function is called when the user has released the mouse
+        button to drop an element at the mouse pointer location.
+        Note: we have totally reimplemented this function because the
+        default QT implementation wants to Copy & Delete each dragged
+        item, even when we only use internals move inside the treeView.
+        This is totally unnecessary and over-complicated for us because
+        it would imply to implement a QMimeData import and export
+        functions to export our Shapes / Layers / Entities. The code
+        below tries to move the items to the right place when they are
+        dropped ; it uses simple lists permutations (ie no duplicates
+        & deletes).
+        options
+        @param event: the dropEvent (contains position, ...)
+        print("\033[32mdropEvent {0} at pos({1}).{3}, index = {2}\033[m\n".format(event, event.pos(), self.indexAt(event.pos()).parent().internalId(), self.dropIndicatorPosition()))
+        """
+
         if self.dragged_element and self.dragged_element_model_index:
             logger.debug("action proposee = {0}".format(event.proposedAction()))
             event.setDropAction(QtCore.Qt.IgnoreAction)
@@ -153,6 +284,7 @@ class TreeView(QTreeView):
             if drop_model_index.isValid() and relative_position != QTreeView.OnViewport:
                 #drop position is computable from a real element
                 drop_item = drop_model_index.model().itemFromIndex(drop_model_index)
+                logger.debug("drop_item: %s", drop_item)
 
                 if drag_item.parent() == drop_item.parent():
                     #dropped element is on the same tree branch as
@@ -186,6 +318,11 @@ class TreeView(QTreeView):
                 else:
                     #we are in the wrong branch of the tree,
                     # item can't be pasted here
+                    drag_row = self.dragged_element_model_index.row()
+                    drop_row = items_parent.rowCount()
+
+
+
                     drop_row = -1
                     logger.debug("\033[31;1mREFUSED!\033[m\n")
 

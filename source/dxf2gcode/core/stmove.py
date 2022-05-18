@@ -233,7 +233,9 @@ class StMove(object):
                     direction = prvnorm.to3D().cross_product(norm.to3D()).z
                     swivel = ArcGeo(Ps=prvend, Pe=geo_b.Ps, r=offset, direction=direction)
                     swivel.drag = drag_angle < abs(swivel.ext)
+                    logger.debug(swivel)
                     self.append(swivel)
+                logger.debug(geo_b)
                 self.append(geo_b)
 
                 prvend = geo_b.Pe
@@ -264,21 +266,29 @@ class StMove(object):
                     direction = prvnorm.to3D().cross_product(norma.to3D()).z
                     swivel = ArcGeo(Ps=prvend, Pe=geo_b.Ps, r=offset, direction=direction)
                     swivel.drag = drag_angle < abs(swivel.ext)
+                    logger.debug(swivel)
                     self.append(swivel)
                 prvend = geo_b.Pe
                 prvnorm = offset*norme
                 if -pi < geo_b.ext < pi:
-                    self.append(ArcGeo(Ps=geo_b.Ps, Pe=geo_b.Pe, r=sqrt(geo_b.r**2+offset**2), direction=geo_b.ext))
+                    swivel = ArcGeo(Ps=geo_b.Ps, Pe=geo_b.Pe, r=sqrt(geo_b.r ** 2 + offset ** 2), direction=geo_b.ext)
+                    logger.debug(swivel)
+                    self.append(swivel)
+
                 else:
                     geo_b = ArcGeo(Ps=geo_b.Ps, Pe=geo_b.Pe, r=sqrt(geo_b.r**2+offset**2), direction=-geo_b.ext)
                     geo_b.ext = -geo_b.ext
+                    logger.debug(geo_b)
                     self.append(geo_b)
             # TODO support different geos, or disable them in the GUI
             # else:
             #     self.append(copy(geo))
         if not prvnorm == startnorm:
             direction = prvnorm.to3D().cross_product(startnorm.to3D()).z
-            self.append(ArcGeo(Ps=prvend, Pe=prvend-prvnorm+startnorm, r=offset, direction=direction))
+            swivel = ArcGeo(Ps=prvend, Pe=prvend - prvnorm + startnorm, r=offset, direction=direction)
+            swivel.drag = drag_angle < abs(swivel.ext)
+            logger.debug(swivel)
+            self.append(swivel)
 
         self.geos.insert(0, RapidPos(self.geos.abs_el(0).Ps))
         self.geos[0].make_abs_geo()
