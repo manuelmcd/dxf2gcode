@@ -294,7 +294,7 @@ Not enough chars (expected {0}, found {1}) for the field &quot;{2}&quot;
     </message>
     <message>
         <source>&lt;html&gt;&lt;h2&gt;&lt;center&gt;You are using&lt;/center&gt;&lt;/h2&gt;&lt;body bgcolor=&lt;center&gt;&lt;img src=&apos;:images/dxf2gcode_logo.png&apos; border=&apos;1&apos; color=&apos;white&apos;&gt;&lt;/center&gt;&lt;/body&gt;&lt;h2&gt;Version:&lt;/h2&gt;&lt;body&gt;%s: %s&lt;br&gt;Last change: %s&lt;br&gt;Changed by: %s&lt;br&gt;&lt;/body&gt;&lt;h2&gt;Where to get help:&lt;/h2&gt;For more information and updates, please visit &lt;a href=&apos;http://sourceforge.net/projects/dxf2gcode/&apos;&gt;http://sourceforge.net/projects/dxf2gcode/&lt;/a&gt;&lt;br&gt;For any questions on how to use dxf2gcode please use the &lt;a href=&apos;https://groups.google.com/forum/?fromgroups#!forum/dxf2gcode-users&apos;&gt;mailing list&lt;/a&gt;&lt;br&gt;To log bugs, or request features please use the &lt;a href=&apos;http://sourceforge.net/projects/dxf2gcode/tickets/&apos;&gt;issue tracking system&lt;/a&gt;&lt;br&gt;&lt;h2&gt;License and copyright:&lt;/h2&gt;&lt;body&gt;This program is written in Python and is published under the &lt;a href=&apos;http://www.gnu.org/licenses/&apos;&gt;GNU GPLv3 license.&lt;/a&gt;&lt;br&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="obsolete">&lt;html&gt;&lt;h2&gt;&lt;center&gt;Vous utilisez&lt;/center&gt;&lt;/h2&gt;&lt;body bgcolor=&lt;center&gt;&lt;img src=&apos;:images/dxf2gcode_logo.png; border=&apos;1&apos; color=&apos;white&apos;&gt;&lt;/center&gt;&lt;/body&gt;&lt;h2&gt;Version:&lt;/h2&gt;&lt;body&gt;%s: %s&lt;br&gt;Dernière modification: %s&lt;br&gt;Modifié par: %s&lt;br&gt;&lt;/body&gt;&lt;h2&gt;Ou trouver de l&apos;aide:&lt;/h2&gt;Pour plus d&apos;informationds et mises à jour, aller sur &lt;a href=&apos;http://sourceforge.net/projects/dxf2gcode/&apos;&gt;http://sourceforge.net/projects/dxf2gcode/&lt;/a&gt;&lt;br&gt;Pour toute questions sur l&apos;utilisation de dxf2gcode aller voir &lt;a href=&apos;https://groups.google.com/forum/?fromgroups#!forum/dxf2gcode-users&apos;&gt;mailing list&lt;/a&gt;&lt;br&gt;Pour rapporter un bug ou toute autre demande se rendre sur &lt;a href=&apos;http://sourceforge.net/projects/dxf2gcode/tickets/&apos;&gt;issue tracking system&lt;/a&gt;&lt;br&gt;&lt;h2&gt;Licence et copyright:&lt;/h2&gt;&lt;body&gt;Ce programme est écrit en Python et est publié sous &lt;a href=&apos;http://www.gnu.org/licenses/&apos;&gt;GNU GPLv3 license.&lt;/a&gt;&lt;br&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation type="obsolete">&amp;lt;html&amp;gt;&amp;lt;h2&amp;gt;&amp;lt;center&amp;gt;Vous utilisez&amp;lt;/center&amp;gt;&amp;lt;/h2&amp;gt;&amp;lt;body bgcolor=&amp;lt;center&amp;gt;&amp;lt;img src=&apos;:images/dxf2gcode_logo.png; border=&apos;1&apos; color=&apos;white&apos;&amp;gt;&amp;lt;/center&amp;gt;&amp;lt;/body&amp;gt;&amp;lt;h2&amp;gt;Version:&amp;lt;/h2&amp;gt;&amp;lt;body&amp;gt;%s: %s&amp;lt;br&amp;gt;Dernière modification: %s&amp;lt;br&amp;gt;Modifié par: %s&amp;lt;br&amp;gt;&amp;lt;/body&amp;gt;&amp;lt;h2&amp;gt;Ou trouver de l&apos;aide:&amp;lt;/h2&amp;gt;Pour plus d&apos;informationds et mises à jour, aller sur &amp;lt;a href=&apos;http://sourceforge.net/projects/dxf2gcode/&apos;&amp;gt;http://sourceforge.net/projects/dxf2gcode/&amp;lt;/a&amp;gt;&amp;lt;br&amp;gt;Pour toute questions sur l&apos;utilisation de dxf2gcode aller voir &amp;lt;a href=&apos;https://groups.google.com/forum/?fromgroups#!forum/dxf2gcode-users&apos;&amp;gt;mailing list&amp;lt;/a&amp;gt;&amp;lt;br&amp;gt;Pour rapporter un bug ou toute autre demande se rendre sur &amp;lt;a href=&apos;http://sourceforge.net/projects/dxf2gcode/tickets/&apos;&amp;gt;issue tracking system&amp;lt;/a&amp;gt;&amp;lt;br&amp;gt;&amp;lt;h2&amp;gt;Licence et copyright:&amp;lt;/h2&amp;gt;&amp;lt;body&amp;gt;Ce programme est écrit en Python et est publié sous &amp;lt;a href=&apos;http://www.gnu.org/licenses/&apos;&amp;gt;GNU GPLv3 license.&amp;lt;/a&amp;gt;&amp;lt;br&amp;gt;&amp;lt;/body&amp;gt;&amp;lt;/html&amp;gt;</translation>
     </message>
     <message>
         <source>No Z-Axis for lathe</source>
@@ -342,7 +342,7 @@ Not enough chars (expected {0}, found {1}) for the field &quot;{2}&quot;
     </message>
     <message>
         <source>Milling will start at Z = &quot;Workpiece top Z&quot; - &quot;Z infeed depth&quot;</source>
-        <translation>Usinage débutera à Z = &quot;Haut. Z brut&quot; - &quot;Prof. passe Z&quot;</translation>
+        <translation>Usinage débutera à Z = &amp;quot;Haut. Z brut&amp;quot; - &amp;quot;Prof. passe Z&amp;quot;</translation>
     </message>
     <message>
         <source>File</source>
@@ -1542,7 +1542,7 @@ You have to delete (or carefully edit) the configuration file &quot;{2}&quot; to
         <source>Reading stopped at line %i.
  &quot;%s&quot; is not a valid code (number) - please, check/correct dxf file</source>
         <translation>Echec lecture lignes arrêté ligne %i.
- Vérifier/corriger ligne &quot;%s&quot; dans le fichier dxf</translation>
+ Vérifier/corriger ligne &amp;quot;%s&amp;quot; dans le fichier dxf</translation>
     </message>
     <message>
         <source>Short Elements</source>
