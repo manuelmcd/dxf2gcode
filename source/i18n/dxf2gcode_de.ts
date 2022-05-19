@@ -636,8 +636,7 @@ Nicht genügend Zeichen (erwartet {0}, gefunden {1}) für das Feld &quot;{2}&quo
     </message>
     <message>
         <source>&lt;html&gt;&lt;h2&gt;&lt;center&gt;You are using&lt;/center&gt;&lt;/h2&gt;&lt;body bgcolor=&lt;center&gt;&lt;img src=&apos;:images/dxf2gcode_logo.png&apos; border=&apos;1&apos; color=&apos;white&apos;&gt;&lt;/center&gt;&lt;/body&gt;&lt;h2&gt;Version:&lt;/h2&gt;&lt;body&gt;%s: %s&lt;br&gt;Last change: %s&lt;br&gt;Changed by: %s&lt;br&gt;&lt;/body&gt;&lt;h2&gt;Where to get help:&lt;/h2&gt;For more information and updates, please visit &lt;a href=&apos;http://sourceforge.net/projects/dxf2gcode/&apos;&gt;http://sourceforge.net/projects/dxf2gcode/&lt;/a&gt;&lt;br&gt;For any questions on how to use dxf2gcode please use the &lt;a href=&apos;https://groups.google.com/forum/?fromgroups#!forum/dxf2gcode-users&apos;&gt;mailing list&lt;/a&gt;&lt;br&gt;To log bugs, or request features please use the &lt;a href=&apos;http://sourceforge.net/p/dxf2gcode/tickets/&apos;&gt;issue tracking system&lt;/a&gt;&lt;br&gt;&lt;h2&gt;License and copyright:&lt;/h2&gt;&lt;body&gt;This program is written in Python and is published under the &lt;a href=&apos;http://www.gnu.org/licenses/&apos;&gt;GNU GPLv3 license.&lt;/a&gt;&lt;br&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translatorcomment>Deutsche Übersetzung von Daniel Luginbühl</translatorcomment>
-        <translation>&lt;html&gt;&lt;h2&gt;&lt;center&gt;Du benutzt&lt;/center&gt;&lt;/h2&gt;&lt;body bgcolor=&lt;center&gt;&lt;img src=&apos;:images/dxf2gcode_logo.png&apos; border=&apos;1&apos; color=&apos;white&apos;&gt;&lt;/center&gt;&lt;/body&gt;&lt;h2&gt;Version:&lt;/h2&gt;&lt;body&gt;%s: %s&lt;br&gt;Letzte Bearbeitung: %s&lt;br&gt;Bearbeitet von: %s&lt;br&gt;Deutsche Übersetzung von Daniel Luginbühl&lt;br&gt;&lt;/body&gt;&lt;h2&gt;Wo bekommen Sie Hilfe:&lt;/h2&gt;Weitere Informationen und Aktualisierungen finden Sie unter &lt;a href=&apos;http://sourceforge.net/projects/dxf2gcode/&apos;&gt;http://sourceforge.net/projects/dxf2gcode/&lt;/a&gt;&lt;br&gt;Bei Fragen zur Verwendung von dxf2gcode besuchen Sie bitte dieses &lt;a href=&apos;https://www.ltspiceusers.ch/forums/deutsche-sektion.66&apos;&gt;Forum&lt;/a&gt;&lt;br&gt;Um Fehler zu protokollieren oder Funktionen anzufordern, verwenden Sie bitte das &lt;a href=&apos;http://sourceforge.net/p/dxf2gcode/tickets/&apos;&gt;Issue-Tracking-System&lt;/a&gt;&lt;br&gt;&lt;h2&gt;Lizenz und Copyright:&lt;/h2&gt;&lt;body&gt;Dieses Programm ist in Python geschrieben und veröffentlicht unter &lt;a href=&apos;http://www.gnu.org/licenses/&apos;&gt;GNU GPLv3 license.&lt;/a&gt;&lt;br&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation type="obsolete">&lt;html&gt;&lt;h2&gt;&lt;center&gt;Du benutzt&lt;/center&gt;&lt;/h2&gt;&lt;body bgcolor=&lt;center&gt;&lt;img src=&apos;:images/dxf2gcode_logo.png&apos; border=&apos;1&apos; color=&apos;white&apos;&gt;&lt;/center&gt;&lt;/body&gt;&lt;h2&gt;Version:&lt;/h2&gt;&lt;body&gt;%s: %s&lt;br&gt;Letzte Bearbeitung: %s&lt;br&gt;Bearbeitet von: %s&lt;br&gt;Deutsche Übersetzung von Daniel Luginbühl&lt;br&gt;&lt;/body&gt;&lt;h2&gt;Wo bekommen Sie Hilfe:&lt;/h2&gt;Weitere Informationen und Aktualisierungen finden Sie unter &lt;a href=&apos;http://sourceforge.net/projects/dxf2gcode/&apos;&gt;http://sourceforge.net/projects/dxf2gcode/&lt;/a&gt;&lt;br&gt;Bei Fragen zur Verwendung von dxf2gcode besuchen Sie bitte dieses &lt;a href=&apos;https://www.ltspiceusers.ch/forums/deutsche-sektion.66&apos;&gt;Forum&lt;/a&gt;&lt;br&gt;Um Fehler zu protokollieren oder Funktionen anzufordern, verwenden Sie bitte das &lt;a href=&apos;http://sourceforge.net/p/dxf2gcode/tickets/&apos;&gt;Issue-Tracking-System&lt;/a&gt;&lt;br&gt;&lt;h2&gt;Lizenz und Copyright:&lt;/h2&gt;&lt;body&gt;Dieses Programm ist in Python geschrieben und veröffentlicht unter &lt;a href=&apos;http://www.gnu.org/licenses/&apos;&gt;GNU GPLv3 license.&lt;/a&gt;&lt;br&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <source>No differences found. Ergo, workpiece zero is not moved</source>
@@ -806,6 +805,14 @@ zurückgegebener Fehlercode: {1}</translation>
     <message>
         <source>&amp;Inches</source>
         <translation>&amp;Inches (Zoll)</translation>
+    </message>
+    <message>
+        <source>Filter: %s selected</source>
+        <translation>Filter: %s wurde ausgewählt</translation>
+    </message>
+    <message>
+        <source>&lt;html&gt;&lt;h2&gt;&lt;center&gt;You are using&lt;/center&gt;&lt;/h2&gt;&lt;body bgcolor=&lt;center&gt;&lt;img src=&apos;:images/dxf2gcode_logo.png&apos; border=&apos;1&apos; color=&apos;white&apos;&gt;&lt;/center&gt;&lt;/body&gt;&lt;h2&gt;Version:&lt;/h2&gt;&lt;body&gt;%s: %s&lt;br&gt;Last change: %s&lt;br&gt;Changed by: %s&lt;br&gt;&lt;/body&gt;&lt;h2&gt;Where to get help:&lt;/h2&gt;For more information and updates, please visit &lt;a href=&apos;http://sourceforge.net/projects/dxf2gcode/&apos;&gt;http://sourceforge.net/projects/dxf2gcode/&lt;/a&gt;&lt;br&gt;For any questions on how to use dxf2gcode please use the &lt;a href=&apos;https://www.ltspiceusers.ch/forums/english-section.67/&apos;&gt;https://www.ltspiceusers.ch/forums/english-section.67/&lt;/a&gt;&lt;br&gt;To log bugs, or request features please use the &lt;a href=&apos;http://sourceforge.net/p/dxf2gcode/tickets/&apos;&gt;issue tracking system&lt;/a&gt;&lt;br&gt;&lt;h2&gt;License and copyright:&lt;/h2&gt;&lt;body&gt;This program is written in Python and is published under the &lt;a href=&apos;http://www.gnu.org/licenses/&apos;&gt;GNU GPLv3 license.&lt;/a&gt;&lt;br&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation>&lt;html&gt;&lt;h2&gt;&lt;center&gt;Du benutzt&lt;/center&gt;&lt;/h2&gt;&lt;body bgcolor=&lt;center&gt;&lt;img src=&apos;:images/dxf2gcode_logo.png&apos; border=&apos;1&apos; color=&apos;white&apos;&gt;&lt;/center&gt;&lt;/body&gt;&lt;h2&gt;Version:&lt;/h2&gt;&lt;body&gt;%s: %s&lt;br&gt;Letzte Bearbeitung: %s&lt;br&gt;Bearbeitet von: %s&lt;br&gt;Deutsche Übersetzung von Daniel Luginbühl&lt;br&gt;&lt;/body&gt;&lt;h2&gt;Wo bekommen Sie Hilfe:&lt;/h2&gt;Weitere Informationen und Aktualisierungen finden Sie unter &lt;a href=&apos;http://sourceforge.net/projects/dxf2gcode/&apos;&gt;http://sourceforge.net/projects/dxf2gcode/&lt;/a&gt;&lt;br&gt;Bei Fragen zur Verwendung von dxf2gcode besuchen Sie bitte dieses &lt;a href=&apos;https://www.ltspiceusers.ch/forums/deutsche-sektion.66&apos;&gt;Forum&lt;/a&gt;&lt;br&gt;Um Fehler zu protokollieren oder Funktionen anzufordern, verwenden Sie bitte das &lt;a href=&apos;http://sourceforge.net/p/dxf2gcode/tickets/&apos;&gt;Issue-Tracking-System&lt;/a&gt;&lt;br&gt;&lt;h2&gt;Lizenz und Copyright:&lt;/h2&gt;&lt;body&gt;Dieses Programm ist in Python geschrieben und veröffentlicht unter &lt;a href=&apos;http://www.gnu.org/licenses/&apos;&gt;GNU GPLv3 license.&lt;/a&gt;&lt;br&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
 </context>
 <context>
@@ -1136,6 +1143,14 @@ Sie müssen die Konfigurationsdatei &quot;{2}&quot; löschen (oder sorgfältig b
     <message>
         <source>Cutter compensation is done by machine (check box if machine reconizes G41 and G42 commands / uncheck otherwise. This also disables pocket milling.)</source>
         <translation>Die Fräserkompensation erfolgt durch die Maschine (Kontrollkästchen aktivieren, wenn die Maschine G41 und G42 Befehle versteht / andernfalls deaktivieren. Dadurch wird auch das Taschenfräsen deaktiviert.)</translation>
+    </message>
+    <message>
+        <source>By default save Project files to:</source>
+        <translation>Als standart Projekt Datein in speichern:</translation>
+    </message>
+    <message>
+        <source>Update paths with last used path: </source>
+        <translation>Pfad mit letztem genutztem Pfad aktualisieren:</translation>
     </message>
 </context>
 <context>
