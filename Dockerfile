@@ -27,10 +27,11 @@
 #     -w $(pwd) dxf2gcode:latest
 #
 
-FROM python:3.6.7-stretch
+FROM python:3.7-bullseye
 
-RUN apt-get update && apt-get install -y qttools5-dev qttools5-dev-tools pstoedit poppler-utils
-# Feels like I'm missing something having to make this symlink
+RUN apt-get update && apt-get install -y qttools5-dev qttools5-dev-tools pstoedit poppler-utils libxcb-util1
+# This symlink is needed to successfully run `make_tr.py`, but I don't
+# understand why.
 RUN ln -s /usr/lib/x86_64-linux-gnu/qt5/bin/lrelease /usr/bin/lrelease-qt5
 RUN pip install PyQt5 PyOpenGL setuptools
 
