@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS><TS version="2.0" language="ru_RU" sourcelanguage="">
+<!DOCTYPE TS>
+<TS version="2.1" language="ru_RU">
 <context>
     <name>ArcGeo</name>
     <message>
@@ -21,7 +22,7 @@
 Not enough chars (expected {0}, found {1}) for the field &quot;{2}&quot;
 </source>
         <translation>
-Недостаточно символов (ожидалось {0}, реально {1}) в поле &amp;quot;{2}&amp;quot;
+Недостаточно символов (ожидалось {0}, реально {1}) в поле &quot;{2}&quot;
 </translation>
     </message>
 </context>
@@ -32,7 +33,7 @@ Not enough chars (expected {0}, found {1}) for the field &quot;{2}&quot;
 The cell at line {0}, column 0 must not be empty for the table &quot;{1}&quot;
 </source>
         <translation>
-Ячейка в строке {0}, колонка 0 не должна быть пустой в таблице &amp;quot;{1}&amp;quot;
+Ячейка в строке {0}, колонка 0 не должна быть пустой в таблице &quot;{1}&quot;
 </translation>
     </message>
     <message>
@@ -40,7 +41,7 @@ The cell at line {0}, column 0 must not be empty for the table &quot;{1}&quot;
 Found {0} duplicate elements for the table &quot;{1}&quot;
 </source>
         <translation>
-В таблице &amp;quot;{1}&amp;quot; найдено {0} дубликатов
+В таблице &quot;{1}&quot; найдено {0} дубликатов
 </translation>
     </message>
 </context>
@@ -51,7 +52,7 @@ Found {0} duplicate elements for the table &quot;{1}&quot;
 The cell at line {0}, column 0 must not be empty for the table &quot;{1}&quot;
 </source>
         <translation>
-Ячейка в строке {0}, колонка 0 не должна быть пустой в таблице &amp;quot;{1}&amp;quot;
+Ячейка в строке {0}, колонка 0 не должна быть пустой в таблице &quot;{1}&quot;
 </translation>
     </message>
     <message>
@@ -59,7 +60,7 @@ The cell at line {0}, column 0 must not be empty for the table &quot;{1}&quot;
 Found {0} duplicate elements for the table &quot;{1}&quot;
 </source>
         <translation>
-В таблице &amp;quot;{1}&amp;quot; найдено {0} дубликатов
+В таблице &quot;{1}&quot; найдено {0} дубликатов
 </translation>
     </message>
     <message>
@@ -67,7 +68,7 @@ Found {0} duplicate elements for the table &quot;{1}&quot;
 The table &quot;{0}&quot; must always contains tool number &apos;1&apos;
 </source>
         <translation>
-Таблица &amp;quot;{0}&amp;quot; должна всегда содержать номер инструмента &apos;1&apos;
+Таблица &quot;{0}&quot; должна всегда содержать номер инструмента '1'
 </translation>
     </message>
 </context>
@@ -78,7 +79,7 @@ The table &quot;{0}&quot; must always contains tool number &apos;1&apos;
 Not enough chars (expected {0}, found {1}) for the field &quot;{2}&quot;
 </source>
         <translation>
-Недостаточно символов (ожидалось {0}, найдено {1}) в поле &amp;quot;{2}&amp;quot;
+Недостаточно символов (ожидалось {0}, найдено {1}) в поле &quot;{2}&quot;
 </translation>
     </message>
 </context>
@@ -86,7 +87,7 @@ Not enough chars (expected {0}, found {1}) for the field &quot;{2}&quot;
     <name>ConfigObj</name>
     <message>
         <source>Config file not found: &quot;%s&quot;.</source>
-        <translation type="obsolete">Файл настроек не найден: &amp;quot;%s&amp;quot;.</translation>
+        <translation type="obsolete">Файл настроек не найден: &quot;%s&quot;.</translation>
     </message>
     <message>
         <source>infile must be a filename, file like object, or list of lines.</source>
@@ -122,11 +123,11 @@ Not enough chars (expected {0}, found {1}) for the field &quot;{2}&quot;
     </message>
     <message>
         <source>Value &quot;%s&quot; is not a string.</source>
-        <translation type="obsolete">Значение &amp;quot;%s&amp;quot; не является строкой.</translation>
+        <translation type="obsolete">Значение &quot;%s&quot; не является строкой.</translation>
     </message>
     <message>
         <source>Value &quot;%s&quot; cannot be safely quoted.</source>
-        <translation type="obsolete">Значение &amp;quot;%s&amp;quot; не может быть безопасно окружено кавычками.</translation>
+        <translation type="obsolete">Значение &quot;%s&quot; не может быть безопасно окружено кавычками.</translation>
     </message>
     <message>
         <source>Parsing configspec failed: %s</source>
@@ -175,7 +176,7 @@ Not enough chars (expected {0}, found {1}) for the field &quot;{2}&quot;
     </message>
     <message>
         <source>An error occured while duplicating the file &quot;{0}&quot;. Check that it doesn&apos;t already exists for example</source>
-        <translation>Ошибка создания дубликата файла &amp;quot;{0}&amp;quot;. Проверьте, например, не существует ли он</translation>
+        <translation>Ошибка создания дубликата файла &quot;{0}&quot;. Проверьте, например, не существует ли он</translation>
     </message>
     <message>
         <source>Add a configuration file</source>
@@ -187,7 +188,7 @@ Not enough chars (expected {0}, found {1}) for the field &quot;{2}&quot;
     </message>
     <message>
         <source>An error occured while creating the file &quot;{0}&quot;. Check that it doesn&apos;t already exists for example</source>
-        <translation>При создании файла &amp;quot;{0}&amp;quot; произошла ошибка. Проверьте, например, не существует ли он</translation>
+        <translation>При создании файла &quot;{0}&quot; произошла ошибка. Проверьте, например, не существует ли он</translation>
     </message>
     <message>
         <source>Delete configuration file?</source>
@@ -195,11 +196,11 @@ Not enough chars (expected {0}, found {1}) for the field &quot;{2}&quot;
     </message>
     <message>
         <source>Are you sure you want to permanently remove the file &quot;{0}&quot;</source>
-        <translation>Вы уверены, что хотите удалить файл &amp;quot;{0}&amp;quot;</translation>
+        <translation>Вы уверены, что хотите удалить файл &quot;{0}&quot;</translation>
     </message>
     <message>
         <source>An error occured while removing the file &quot;{0}&quot;. Remove it manually</source>
-        <translation>При удалении файла &amp;quot;{0}&amp;quot; возникла ошибка. Удалите его сами</translation>
+        <translation>При удалении файла &quot;{0}&quot; возникла ошибка. Удалите его сами</translation>
     </message>
 </context>
 <context>
@@ -542,7 +543,7 @@ Not enough chars (expected {0}, found {1}) for the field &quot;{2}&quot;
     </message>
     <message>
         <source>&lt;html&gt;&lt;h2&gt;&lt;center&gt;You are using&lt;/center&gt;&lt;/h2&gt;&lt;body bgcolor=&lt;center&gt;&lt;img src=&apos;:images/dxf2gcode_logo.png&apos; border=&apos;1&apos; color=&apos;white&apos;&gt;&lt;/center&gt;&lt;/body&gt;&lt;h2&gt;Version:&lt;/h2&gt;&lt;body&gt;%s: %s&lt;br&gt;Last change: %s&lt;br&gt;Changed by: %s&lt;br&gt;&lt;/body&gt;&lt;h2&gt;Where to get help:&lt;/h2&gt;For more information and updates, please visit &lt;a href=&apos;http://sourceforge.net/projects/dxf2gcode/&apos;&gt;http://sourceforge.net/projects/dxf2gcode/&lt;/a&gt;&lt;br&gt;For any questions on how to use dxf2gcode please use the &lt;a href=&apos;https://groups.google.com/forum/?fromgroups#!forum/dxf2gcode-users&apos;&gt;mailing list&lt;/a&gt;&lt;br&gt;To log bugs, or request features please use the &lt;a href=&apos;http://sourceforge.net/projects/dxf2gcode/tickets/&apos;&gt;issue tracking system&lt;/a&gt;&lt;br&gt;&lt;h2&gt;License and copyright:&lt;/h2&gt;&lt;body&gt;This program is written in Python and is published under the &lt;a href=&apos;http://www.gnu.org/licenses/&apos;&gt;GNU GPLv3 license.&lt;/a&gt;&lt;br&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="obsolete">&amp;lt;html&amp;gt;&amp;lt;h2&amp;gt;&amp;lt;center&amp;gt;Вы используете&amp;lt;/center&amp;gt;&amp;lt;/h2&amp;gt;&amp;lt;body bgcolor=&amp;lt;center&amp;gt;&amp;lt;img src=&apos;images/dxf2gcode_logo.png&apos; border=&apos;1&apos; color=&apos;white&apos;&amp;gt;&amp;lt;/center&amp;gt;&amp;lt;/body&amp;gt;&amp;lt;h2&amp;gt;Версия:&amp;lt;/h2&amp;gt;&amp;lt;body&amp;gt;%s: %s&amp;lt;br&amp;gt;Последнее изменение: %s&amp;lt;br&amp;gt;Автор изменеий: %s&amp;lt;br&amp;gt;&amp;lt;/body&amp;gt;&amp;lt;h2&amp;gt;Где получить помощь:&amp;lt;/h2&amp;gt;Для дальнейшей информации и обновлений, посетите проект &amp;lt;a href=&apos;http://sourceforge.net/projects/dxf2gcode/&apos;&amp;gt;http://sourceforge.net/projects/dxf2gcode/&amp;lt;/a&amp;gt;&amp;lt;br&amp;gt;Для любых вопросов по использованию dxf2gcode, используйте &amp;lt;a href=&apos;https://groups.google.com/forum/?fromgroups#!forum/dxf2gcode-users&apos;&amp;gt;список рассылки&amp;lt;/a&amp;gt;&amp;lt;br&amp;gt;Для сообщений об ошибках или пожеланий используйте &amp;lt;a href=&apos;http://sourceforge.net/projects/dxf2gcode/tickets/&apos;&amp;gt;систему отслеживания проблем&amp;lt;/a&amp;gt;.&amp;lt;br&amp;gt;&amp;lt;h2&amp;gt;Лицензия и авторские права:&amp;lt;/h2&amp;gt;&amp;lt;body&amp;gt;Данная программа написана на языке Python и опубликована на условиях &amp;lt;a href=&apos;http://www.gnu.org/licenses/&apos;&amp;gt;лицензии GNU GPLv3&amp;lt;/a&amp;gt;.&amp;lt;br&amp;gt;&amp;lt;/body&amp;gt;&amp;lt;/html&amp;gt;</translation>
+        <translation type="obsolete">&lt;html&gt;&lt;h2&gt;&lt;center&gt;Вы используете&lt;/center&gt;&lt;/h2&gt;&lt;body bgcolor=&lt;center&gt;&lt;img src='images/dxf2gcode_logo.png' border='1' color='white'&gt;&lt;/center&gt;&lt;/body&gt;&lt;h2&gt;Версия:&lt;/h2&gt;&lt;body&gt;%s: %s&lt;br&gt;Последнее изменение: %s&lt;br&gt;Автор изменеий: %s&lt;br&gt;&lt;/body&gt;&lt;h2&gt;Где получить помощь:&lt;/h2&gt;Для дальнейшей информации и обновлений, посетите проект &lt;a href='http://sourceforge.net/projects/dxf2gcode/'&gt;http://sourceforge.net/projects/dxf2gcode/&lt;/a&gt;&lt;br&gt;Для любых вопросов по использованию dxf2gcode, используйте &lt;a href='https://groups.google.com/forum/?fromgroups#!forum/dxf2gcode-users'&gt;список рассылки&lt;/a&gt;&lt;br&gt;Для сообщений об ошибках или пожеланий используйте &lt;a href='http://sourceforge.net/projects/dxf2gcode/tickets/'&gt;систему отслеживания проблем&lt;/a&gt;.&lt;br&gt;&lt;h2&gt;Лицензия и авторские права:&lt;/h2&gt;&lt;body&gt;Данная программа написана на языке Python и опубликована на условиях &lt;a href='http://www.gnu.org/licenses/'&gt;лицензии GNU GPLv3&lt;/a&gt;.&lt;br&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <source>About DXF2GCODE</source>
@@ -678,7 +679,7 @@ Not enough chars (expected {0}, found {1}) for the field &quot;{2}&quot;
     </message>
     <message>
         <source>Milling will start at Z = &quot;Workpiece top Z&quot; - &quot;Z infeed depth&quot;</source>
-        <translation>Фрезеровка начнётся при Z = &amp;quot;Z верха заготовки&amp;quot; - &amp;quot;глубина реза по Z&amp;quot;</translation>
+        <translation>Фрезеровка начнётся при Z = &quot;Z верха заготовки&quot; - &quot;глубина реза по Z&quot;</translation>
     </message>
     <message>
         <source>Open...</source>
@@ -718,7 +719,7 @@ Not enough chars (expected {0}, found {1}) for the field &quot;{2}&quot;
     </message>
     <message>
         <source>Move Workpiece Zero</source>
-        <translation type="obsolete">Установить &amp;quot;ноль&amp;quot; заготовки</translation>
+        <translation type="obsolete">Установить &quot;ноль&quot; заготовки</translation>
     </message>
     <message>
         <source>Optimize Paths</source>
@@ -786,11 +787,11 @@ Not enough chars (expected {0}, found {1}) for the field &quot;{2}&quot;
     </message>
     <message>
         <source>&lt;html&gt;&lt;h2&gt;&lt;center&gt;You are using&lt;/center&gt;&lt;/h2&gt;&lt;body bgcolor=&lt;center&gt;&lt;img src=&apos;:images/dxf2gcode_logo.png&apos; border=&apos;1&apos; color=&apos;white&apos;&gt;&lt;/center&gt;&lt;/body&gt;&lt;h2&gt;Version:&lt;/h2&gt;&lt;body&gt;%s: %s&lt;br&gt;Last change: %s&lt;br&gt;Changed by: %s&lt;br&gt;&lt;/body&gt;&lt;h2&gt;Where to get help:&lt;/h2&gt;For more information and updates, please visit &lt;a href=&apos;http://sourceforge.net/projects/dxf2gcode/&apos;&gt;http://sourceforge.net/projects/dxf2gcode/&lt;/a&gt;&lt;br&gt;For any questions on how to use dxf2gcode please use the &lt;a href=&apos;https://groups.google.com/forum/?fromgroups#!forum/dxf2gcode-users&apos;&gt;mailing list&lt;/a&gt;&lt;br&gt;To log bugs, or request features please use the &lt;a href=&apos;http://sourceforge.net/p/dxf2gcode/tickets/&apos;&gt;issue tracking system&lt;/a&gt;&lt;br&gt;&lt;h2&gt;License and copyright:&lt;/h2&gt;&lt;body&gt;This program is written in Python and is published under the &lt;a href=&apos;http://www.gnu.org/licenses/&apos;&gt;GNU GPLv3 license.&lt;/a&gt;&lt;br&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="obsolete">&amp;lt;html&amp;gt;&amp;lt;h2&amp;gt;&amp;lt;center&amp;gt;Вы используете&amp;lt;/center&amp;gt;&amp;lt;/h2&amp;gt;&amp;lt;body bgcolor=&amp;lt;center&amp;gt;&amp;lt;img src=&apos;:images/dxf2gcode_logo.png&apos; border=&apos;1&apos; color=&apos;white&apos;&amp;gt;&amp;lt;/center&amp;gt;&amp;lt;/body&amp;gt;&amp;lt;h2&amp;gt;Версия:&amp;lt;/h2&amp;gt;&amp;lt;body&amp;gt;%s: %s&amp;lt;br&amp;gt;Последнее изменение: %s&amp;lt;br&amp;gt;Автор изменений: %s&amp;lt;br&amp;gt;&amp;lt;/body&amp;gt;&amp;lt;h2&amp;gt;Где получить помощь:&amp;lt;/h2&amp;gt;Для информации и обновлений, посетите &amp;lt;a href=&apos;http://sourceforge.net/projects/dxf2gcode/&apos;&amp;gt;http://sourceforge.net/projects/dxf2gcode/&amp;lt;/a&amp;gt;&amp;lt;br&amp;gt;Для вопросов по использованию dxf2gcode используйте &amp;lt;a href=&apos;https://groups.google.com/forum/?fromgroups#!forum/dxf2gcode-users&apos;&amp;gt;список рассылки&amp;lt;/a&amp;gt;&amp;lt;br&amp;gt;Для сообщений об ошибках, или для идей по новым функциям используйте &amp;lt;a href=&apos;http://sourceforge.net/p/dxf2gcode/tickets/&apos;&amp;gt;систему отслеживания заявок&amp;lt;/a&amp;gt;&amp;lt;br&amp;gt;&amp;lt;h2&amp;gt;Лицензия и авторское право:&amp;lt;/h2&amp;gt;&amp;lt;body&amp;gt;Эта программа написана на Питоне и распространяется на условиях &amp;lt;a href=&apos;http://www.gnu.org/licenses/&apos;&amp;gt;общественной лицензии GNU GPLv3.&amp;lt;/a&amp;gt;&amp;lt;br&amp;gt;&amp;lt;/body&amp;gt;&amp;lt;/html&amp;gt;</translation>
+        <translation type="obsolete">&lt;html&gt;&lt;h2&gt;&lt;center&gt;Вы используете&lt;/center&gt;&lt;/h2&gt;&lt;body bgcolor=&lt;center&gt;&lt;img src=':images/dxf2gcode_logo.png' border='1' color='white'&gt;&lt;/center&gt;&lt;/body&gt;&lt;h2&gt;Версия:&lt;/h2&gt;&lt;body&gt;%s: %s&lt;br&gt;Последнее изменение: %s&lt;br&gt;Автор изменений: %s&lt;br&gt;&lt;/body&gt;&lt;h2&gt;Где получить помощь:&lt;/h2&gt;Для информации и обновлений, посетите &lt;a href='http://sourceforge.net/projects/dxf2gcode/'&gt;http://sourceforge.net/projects/dxf2gcode/&lt;/a&gt;&lt;br&gt;Для вопросов по использованию dxf2gcode используйте &lt;a href='https://groups.google.com/forum/?fromgroups#!forum/dxf2gcode-users'&gt;список рассылки&lt;/a&gt;&lt;br&gt;Для сообщений об ошибках, или для идей по новым функциям используйте &lt;a href='http://sourceforge.net/p/dxf2gcode/tickets/'&gt;систему отслеживания заявок&lt;/a&gt;&lt;br&gt;&lt;h2&gt;Лицензия и авторское право:&lt;/h2&gt;&lt;body&gt;Эта программа написана на Питоне и распространяется на условиях &lt;a href='http://www.gnu.org/licenses/'&gt;общественной лицензии GNU GPLv3.&lt;/a&gt;&lt;br&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <source>No differences found. Ergo, workpiece zero is not moved</source>
-        <translation>&amp;quot;Ноль&amp;quot; заготовки остался там, где был</translation>
+        <translation>&quot;Ноль&quot; заготовки остался там, где был</translation>
     </message>
     <message>
         <source>Command:
@@ -890,7 +891,7 @@ returned error code: {1}</source>
     </message>
     <message>
         <source>&amp;Move Workpiece Zero</source>
-        <translation>Установить &amp;quot;&amp;ноль&amp;quot; заготовки</translation>
+        <translation>Установить &quot;&amp;ноль&quot; заготовки</translation>
     </message>
     <message>
         <source>&amp;About</source>
@@ -996,15 +997,15 @@ returned error code: {1}</source>
     </message>
     <message>
         <source>rename(%s,%s) failed: %s</source>
-        <translation>ошибка переименования (%s -&amp;gt; %s): %s</translation>
+        <translation>ошибка переименования (%s -&gt; %s): %s</translation>
     </message>
     <message>
         <source>renamed bad varspace %s to &apos;%s&apos;</source>
-        <translation>переименовано ошибочное пространство переменных &apos;%s&apos; в &apos;%s&apos;</translation>
+        <translation>переименовано ошибочное пространство переменных '%s' в '%s'</translation>
     </message>
     <message>
         <source>created default varspace &apos;%s&apos;</source>
-        <translation>создано пространство переменных по умолчанию &apos;%s&apos;</translation>
+        <translation>создано пространство переменных по умолчанию '%s'</translation>
     </message>
     <message>
         <source>The configuration file version ({0}) doesn&apos;t match the software expected version ({1}).
@@ -1012,7 +1013,7 @@ returned error code: {1}</source>
 You have to delete (or carefully edit) the configuration file &quot;{2}&quot; to solve the problem.</source>
         <translation>Файл конфгиурации версии ({0}) не соответствует ожидаемой версии ({1}).
 
-Для решения проблемы Вам придётся удалить (или внимательно отредактировать) файл &amp;quot;{2}&amp;quot;.</translation>
+Для решения проблемы Вам придётся удалить (или внимательно отредактировать) файл &quot;{2}&quot;.</translation>
     </message>
     <message>
         <source>Tools table</source>
@@ -1208,7 +1209,7 @@ You have to delete (or carefully edit) the configuration file &quot;{2}&quot; to
     </message>
     <message>
         <source>Retract to drag depth (&quot;Third axis slice depth&quot;) if angle exceeds:</source>
-        <translation>Вернуться на глубину реза (&amp;quot;Глубина слоя по третьей оси&amp;quot;) если угол превышает:</translation>
+        <translation>Вернуться на глубину реза (&quot;Глубина слоя по третьей оси&quot;) если угол превышает:</translation>
     </message>
     <message>
         <source>By default enable the TSP optimization for ordering shapes (TSP = Travelling Salesman Problem)</source>
@@ -1428,15 +1429,15 @@ You have to delete (or carefully edit) the configuration file &quot;{2}&quot; to
     </message>
     <message>
         <source>renamed bad varspace %s to &apos;%s&apos;</source>
-        <translation>переименовано ошибочное пространство переменных &apos;%s&apos; в &apos;%s&apos;</translation>
+        <translation>переименовано ошибочное пространство переменных '%s' в '%s'</translation>
     </message>
     <message>
         <source>created default varspace &apos;%s&apos;</source>
-        <translation>создано пространство переменных по умолчанию &apos;%s&apos;</translation>
+        <translation>создано пространство переменных по умолчанию '%s'</translation>
     </message>
     <message>
         <source>read existing varspace &apos;%s&apos;</source>
-        <translation>чтение существующего пространства переменных &apos;%s&apos;</translation>
+        <translation>чтение существующего пространства переменных '%s'</translation>
     </message>
     <message>
         <source>The postprocessor configuration file version ({0}) doesn&apos;t match the software expected version ({1}).
@@ -1444,7 +1445,7 @@ You have to delete (or carefully edit) the configuration file &quot;{2}&quot; to
 You have to delete (or carefully edit) the configuration file &quot;{2}&quot; to solve the problem.</source>
         <translation>Файл конфигурации пост-процессора ({0}) не соответствует ожидаемой версии ({1}).
 
-Для решения проблемы Вам придётся удалить (или внимательно отредактировать) файл &amp;quot;{2}&amp;quot;.</translation>
+Для решения проблемы Вам придётся удалить (или внимательно отредактировать) файл &quot;{2}&quot;.</translation>
     </message>
     <message>
         <source>Software config</source>
@@ -1524,7 +1525,7 @@ You have to delete (or carefully edit) the configuration file &quot;{2}&quot; to
     </message>
     <message>
         <source>Prepend numbers with the &apos;+&apos; sign for positive values</source>
-        <translation>Записывать положительные числа со знаком &apos;+&apos;</translation>
+        <translation>Записывать положительные числа со знаком '+'</translation>
     </message>
     <message>
         <source>Number of digits before the decimal separator:</source>
@@ -1790,19 +1791,19 @@ Skipped Geometries</source>
     <name>Section</name>
     <message>
         <source>The key &quot;%s&quot; is not a string.</source>
-        <translation type="obsolete">Ключ &amp;quot;%s&amp;quot; не является строкой.</translation>
+        <translation type="obsolete">Ключ &quot;%s&quot; не является строкой.</translation>
     </message>
     <message>
         <source>Value is not a string &quot;%s&quot;.</source>
-        <translation type="obsolete">Значение &amp;quot;%s&amp;quot; не является строкой.</translation>
+        <translation type="obsolete">Значение &quot;%s&quot; не является строкой.</translation>
     </message>
     <message>
         <source>: &apos;popitem(): dictionary is empty&apos;</source>
-        <translation type="obsolete">: &apos;popitem(): словарь пуст&apos;</translation>
+        <translation type="obsolete">: 'popitem(): словарь пуст'</translation>
     </message>
     <message>
         <source>Value &quot;%s&quot; is neither True nor False</source>
-        <translation type="obsolete">Значение &amp;quot;%s&amp;quot; не является истиной (true) или ложью (false)</translation>
+        <translation type="obsolete">Значение &quot;%s&quot; не является истиной (true) или ложью (false)</translation>
     </message>
 </context>
 <context>
@@ -1883,11 +1884,11 @@ Skipped Geometries</source>
     <name>Validator</name>
     <message>
         <source>Bad syntax in check &quot;%s&quot;.</source>
-        <translation type="obsolete">Ошибка синтаксиса при проверке &amp;quot;%s&amp;quot;.</translation>
+        <translation type="obsolete">Ошибка синтаксиса при проверке &quot;%s&quot;.</translation>
     </message>
     <message>
         <source>Check &quot;%s&quot; has no default value.</source>
-        <translation type="obsolete">Проверка &amp;quot;%s&amp;quot; не имеет значения по умолчанию.</translation>
+        <translation type="obsolete">Проверка &quot;%s&quot; не имеет значения по умолчанию.</translation>
     </message>
 </context>
 </TS>

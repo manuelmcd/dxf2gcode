@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS><TS version="2.0" language="fr_FR" sourcelanguage="en">
+<!DOCTYPE TS>
+<TS version="2.1" language="fr_FR" sourcelanguage="en">
 <context>
     <name>ArcGeo</name>
     <message>
@@ -202,7 +203,7 @@ Not enough chars (expected {0}, found {1}) for the field &quot;{2}&quot;
     </message>
     <message>
         <source>New Export Order after TSP: %s</source>
-        <translation>Nouvel ordre d&apos;exportation après TSP: %s</translation>
+        <translation>Nouvel ordre d'exportation après TSP: %s</translation>
     </message>
     <message>
         <source>Export the enabled shapes</source>
@@ -278,7 +279,7 @@ Not enough chars (expected {0}, found {1}) for the field &quot;{2}&quot;
     </message>
     <message>
         <source>Loaded %i entity geometries; reduced to %i contours; used layers: %s; number of inserts %i</source>
-        <translation>Chargé %i Entités géométriques; réduit à %i Contours; calques utilisés: %s; nombre d&apos;inserts: %i</translation>
+        <translation>Chargé %i Entités géométriques; réduit à %i Contours; calques utilisés: %s; nombre d'inserts: %i</translation>
     </message>
     <message>
         <source>Closing</source>
@@ -294,7 +295,7 @@ Not enough chars (expected {0}, found {1}) for the field &quot;{2}&quot;
     </message>
     <message>
         <source>&lt;html&gt;&lt;h2&gt;&lt;center&gt;You are using&lt;/center&gt;&lt;/h2&gt;&lt;body bgcolor=&lt;center&gt;&lt;img src=&apos;:images/dxf2gcode_logo.png&apos; border=&apos;1&apos; color=&apos;white&apos;&gt;&lt;/center&gt;&lt;/body&gt;&lt;h2&gt;Version:&lt;/h2&gt;&lt;body&gt;%s: %s&lt;br&gt;Last change: %s&lt;br&gt;Changed by: %s&lt;br&gt;&lt;/body&gt;&lt;h2&gt;Where to get help:&lt;/h2&gt;For more information and updates, please visit &lt;a href=&apos;http://sourceforge.net/projects/dxf2gcode/&apos;&gt;http://sourceforge.net/projects/dxf2gcode/&lt;/a&gt;&lt;br&gt;For any questions on how to use dxf2gcode please use the &lt;a href=&apos;https://groups.google.com/forum/?fromgroups#!forum/dxf2gcode-users&apos;&gt;mailing list&lt;/a&gt;&lt;br&gt;To log bugs, or request features please use the &lt;a href=&apos;http://sourceforge.net/projects/dxf2gcode/tickets/&apos;&gt;issue tracking system&lt;/a&gt;&lt;br&gt;&lt;h2&gt;License and copyright:&lt;/h2&gt;&lt;body&gt;This program is written in Python and is published under the &lt;a href=&apos;http://www.gnu.org/licenses/&apos;&gt;GNU GPLv3 license.&lt;/a&gt;&lt;br&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="obsolete">&amp;lt;html&amp;gt;&amp;lt;h2&amp;gt;&amp;lt;center&amp;gt;Vous utilisez&amp;lt;/center&amp;gt;&amp;lt;/h2&amp;gt;&amp;lt;body bgcolor=&amp;lt;center&amp;gt;&amp;lt;img src=&apos;:images/dxf2gcode_logo.png; border=&apos;1&apos; color=&apos;white&apos;&amp;gt;&amp;lt;/center&amp;gt;&amp;lt;/body&amp;gt;&amp;lt;h2&amp;gt;Version:&amp;lt;/h2&amp;gt;&amp;lt;body&amp;gt;%s: %s&amp;lt;br&amp;gt;Dernière modification: %s&amp;lt;br&amp;gt;Modifié par: %s&amp;lt;br&amp;gt;&amp;lt;/body&amp;gt;&amp;lt;h2&amp;gt;Ou trouver de l&apos;aide:&amp;lt;/h2&amp;gt;Pour plus d&apos;informationds et mises à jour, aller sur &amp;lt;a href=&apos;http://sourceforge.net/projects/dxf2gcode/&apos;&amp;gt;http://sourceforge.net/projects/dxf2gcode/&amp;lt;/a&amp;gt;&amp;lt;br&amp;gt;Pour toute questions sur l&apos;utilisation de dxf2gcode aller voir &amp;lt;a href=&apos;https://groups.google.com/forum/?fromgroups#!forum/dxf2gcode-users&apos;&amp;gt;mailing list&amp;lt;/a&amp;gt;&amp;lt;br&amp;gt;Pour rapporter un bug ou toute autre demande se rendre sur &amp;lt;a href=&apos;http://sourceforge.net/projects/dxf2gcode/tickets/&apos;&amp;gt;issue tracking system&amp;lt;/a&amp;gt;&amp;lt;br&amp;gt;&amp;lt;h2&amp;gt;Licence et copyright:&amp;lt;/h2&amp;gt;&amp;lt;body&amp;gt;Ce programme est écrit en Python et est publié sous &amp;lt;a href=&apos;http://www.gnu.org/licenses/&apos;&amp;gt;GNU GPLv3 license.&amp;lt;/a&amp;gt;&amp;lt;br&amp;gt;&amp;lt;/body&amp;gt;&amp;lt;/html&amp;gt;</translation>
+        <translation type="obsolete">&lt;html&gt;&lt;h2&gt;&lt;center&gt;Vous utilisez&lt;/center&gt;&lt;/h2&gt;&lt;body bgcolor=&lt;center&gt;&lt;img src=':images/dxf2gcode_logo.png; border='1' color='white'&gt;&lt;/center&gt;&lt;/body&gt;&lt;h2&gt;Version:&lt;/h2&gt;&lt;body&gt;%s: %s&lt;br&gt;Dernière modification: %s&lt;br&gt;Modifié par: %s&lt;br&gt;&lt;/body&gt;&lt;h2&gt;Ou trouver de l'aide:&lt;/h2&gt;Pour plus d'informationds et mises à jour, aller sur &lt;a href='http://sourceforge.net/projects/dxf2gcode/'&gt;http://sourceforge.net/projects/dxf2gcode/&lt;/a&gt;&lt;br&gt;Pour toute questions sur l'utilisation de dxf2gcode aller voir &lt;a href='https://groups.google.com/forum/?fromgroups#!forum/dxf2gcode-users'&gt;mailing list&lt;/a&gt;&lt;br&gt;Pour rapporter un bug ou toute autre demande se rendre sur &lt;a href='http://sourceforge.net/projects/dxf2gcode/tickets/'&gt;issue tracking system&lt;/a&gt;&lt;br&gt;&lt;h2&gt;Licence et copyright:&lt;/h2&gt;&lt;body&gt;Ce programme est écrit en Python et est publié sous &lt;a href='http://www.gnu.org/licenses/'&gt;GNU GPLv3 license.&lt;/a&gt;&lt;br&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <source>No Z-Axis for lathe</source>
@@ -342,7 +343,7 @@ Not enough chars (expected {0}, found {1}) for the field &quot;{2}&quot;
     </message>
     <message>
         <source>Milling will start at Z = &quot;Workpiece top Z&quot; - &quot;Z infeed depth&quot;</source>
-        <translation>Usinage débutera à Z = &amp;quot;Haut. Z brut&amp;quot; - &amp;quot;Prof. passe Z&amp;quot;</translation>
+        <translation>Usinage débutera à Z = &quot;Haut. Z brut&quot; - &quot;Prof. passe Z&quot;</translation>
     </message>
     <message>
         <source>File</source>
@@ -478,7 +479,7 @@ Not enough chars (expected {0}, found {1}) for the field &quot;{2}&quot;
     </message>
     <message>
         <source>Feed rate XY</source>
-        <translation>Vitesse d&apos;avance XY</translation>
+        <translation>Vitesse d'avance XY</translation>
     </message>
     <message>
         <source>Z Final mill depth</source>
@@ -798,11 +799,11 @@ returned error code: {1}</source>
     </message>
     <message>
         <source>renamed bad varspace %s to &apos;%s&apos;</source>
-        <translation>renommage mauvais varspace %s à &apos;%s&apos;</translation>
+        <translation>renommage mauvais varspace %s à '%s'</translation>
     </message>
     <message>
         <source>created default varspace &apos;%s&apos;</source>
-        <translation>varspace &apos;%s&apos; par défaut créé</translation>
+        <translation>varspace '%s' par défaut créé</translation>
     </message>
     <message>
         <source>The configuration file version ({0}) doesn&apos;t match the software expected version ({1}).
@@ -1213,15 +1214,15 @@ You have to delete (or carefully edit) the configuration file &quot;{2}&quot; to
     </message>
     <message>
         <source>renamed bad varspace %s to &apos;%s&apos;</source>
-        <translation>renommage mauvais varspace %s à &apos;%s&apos;</translation>
+        <translation>renommage mauvais varspace %s à '%s'</translation>
     </message>
     <message>
         <source>created default varspace &apos;%s&apos;</source>
-        <translation>varspace &apos;%s&apos; créé par défaut</translation>
+        <translation>varspace '%s' créé par défaut</translation>
     </message>
     <message>
         <source>read existing varspace &apos;%s&apos;</source>
-        <translation>lecture varspace &apos;%s&apos; existant</translation>
+        <translation>lecture varspace '%s' existant</translation>
     </message>
     <message>
         <source>The postprocessor configuration file version ({0}) doesn&apos;t match the software expected version ({1}).
@@ -1542,7 +1543,7 @@ You have to delete (or carefully edit) the configuration file &quot;{2}&quot; to
         <source>Reading stopped at line %i.
  &quot;%s&quot; is not a valid code (number) - please, check/correct dxf file</source>
         <translation>Echec lecture lignes arrêté ligne %i.
- Vérifier/corriger ligne &amp;quot;%s&amp;quot; dans le fichier dxf</translation>
+ Vérifier/corriger ligne &quot;%s&quot; dans le fichier dxf</translation>
     </message>
     <message>
         <source>Short Elements</source>
@@ -1572,7 +1573,7 @@ La longueur doit être supérieure à la tolérance</translation>
     </message>
     <message>
         <source>Had to reverse the shape to be CW</source>
-        <translation>Obligation d&apos;inverser la forme pour etre CW</translation>
+        <translation>Obligation d'inverser la forme pour etre CW</translation>
     </message>
     <message>
         <source>Clicked Point: %s</source>
@@ -1592,7 +1593,7 @@ La longueur doit être supérieure à la tolérance</translation>
     </message>
     <message>
         <source>WARNING: initial mill depth (%i) is lower than end mill depth (%i). Using end mill depth as final depth.</source>
-        <translation type="obsolete">ATTENTION: profondeur d&apos;usinage initiale (%i) inférieure à la profondeur d&apos;usinage totale (%i). Utilisation de cette dernière.</translation>
+        <translation type="obsolete">ATTENTION: profondeur d'usinage initiale (%i) inférieure à la profondeur d'usinage totale (%i). Utilisation de cette dernière.</translation>
     </message>
     <message>
         <source>Shoelace method cannot (directly) be applied to this shape</source>

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS><TS version="2.0" language="de_DE" sourcelanguage="en">
+<!DOCTYPE TS>
+<TS version="2.1" language="de_DE" sourcelanguage="en">
 <context>
     <name>@default</name>
     <message>
@@ -20,11 +21,11 @@
     </message>
     <message>
         <source>created default varspace &apos;%s&apos;</source>
-        <translation type="obsolete">Es wurden die Standard Variablen erstellt: &apos;%s&apos;</translation>
+        <translation type="obsolete">Es wurden die Standard Variablen erstellt: '%s'</translation>
     </message>
     <message>
         <source>read existing varspace &apos;%s&apos;</source>
-        <translation type="obsolete">Es wird die vorhanden Konfigurationsdatei gelesen &apos;%s&apos;</translation>
+        <translation type="obsolete">Es wird die vorhanden Konfigurationsdatei gelesen '%s'</translation>
     </message>
 </context>
 <context>
@@ -41,7 +42,7 @@
 Not enough chars (expected {0}, found {1}) for the field &quot;{2}&quot;
 </source>
         <translation>
-Nicht genügend Zeichen (erwartet {0}, gefunden {1}) für das Feld &amp;quot;{2}&amp;quot;
+Nicht genügend Zeichen (erwartet {0}, gefunden {1}) für das Feld &quot;{2}&quot;
 </translation>
     </message>
 </context>
@@ -52,7 +53,7 @@ Nicht genügend Zeichen (erwartet {0}, gefunden {1}) für das Feld &amp;quot;{2}
 The cell at line {0}, column 0 must not be empty for the table &quot;{1}&quot;
 </source>
         <translation>
-Die Zelle in Zeile {0}, Spalte 0 darf für die Tabelle &amp;quot;{1}&amp;quot; nicht leer sein
+Die Zelle in Zeile {0}, Spalte 0 darf für die Tabelle &quot;{1}&quot; nicht leer sein
 </translation>
     </message>
     <message>
@@ -60,7 +61,7 @@ Die Zelle in Zeile {0}, Spalte 0 darf für die Tabelle &amp;quot;{1}&amp;quot; n
 Found {0} duplicate elements for the table &quot;{1}&quot;
 </source>
         <translation>
-{0} doppelte Elemente für die Tabelle &amp;quot;{1}&amp;quot; gefunden
+{0} doppelte Elemente für die Tabelle &quot;{1}&quot; gefunden
 </translation>
     </message>
 </context>
@@ -71,7 +72,7 @@ Found {0} duplicate elements for the table &quot;{1}&quot;
 The cell at line {0}, column 0 must not be empty for the table &quot;{1}&quot;
 </source>
         <translation>
-Die Zelle in Zeile {0}, Spalte 0 darf für die Tabelle &amp;quot;{1}&amp;quot; nicht leer sein
+Die Zelle in Zeile {0}, Spalte 0 darf für die Tabelle &quot;{1}&quot; nicht leer sein
 </translation>
     </message>
     <message>
@@ -79,7 +80,7 @@ Die Zelle in Zeile {0}, Spalte 0 darf für die Tabelle &amp;quot;{1}&amp;quot; n
 Found {0} duplicate elements for the table &quot;{1}&quot;
 </source>
         <translation>
-{0} doppelte Elemente für die Tabelle &amp;quot;{1}&amp;quot; gefunden
+{0} doppelte Elemente für die Tabelle &quot;{1}&quot; gefunden
 </translation>
     </message>
     <message>
@@ -87,7 +88,7 @@ Found {0} duplicate elements for the table &quot;{1}&quot;
 The table &quot;{0}&quot; must always contains tool number &apos;1&apos;
 </source>
         <translation>
-Die Tabelle &amp;quot;{0}&amp;quot; muss immer die Werkzeugnummer &apos;1&apos; enthalten
+Die Tabelle &quot;{0}&quot; muss immer die Werkzeugnummer '1' enthalten
 </translation>
     </message>
 </context>
@@ -98,7 +99,7 @@ Die Tabelle &amp;quot;{0}&amp;quot; muss immer die Werkzeugnummer &apos;1&apos; 
 Not enough chars (expected {0}, found {1}) for the field &quot;{2}&quot;
 </source>
         <translation>
-Nicht genügend Zeichen (erwartet {0}, gefunden {1}) für das Feld &amp;quot;{2}&amp;quot;
+Nicht genügend Zeichen (erwartet {0}, gefunden {1}) für das Feld &quot;{2}&quot;
 </translation>
     </message>
 </context>
@@ -136,7 +137,7 @@ Nicht genügend Zeichen (erwartet {0}, gefunden {1}) für das Feld &amp;quot;{2}
     </message>
     <message>
         <source>An error occured while duplicating the file &quot;{0}&quot;. Check that it doesn&apos;t already exists for example</source>
-        <translation>Beim Duplizieren der Datei &amp;quot;{0}&amp;quot; ist ein Fehler aufgetreten. Überprüfen Sie, ob die Datei nicht bereits vorhanden ist</translation>
+        <translation>Beim Duplizieren der Datei &quot;{0}&quot; ist ein Fehler aufgetreten. Überprüfen Sie, ob die Datei nicht bereits vorhanden ist</translation>
     </message>
     <message>
         <source>Add a configuration file</source>
@@ -148,7 +149,7 @@ Nicht genügend Zeichen (erwartet {0}, gefunden {1}) für das Feld &amp;quot;{2}
     </message>
     <message>
         <source>An error occured while creating the file &quot;{0}&quot;. Check that it doesn&apos;t already exists for example</source>
-        <translation>Beim Erstellen der Datei &amp;quot;{0}&amp;quot; ist ein Fehler aufgetreten. Überprüfen Sie, ob diese nicht bereits vorhanden ist</translation>
+        <translation>Beim Erstellen der Datei &quot;{0}&quot; ist ein Fehler aufgetreten. Überprüfen Sie, ob diese nicht bereits vorhanden ist</translation>
     </message>
     <message>
         <source>Delete configuration file?</source>
@@ -156,11 +157,11 @@ Nicht genügend Zeichen (erwartet {0}, gefunden {1}) für das Feld &amp;quot;{2}
     </message>
     <message>
         <source>Are you sure you want to permanently remove the file &quot;{0}&quot;</source>
-        <translation>Möchten Sie die Datei &amp;quot;{0}“ wirklich dauerhaft entfernen</translation>
+        <translation>Möchten Sie die Datei &quot;{0}“ wirklich dauerhaft entfernen</translation>
     </message>
     <message>
         <source>An error occured while removing the file &quot;{0}&quot;. Remove it manually</source>
-        <translation>Beim Entfernen der Datei &amp;quot;{0}&amp;quot; ist ein Fehler aufgetreten. Entfernen Sie diese manuell</translation>
+        <translation>Beim Entfernen der Datei &quot;{0}&quot; ist ein Fehler aufgetreten. Entfernen Sie diese manuell</translation>
     </message>
 </context>
 <context>
@@ -335,7 +336,7 @@ Nicht genügend Zeichen (erwartet {0}, gefunden {1}) für das Feld &amp;quot;{2}
     </message>
     <message>
         <source>&lt;html&gt;&lt;h2&gt;&lt;center&gt;You are using&lt;/center&gt;&lt;/h2&gt;&lt;body bgcolor=&lt;center&gt;&lt;img src=&apos;:images/dxf2gcode_logo.png&apos; border=&apos;1&apos; color=&apos;white&apos;&gt;&lt;/center&gt;&lt;/body&gt;&lt;h2&gt;Version:&lt;/h2&gt;&lt;body&gt;%s: %s&lt;br&gt;Last change: %s&lt;br&gt;Changed by: %s&lt;br&gt;&lt;/body&gt;&lt;h2&gt;Where to get help:&lt;/h2&gt;For more information and updates, please visit &lt;a href=&apos;http://sourceforge.net/projects/dxf2gcode/&apos;&gt;http://sourceforge.net/projects/dxf2gcode/&lt;/a&gt;&lt;br&gt;For any questions on how to use dxf2gcode please use the &lt;a href=&apos;https://groups.google.com/forum/?fromgroups#!forum/dxf2gcode-users&apos;&gt;mailing list&lt;/a&gt;&lt;br&gt;To log bugs, or request features please use the &lt;a href=&apos;http://sourceforge.net/projects/dxf2gcode/tickets/&apos;&gt;issue tracking system&lt;/a&gt;&lt;br&gt;&lt;h2&gt;License and copyright:&lt;/h2&gt;&lt;body&gt;This program is written in Python and is published under the &lt;a href=&apos;http://www.gnu.org/licenses/&apos;&gt;GNU GPLv3 license.&lt;/a&gt;&lt;br&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="obsolete">&amp;lt;html&amp;gt;&amp;lt;h2&amp;gt;&amp;lt;center&amp;gt;Sie benutzen&amp;lt;/center&amp;gt;&amp;lt;/h2&amp;gt;&amp;lt;body bgcolor=&amp;lt;center&amp;gt;&amp;lt;img src=&apos;:images/dxf2gcode_logo.png&apos; border=&apos;1&apos; color=&apos;white&apos;&amp;gt;&amp;lt;/center&amp;gt;&amp;lt;/body&amp;gt;&amp;lt;h2&amp;gt;Version:&amp;lt;/h2&amp;gt;&amp;lt;body&amp;gt;%s: %s&amp;lt;br&amp;gt;Zuletzt geändert: %s&amp;lt;br&amp;gt;Geändert von: %s&amp;lt;br&amp;gt;&amp;lt;/body&amp;gt;&amp;lt;h2&amp;gt;Wo man Hilfe findet:&amp;lt;/h2&amp;gt;Für mehr Information zum Programm und Möglichen Updates besuchen sie bitte &amp;lt;a href=&apos;http://sourceforge.net/projects/dxf2gcode/&apos;&amp;gt;http://sourceforge.net/projects/dxf2gcode/&amp;lt;/a&amp;gt;&amp;lt;br&amp;gt;Für alle Fragen zur Bedienung von DXF2GCODE benutzen Sie bitte die &amp;lt;a href=&apos;https://groups.google.com/forum/?fromgroups#!forum/dxf2gcode-users&apos;&amp;gt;Mailing List&amp;lt;/a&amp;gt;&amp;lt;br&amp;gt;Für gefundene Bugs oder Feature Anfragen benutzen Sie bitte das &amp;lt;a href=&apos;http://sourceforge.net/projects/dxf2gcode/tickets/&apos;&amp;gt;Issue Tracking System&amp;lt;/a&amp;gt;&amp;lt;br&amp;gt;&amp;lt;h2&amp;gt;Lizens und Copyright:&amp;lt;/h2&amp;gt;&amp;lt;body&amp;gt;Das Programm wurde mit der Freeware Programmiersprache Python geschrieben und ist unter der &amp;lt;a href=&apos;http://www.gnu.org/licenses/&apos;&amp;gt;GNU GPLv3 Lizenz &amp;lt;/a&amp;gt;veröffentlicht&amp;lt;br&amp;gt;&amp;lt;/body&amp;gt;&amp;lt;/html&amp;gt;</translation>
+        <translation type="obsolete">&lt;html&gt;&lt;h2&gt;&lt;center&gt;Sie benutzen&lt;/center&gt;&lt;/h2&gt;&lt;body bgcolor=&lt;center&gt;&lt;img src=':images/dxf2gcode_logo.png' border='1' color='white'&gt;&lt;/center&gt;&lt;/body&gt;&lt;h2&gt;Version:&lt;/h2&gt;&lt;body&gt;%s: %s&lt;br&gt;Zuletzt geändert: %s&lt;br&gt;Geändert von: %s&lt;br&gt;&lt;/body&gt;&lt;h2&gt;Wo man Hilfe findet:&lt;/h2&gt;Für mehr Information zum Programm und Möglichen Updates besuchen sie bitte &lt;a href='http://sourceforge.net/projects/dxf2gcode/'&gt;http://sourceforge.net/projects/dxf2gcode/&lt;/a&gt;&lt;br&gt;Für alle Fragen zur Bedienung von DXF2GCODE benutzen Sie bitte die &lt;a href='https://groups.google.com/forum/?fromgroups#!forum/dxf2gcode-users'&gt;Mailing List&lt;/a&gt;&lt;br&gt;Für gefundene Bugs oder Feature Anfragen benutzen Sie bitte das &lt;a href='http://sourceforge.net/projects/dxf2gcode/tickets/'&gt;Issue Tracking System&lt;/a&gt;&lt;br&gt;&lt;h2&gt;Lizens und Copyright:&lt;/h2&gt;&lt;body&gt;Das Programm wurde mit der Freeware Programmiersprache Python geschrieben und ist unter der &lt;a href='http://www.gnu.org/licenses/'&gt;GNU GPLv3 Lizenz &lt;/a&gt;veröffentlicht&lt;br&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <source>No Z-Axis for lathe</source>
@@ -379,7 +380,7 @@ Nicht genügend Zeichen (erwartet {0}, gefunden {1}) für das Feld &amp;quot;{2}
     </message>
     <message>
         <source>Milling will start at Z = &quot;Workpiece top Z&quot; - &quot;Z infeed depth&quot;</source>
-        <translation>Fräsen beginnt bei Z = &amp;quot;Werkstück Top Z&amp;quot; -&amp;quot;Z Zustellstiefe&amp;quot;</translation>
+        <translation>Fräsen beginnt bei Z = &quot;Werkstück Top Z&quot; -&quot;Z Zustellstiefe&quot;</translation>
     </message>
     <message>
         <source>File</source>
@@ -635,7 +636,7 @@ Nicht genügend Zeichen (erwartet {0}, gefunden {1}) für das Feld &amp;quot;{2}
     </message>
     <message>
         <source>&lt;html&gt;&lt;h2&gt;&lt;center&gt;You are using&lt;/center&gt;&lt;/h2&gt;&lt;body bgcolor=&lt;center&gt;&lt;img src=&apos;:images/dxf2gcode_logo.png&apos; border=&apos;1&apos; color=&apos;white&apos;&gt;&lt;/center&gt;&lt;/body&gt;&lt;h2&gt;Version:&lt;/h2&gt;&lt;body&gt;%s: %s&lt;br&gt;Last change: %s&lt;br&gt;Changed by: %s&lt;br&gt;&lt;/body&gt;&lt;h2&gt;Where to get help:&lt;/h2&gt;For more information and updates, please visit &lt;a href=&apos;http://sourceforge.net/projects/dxf2gcode/&apos;&gt;http://sourceforge.net/projects/dxf2gcode/&lt;/a&gt;&lt;br&gt;For any questions on how to use dxf2gcode please use the &lt;a href=&apos;https://groups.google.com/forum/?fromgroups#!forum/dxf2gcode-users&apos;&gt;mailing list&lt;/a&gt;&lt;br&gt;To log bugs, or request features please use the &lt;a href=&apos;http://sourceforge.net/p/dxf2gcode/tickets/&apos;&gt;issue tracking system&lt;/a&gt;&lt;br&gt;&lt;h2&gt;License and copyright:&lt;/h2&gt;&lt;body&gt;This program is written in Python and is published under the &lt;a href=&apos;http://www.gnu.org/licenses/&apos;&gt;GNU GPLv3 license.&lt;/a&gt;&lt;br&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="obsolete">&amp;lt;html&amp;gt;&amp;lt;h2&amp;gt;&amp;lt;center&amp;gt;Du benutzt&amp;lt;/center&amp;gt;&amp;lt;/h2&amp;gt;&amp;lt;body bgcolor=&amp;lt;center&amp;gt;&amp;lt;img src=&apos;:images/dxf2gcode_logo.png&apos; border=&apos;1&apos; color=&apos;white&apos;&amp;gt;&amp;lt;/center&amp;gt;&amp;lt;/body&amp;gt;&amp;lt;h2&amp;gt;Version:&amp;lt;/h2&amp;gt;&amp;lt;body&amp;gt;%s: %s&amp;lt;br&amp;gt;Letzte Bearbeitung: %s&amp;lt;br&amp;gt;Bearbeitet von: %s&amp;lt;br&amp;gt;Deutsche Übersetzung von Daniel Luginbühl&amp;lt;br&amp;gt;&amp;lt;/body&amp;gt;&amp;lt;h2&amp;gt;Wo bekommen Sie Hilfe:&amp;lt;/h2&amp;gt;Weitere Informationen und Aktualisierungen finden Sie unter &amp;lt;a href=&apos;http://sourceforge.net/projects/dxf2gcode/&apos;&amp;gt;http://sourceforge.net/projects/dxf2gcode/&amp;lt;/a&amp;gt;&amp;lt;br&amp;gt;Bei Fragen zur Verwendung von dxf2gcode besuchen Sie bitte dieses &amp;lt;a href=&apos;https://www.ltspiceusers.ch/forums/deutsche-sektion.66&apos;&amp;gt;Forum&amp;lt;/a&amp;gt;&amp;lt;br&amp;gt;Um Fehler zu protokollieren oder Funktionen anzufordern, verwenden Sie bitte das &amp;lt;a href=&apos;http://sourceforge.net/p/dxf2gcode/tickets/&apos;&amp;gt;Issue-Tracking-System&amp;lt;/a&amp;gt;&amp;lt;br&amp;gt;&amp;lt;h2&amp;gt;Lizenz und Copyright:&amp;lt;/h2&amp;gt;&amp;lt;body&amp;gt;Dieses Programm ist in Python geschrieben und veröffentlicht unter &amp;lt;a href=&apos;http://www.gnu.org/licenses/&apos;&amp;gt;GNU GPLv3 license.&amp;lt;/a&amp;gt;&amp;lt;br&amp;gt;&amp;lt;/body&amp;gt;&amp;lt;/html&amp;gt;</translation>
+        <translation type="obsolete">&lt;html&gt;&lt;h2&gt;&lt;center&gt;Du benutzt&lt;/center&gt;&lt;/h2&gt;&lt;body bgcolor=&lt;center&gt;&lt;img src=':images/dxf2gcode_logo.png' border='1' color='white'&gt;&lt;/center&gt;&lt;/body&gt;&lt;h2&gt;Version:&lt;/h2&gt;&lt;body&gt;%s: %s&lt;br&gt;Letzte Bearbeitung: %s&lt;br&gt;Bearbeitet von: %s&lt;br&gt;Deutsche Übersetzung von Daniel Luginbühl&lt;br&gt;&lt;/body&gt;&lt;h2&gt;Wo bekommen Sie Hilfe:&lt;/h2&gt;Weitere Informationen und Aktualisierungen finden Sie unter &lt;a href='http://sourceforge.net/projects/dxf2gcode/'&gt;http://sourceforge.net/projects/dxf2gcode/&lt;/a&gt;&lt;br&gt;Bei Fragen zur Verwendung von dxf2gcode besuchen Sie bitte dieses &lt;a href='https://www.ltspiceusers.ch/forums/deutsche-sektion.66'&gt;Forum&lt;/a&gt;&lt;br&gt;Um Fehler zu protokollieren oder Funktionen anzufordern, verwenden Sie bitte das &lt;a href='http://sourceforge.net/p/dxf2gcode/tickets/'&gt;Issue-Tracking-System&lt;/a&gt;&lt;br&gt;&lt;h2&gt;Lizenz und Copyright:&lt;/h2&gt;&lt;body&gt;Dieses Programm ist in Python geschrieben und veröffentlicht unter &lt;a href='http://www.gnu.org/licenses/'&gt;GNU GPLv3 license.&lt;/a&gt;&lt;br&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <source>No differences found. Ergo, workpiece zero is not moved</source>
@@ -807,11 +808,11 @@ zurückgegebener Fehlercode: {1}</translation>
     </message>
     <message>
         <source>Filter: %s selected</source>
-        <translation>Filter: %s wurde ausgewählt</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>&lt;html&gt;&lt;h2&gt;&lt;center&gt;You are using&lt;/center&gt;&lt;/h2&gt;&lt;body bgcolor=&lt;center&gt;&lt;img src=&apos;:images/dxf2gcode_logo.png&apos; border=&apos;1&apos; color=&apos;white&apos;&gt;&lt;/center&gt;&lt;/body&gt;&lt;h2&gt;Version:&lt;/h2&gt;&lt;body&gt;%s: %s&lt;br&gt;Last change: %s&lt;br&gt;Changed by: %s&lt;br&gt;&lt;/body&gt;&lt;h2&gt;Where to get help:&lt;/h2&gt;For more information and updates, please visit &lt;a href=&apos;http://sourceforge.net/projects/dxf2gcode/&apos;&gt;http://sourceforge.net/projects/dxf2gcode/&lt;/a&gt;&lt;br&gt;For any questions on how to use dxf2gcode please use the &lt;a href=&apos;https://www.ltspiceusers.ch/forums/english-section.67/&apos;&gt;https://www.ltspiceusers.ch/forums/english-section.67/&lt;/a&gt;&lt;br&gt;To log bugs, or request features please use the &lt;a href=&apos;http://sourceforge.net/p/dxf2gcode/tickets/&apos;&gt;issue tracking system&lt;/a&gt;&lt;br&gt;&lt;h2&gt;License and copyright:&lt;/h2&gt;&lt;body&gt;This program is written in Python and is published under the &lt;a href=&apos;http://www.gnu.org/licenses/&apos;&gt;GNU GPLv3 license.&lt;/a&gt;&lt;br&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished">&lt;html&gt;&lt;h2&gt;&lt;center&gt;Du benutzt&lt;/center&gt;&lt;/h2&gt;&lt;body bgcolor=&lt;center&gt;&lt;img src=&apos;:images/dxf2gcode_logo.png&apos; border=&apos;1&apos; color=&apos;white&apos;&gt;&lt;/center&gt;&lt;/body&gt;&lt;h2&gt;Version:&lt;/h2&gt;&lt;body&gt;%s: %s&lt;br&gt;Letzte Bearbeitung: %s&lt;br&gt;Bearbeitet von: %s&lt;br&gt;Deutsche Übersetzung von Daniel Luginbühl&lt;br&gt;&lt;/body&gt;&lt;h2&gt;Wo bekommen Sie Hilfe:&lt;/h2&gt;Weitere Informationen und Aktualisierungen finden Sie unter &lt;a href=&apos;http://sourceforge.net/projects/dxf2gcode/&apos;&gt;http://sourceforge.net/projects/dxf2gcode/&lt;/a&gt;&lt;br&gt;Bei Fragen zur Verwendung von dxf2gcode besuchen Sie bitte dieses &lt;a href=&apos;https://www.ltspiceusers.ch/forums/deutsche-sektion.66&apos;&gt;Forum&lt;/a&gt;&lt;br&gt;Um Fehler zu protokollieren oder Funktionen anzufordern, verwenden Sie bitte das &lt;a href=&apos;http://sourceforge.net/p/dxf2gcode/tickets/&apos;&gt;Issue-Tracking-System&lt;/a&gt;&lt;br&gt;&lt;h2&gt;Lizenz und Copyright:&lt;/h2&gt;&lt;body&gt;Dieses Programm ist in Python geschrieben und veröffentlicht unter &lt;a href=&apos;http://www.gnu.org/licenses/&apos;&gt;GNU GPLv3 license.&lt;/a&gt;&lt;br&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -853,7 +854,7 @@ zurückgegebener Fehlercode: {1}</translation>
     </message>
     <message>
         <source>created default varspace &apos;%s&apos;</source>
-        <translation>Es wurden die Standard Variablen erstellt: &apos;%s&apos;</translation>
+        <translation>Es wurden die Standard Variablen erstellt: '%s'</translation>
     </message>
     <message>
         <source>The configuration file version ({0}) doesn&apos;t match the software expected version ({1}).
@@ -861,7 +862,7 @@ zurückgegebener Fehlercode: {1}</translation>
 You have to delete (or carefully edit) the configuration file &quot;{2}&quot; to solve the problem.</source>
         <translation>Die Version der Konfigurationsdatei ({0}) stimmt nicht mit der erwarteten Softwareversion ({1}) überein.
 
-Sie müssen die Konfigurationsdatei &amp;quot;{2}&amp;quot; löschen (oder sorgfältig bearbeiten), um das Problem zu lösen.</translation>
+Sie müssen die Konfigurationsdatei &quot;{2}&quot; löschen (oder sorgfältig bearbeiten), um das Problem zu lösen.</translation>
     </message>
     <message>
         <source>Tools table</source>
@@ -1053,7 +1054,7 @@ Sie müssen die Konfigurationsdatei &amp;quot;{2}&amp;quot; löschen (oder sorgf
     </message>
     <message>
         <source>Retract to drag depth (&quot;Third axis slice depth&quot;) if angle exceeds:</source>
-        <translation>Zurückziehen auf Ziehtiefe (&amp;quot;Schnitttiefe der dritten Achse&amp;quot;), wenn der Winkel Folgendes überschreitet:</translation>
+        <translation>Zurückziehen auf Ziehtiefe (&quot;Schnitttiefe der dritten Achse&quot;), wenn der Winkel Folgendes überschreitet:</translation>
     </message>
     <message>
         <source>By default enable the TSP optimization for ordering shapes (TSP = Travelling Salesman Problem)</source>
@@ -1145,11 +1146,11 @@ Sie müssen die Konfigurationsdatei &amp;quot;{2}&amp;quot; löschen (oder sorgf
     </message>
     <message>
         <source>By default save Project files to:</source>
-        <translation>Als standart Projekt Datein in speichern:</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Update paths with last used path: </source>
-        <translation>Pfad mit letztem genutztem Pfad aktualisieren:</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -1216,11 +1217,11 @@ Sie müssen die Konfigurationsdatei &amp;quot;{2}&amp;quot; löschen (oder sorgf
     </message>
     <message>
         <source>Set to True for Pocket Mill for shape: %i</source>
-        <translation>Auf „True“ setzen für&apos;s Taschenfräsen von Shape: %i</translation>
+        <translation>Auf „True“ setzen für's Taschenfräsen von Shape: %i</translation>
     </message>
     <message>
         <source>Set to False for Pocket Mill for shape: %i</source>
-        <translation>Auf „False“ setzen für&apos;s Taschenfräsen von Shape: %i</translation>
+        <translation>Auf „False“ setzen für's Taschenfräsen von Shape: %i</translation>
     </message>
     <message>
         <source>Set to True for G73 Drill, for shape: %i</source>
@@ -1270,11 +1271,11 @@ Sie müssen die Konfigurationsdatei &amp;quot;{2}&amp;quot; löschen (oder sorgf
     </message>
     <message>
         <source>created default varspace &apos;%s&apos;</source>
-        <translation>Es wurden die Standard Variablen erstellt: &apos;%s&apos;</translation>
+        <translation>Es wurden die Standard Variablen erstellt: '%s'</translation>
     </message>
     <message>
         <source>read existing varspace &apos;%s&apos;</source>
-        <translation>Es wird die vorhanden Konfigurationsdatei gelesen &apos;%s&apos;</translation>
+        <translation>Es wird die vorhanden Konfigurationsdatei gelesen '%s'</translation>
     </message>
     <message>
         <source>The postprocessor configuration file version ({0}) doesn&apos;t match the software expected version ({1}).
@@ -1282,7 +1283,7 @@ Sie müssen die Konfigurationsdatei &amp;quot;{2}&amp;quot; löschen (oder sorgf
 You have to delete (or carefully edit) the configuration file &quot;{2}&quot; to solve the problem.</source>
         <translation>Die Version der Postprozessor-Konfigurationsdatei ({0}) stimmt nicht mit der erwarteten Softwareversion ({1}) überein.
 
-Sie müssen die Konfigurationsdatei &amp;quot;{2}&amp;quot; löschen (oder sorgfältig bearbeiten), um das Problem zu lösen.</translation>
+Sie müssen die Konfigurationsdatei &quot;{2}&quot; löschen (oder sorgfältig bearbeiten), um das Problem zu lösen.</translation>
     </message>
     <message>
         <source>Software config</source>
@@ -1322,7 +1323,7 @@ Sie müssen die Konfigurationsdatei &amp;quot;{2}&amp;quot; löschen (oder sorgf
     </message>
     <message>
         <source>Export only counter clockwise arcs</source>
-        <translation>Nur &amp;quot;gegen den Uhrzeigersinn Bögen&amp;quot; exportieren</translation>
+        <translation>Nur &quot;gegen den Uhrzeigersinn Bögen&quot; exportieren</translation>
     </message>
     <message>
         <source>Maximum arc radius:</source>
@@ -1370,7 +1371,7 @@ Sie müssen die Konfigurationsdatei &amp;quot;{2}&amp;quot; löschen (oder sorgf
     </message>
     <message>
         <source>Padding with &apos;0&apos; digit before the decimal separator</source>
-        <translation>Auffüllen mit Ziffer &apos;0&apos; vor dem Dezimaltrennzeichen</translation>
+        <translation>Auffüllen mit Ziffer '0' vor dem Dezimaltrennzeichen</translation>
     </message>
     <message>
         <source>Number of digits after the decimal separator:</source>
@@ -1378,7 +1379,7 @@ Sie müssen die Konfigurationsdatei &amp;quot;{2}&amp;quot; löschen (oder sorgf
     </message>
     <message>
         <source>Padding with &apos;0&apos; digit after the decimal separator</source>
-        <translation>Auffüllen mit Ziffer &apos;0&apos; nach dem Dezimaltrennzeichen</translation>
+        <translation>Auffüllen mit Ziffer '0' nach dem Dezimaltrennzeichen</translation>
     </message>
     <message>
         <source>Decimal separator:</source>
@@ -1601,7 +1602,7 @@ Sie müssen die Konfigurationsdatei &amp;quot;{2}&amp;quot; löschen (oder sorgf
         <source>Reading stopped at line %i.
  &quot;%s&quot; is not a valid code (number) - please, check/correct dxf file</source>
         <translation>Fehler während dem einlesen Gestoppt bei Linie %i.
- Bitte überprüfen/korrigieren sie die Linie &amp;quot;%s&amp;quot; in der DXF Datei</translation>
+ Bitte überprüfen/korrigieren sie die Linie &quot;%s&quot; in der DXF Datei</translation>
     </message>
     <message>
         <source>Short Elements</source>

@@ -56,7 +56,7 @@ class RouteText(QGraphicsItem):
 
         self.path = QPainterPath()
         self.path.addText(QtCore.QPointF(0, 0),
-                          QFont("Arial", 10/self.sc),
+                          QFont("Arial", int(10/self.sc)),
                           self.text)
 
     def contains_point(self, point):

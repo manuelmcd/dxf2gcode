@@ -3,7 +3,7 @@
 ############################################################################
 #
 #   Copyright (C) 2012-2014
-#   Xavier Izard
+#    Xavier Izard
 #
 #   This file is part of DXF2GCODE.
 #
