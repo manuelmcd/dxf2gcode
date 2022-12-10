@@ -77,4 +77,4 @@ class MessageBox(QTextBrowser):
         stripped_string = string.strip()
         if stripped_string:
             self.append(stripped_string)
-            self.verticalScrollBar().setValue(int(1e9))
+            self.verticalScrollBar().setValue(int(1e7))

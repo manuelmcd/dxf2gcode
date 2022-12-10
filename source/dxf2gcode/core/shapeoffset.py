@@ -88,8 +88,13 @@ class offShapeClass(Shape):
         while len(nextConvexPoint):  # [self.convex_vertex[-1]]:
             convex_vertex_nr = self.segments.index(nextConvexPoint[0])
 
-            forward, backward = self.PairWiseInterferenceDetection(
-                convex_vertex_nr + 1, convex_vertex_nr - 1)
+            try:
+                forward, backward = self.PairWiseInterferenceDetection(
+                    convex_vertex_nr + 1, convex_vertex_nr - 1)
+            except:
+                logger.warning("Not able to finish cutter compensation without error - Skipping it")
+                return
+                break
 
             if forward is None:
                 return
@@ -493,8 +498,14 @@ class offShapeClass(Shape):
         @return: forward, backward
         """
         val = 2000
+        logger.debug(len(self.segments))
         # self.counter = 0
-        SPoint=self.segments[forward].Ps
+
+        try:
+            SPoint=self.segments[forward].Ps
+        except:
+            logger.warning("Cannot do cutter compensation, please check file / diamter of tool")
+            return
 
         L1_status, L2_status = "full", "full"
         # Repeat until we reached the Partial-interfering-relation
