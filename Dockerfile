@@ -27,7 +27,7 @@
 #     -w $(pwd) dxf2gcode:latest
 #
 
-FROM python:3.7-bullseye
+FROM python:3.11-bullseye
 
 RUN apt-get update && apt-get install -y qttools5-dev qttools5-dev-tools pstoedit poppler-utils libxcb-util1
 # This symlink is needed to successfully run `make_tr.py`, but I don't
