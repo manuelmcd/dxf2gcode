@@ -394,11 +394,11 @@ class Shape(object):
         safe_margin = self.parentLayer.axis3_safe_margin
 
         max_slice = -abs(self.axis3_slice_depth)
-        workpiece_top_Z = abs(self.axis3_start_mill_depth)
+        workpiece_top_Z = self.axis3_start_mill_depth
         # We want to mill the piece, even for the first pass, so remove one
         # "slice"
         initial_mill_depth = workpiece_top_Z + max_slice
-        depth = -abs(self.axis3_mill_depth)
+        depth = self.axis3_mill_depth
         f_g1_plane = self.f_g1_plane
         f_g1_depth = self.f_g1_depth
 
@@ -408,7 +408,7 @@ class Shape(object):
         # If the Output Format is DXF do not perform more then one cut.
         if ((PostPro.vars.General["output_type"] == 'dxf') or (self.Drill)):
             #depth = abs(max_slice)
-            initial_mill_depth=-abs(self.axis3_mill_depth)
+            initial_mill_depth=self.axis3_mill_depth
 
         if max_slice == 0:
             logger.error(self.tr("ERROR: Z infeed depth is null!"))
