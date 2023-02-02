@@ -112,7 +112,7 @@ class StMove(object):
 
         if self.shape.Drill == True:
             if isinstance(self.shape.geos[0], ArcGeo):
-                start = self.shape.geos[0].O
+                start = self.shape.geos[0].abs_geo.O
 
             self.append(RapidPos(start))
 
