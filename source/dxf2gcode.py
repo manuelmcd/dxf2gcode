@@ -136,7 +136,7 @@ class MainWindow(QMainWindow):
         self.cont_dx = 0.0
         self.cont_dy = 0.0
         self.cont_rotate = 0.0
-        self.cont_scale = 1.0
+        self.cont_scale = g.config.vars.Plane_Coordinates['std_scale']
         self.cont_mirrorx = False
         self.cont_mirrory = False
 
@@ -789,7 +789,7 @@ class MainWindow(QMainWindow):
             self.cont_dx = 0.0
             self.cont_dy = 0.0
             self.cont_rotate = 0.0
-            self.cont_scale = 1.0
+            self.cont_scale =  g.config.vars.Plane_Coordinates['std_scale']
             self.cont_mirrorx = False
             self.cont_mirrory = False
 

@@ -46,7 +46,8 @@ from PyQt5 import QtCore
 
 logger = logging.getLogger("Core.Config")
 
-CONFIG_VERSION = "9.11"
+SUPPORTED_CONFIGS = [9.11, 9.12]
+CONFIG_VERSION = SUPPORTED_CONFIGS[-1]
 """
 version tag - increment this each time you edit CONFIG_SPEC
 
@@ -110,9 +111,8 @@ CONFIG_SPEC = str('''
 # do not edit the following section name:
     [Version]
     # do not edit the following value:
-    config_version = string(default = "''' +
-    str(CONFIG_VERSION) + '")\n' +
-    '''
+    config_version = float(default = "''' + str(CONFIG_VERSION) + '''")
+
     [Paths]
     # By default look for DXF files in this directory.
     import_dir = string(default = "''' + IMPORT_DIR + '''")
@@ -143,7 +143,8 @@ CONFIG_SPEC = str('''
     [Plane_Coordinates]
     axis1_start_end = float(default = 0)
     axis2_start_end = float(default = 0)
-
+    std_scale = float(default = 1.0)
+ 
     [Depth_Coordinates]
     # Third axis' coordinate at which it can do rapid move.
     axis3_retract = float(default = 15.0)
@@ -403,14 +404,18 @@ class MyConfig(object):
                 # check config file version against internal version
                 if CONFIG_VERSION:
                     fileversion = self.var_dict['Version']['config_version']  # this could raise KeyError
+                    if fileversion not in  SUPPORTED_CONFIGS:
+                        raise VersionMismatchError(fileversion, SUPPORTED_CONFIGS)
+                    else:
+                        self.var_dict['Version']['config_version']=CONFIG_VERSION
 
-                    if fileversion != CONFIG_VERSION:
-                        raise VersionMismatchError(fileversion, CONFIG_VERSION)
+                    #if fileversion != CONFIG_VERSION:
+                    #   raise VersionMismatchError(fileversion, CONFIG_VERSION)
 
             except VersionMismatchError:
                 #raise VersionMismatchError(fileversion, CONFIG_VERSION)
                 # version mismatch flag, it will be used to display an error.
-                self.version_mismatch = self.tr("The configuration file version ({0}) doesn't match the software expected version ({1}).\n\nYou have to delete (or carefully edit) the configuration file \"{2}\" to solve the problem.").format(fileversion, CONFIG_VERSION, self.filename)
+                self.version_mismatch = self.tr("The configuration file version ({0}) doesn't match any of the software expected version ({1}).\n\nYou have to delete (or carefully edit) the configuration file \"{2}\" to solve the problem.").format(fileversion, SUPPORTED_CONFIGS, self.filename)
 
             except Exception as inst:
                 logger.error(inst)
@@ -516,9 +521,10 @@ class MyConfig(object):
             ])),
             ('Plane_Coordinates', OrderedDict([
                 ('__section_title__', self.tr("Machine config")),
-                ('__subtitle__', CfgSubtitle(self.tr("Start and end's coordinate"))),
-                ('axis1_start_end', CfgDoubleSpinBox(self.tr("First axis:"), coordinate_unit)),
-                ('axis2_start_end', CfgDoubleSpinBox(self.tr("Second axis:"), coordinate_unit))
+                ('__subtitle__', CfgSubtitle(self.tr("Start and end's coordinate and scaling standard multiplier"))),
+                ('axis1_start_end', CfgDoubleSpinBox(self.tr("First axis start/end coordiante:"), coordinate_unit)),
+                ('axis2_start_end', CfgDoubleSpinBox(self.tr("Second axis start/end coordinate:"), coordinate_unit)),
+                ('std_scale', CfgDoubleSpinBox(self.tr("Scale first and second axis:")))
             ])),
             ('Depth_Coordinates', OrderedDict([
                 ('__section_title__', self.tr("Machine config")),
