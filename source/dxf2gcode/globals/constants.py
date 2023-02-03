@@ -42,8 +42,8 @@ from PyQt5 import QtCore
 APPNAME = "DXF2GCODE"
 VERSION = "Py%s PyQt%s" % (platform.python_version(), QtCore.PYQT_VERSION_STR)
 
-DATE     =  "$Date: 2022-02-26 15:29 CET $"
-REVISION =  "$Revision: b6983e9e9c3df532b2f621ab4e89dc813b521bd7 $"
+DATE     =  "$Date: 2022-02-03 13:22 CET $"
+REVISION =  "ID: $Id$"
 AUTHOR   = u"$Author: Christian Kohloeffel <christian.kohloeffel@googlemail.com> $"
 
 CONFIG_EXTENSION = '.cfg'
