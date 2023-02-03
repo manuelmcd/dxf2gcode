@@ -335,7 +335,8 @@ class ConfigWindow(QDialog):
         title = self.tr('Duplicate a configuration file')
         label = [self.tr("Enter a new filename (without extension):")]
         value = [""]
-        filename_dialog = PopUpDialog(title, label, value)
+        wtype = ["lineEdit"]
+        filename_dialog = PopUpDialog(title, label, value, wtype)
 
         if filename_dialog.result is not None and len(filename_dialog.result[0]) > 0:
             #Call the callback function to duplicate the file
@@ -353,7 +354,8 @@ class ConfigWindow(QDialog):
         title = self.tr('Add a configuration file')
         label = [self.tr("Enter filename (without extension):")]
         value = [""]
-        filename_dialog = PopUpDialog(title, label, value)
+        wtype = ["lineEdit"]
+        filename_dialog = PopUpDialog(title, label, value, wtype)
 
         if filename_dialog.result is not None and len(filename_dialog.result[0]) > 0:
             if self.selector_add_callback is not None:

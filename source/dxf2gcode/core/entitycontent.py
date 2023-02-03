@@ -26,7 +26,7 @@
 
 
 class EntityContent(object):
-    def __init__(self, nr, name, parent, p0, pb, sca, rot):
+    def __init__(self, nr, name, parent, p0, pb, sca, rot, mirrorx=False, mirrory=False):
         """
         @param p0: The Starting Point to plot (Default x=0 and y=0)
         @param bp: The Base Point to insert the geometry and base for rotation
@@ -42,6 +42,8 @@ class EntityContent(object):
         self.pb = pb
         self.sca = sca
         self.rot = rot
+        self.mirrorx = mirrorx
+        self.mirrory = mirrory
 
     def __repr__(self):
         return "\nEntityContent" +\
@@ -51,7 +53,9 @@ class EntityContent(object):
                "\np0:       %s" % self.p0 +\
                "\npb:       %s" % self.pb +\
                "\nsca:      %s" % self.sca +\
-               "\nrot:      %s" % self.rot
+               "\nrot:      %s" % self.rot +\
+               "\nmirrorx:  %s" % self.mirrorx +\
+               "\nmirrory:  %s" % self.mirrory
 
     def append(self, child):
         self.children.append(child)

@@ -313,7 +313,14 @@ class ArcGeo(object):
 
         direction = 1 if self.ext > 0.0 else -1
 
+        #TODO this might cause problem for recursive loops
         if parent is not None and parent.sca[0] * parent.sca[1] < 0.0:
+           direction *= -1
+
+        while not(parent.parent==None):
+            parent=parent.parent
+
+        if (not (parent.mirrorx and parent.mirrory)) and (parent.mirrorx or parent.mirrory):
             direction *= -1
 
         self.abs_geo = ArcGeo(Ps=Ps, Pe=Pe, O=O, r=r, direction=direction, drag=self.drag)

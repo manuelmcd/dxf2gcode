@@ -28,7 +28,7 @@ from __future__ import absolute_import
 import logging
 
 import dxf2gcode.globals.constants as c
-from PyQt5.QtWidgets import QDialog, QVBoxLayout, QFrame, QGridLayout, QLabel, QLineEdit, QPushButton
+from PyQt5.QtWidgets import QDialog, QVBoxLayout, QFrame, QGridLayout, QLabel, QLineEdit, QPushButton, QCheckBox
 from PyQt5.QtGui import QIcon, QPixmap
 from PyQt5 import QtCore
 
@@ -38,14 +38,16 @@ logger = logging.getLogger("Gui.PopUpDialog")
 
 class PopUpDialog(QDialog):
 
-    def __init__(self, title="Test", label='Value1', value=1.0, haveAuto=False):
+    def __init__(self, title="Test", label='Value1', value=1.0, wtype="lineEdit", haveAuto=False):
         super(PopUpDialog, self).__init__()
 
         logger.debug(title)
         logger.debug(label)
         logger.debug(value)
+        logger.debug(wtype)
 
         self.title = title
+        self.wtype = wtype
         self.label = label
         self.value = value
 
@@ -78,14 +80,23 @@ class PopUpDialog(QDialog):
         grid1 = QGridLayout()
         grid1.setSpacing(10)
         self.lineLabel = []
-        self.lineEdit = []
+        self.lineElement = []
 
         for i in range(len(self.label)):
             self.lineLabel.append(QLabel(self.label[i]))
-            self.lineEdit.append(QLineEdit('%s' % self.value[i]))
 
             grid1.addWidget(self.lineLabel[i], i, 0)
-            grid1.addWidget(self.lineEdit[i], i, 1)
+            if self.wtype[i]=="lineEdit":
+                self.lineElement.append(QLineEdit('%s' % self.value[i]))
+                grid1.addWidget(self.lineElement[-1], i, 1)
+            elif self.wtype[i]=="checkBox":
+                self.lineElement.append(QCheckBox())
+                self.lineElement[-1].setChecked(self.value[i])
+                #self.lineElement[-1].stateChanged.connect(lambda:self.btnstate(self.lineElement[-1]))
+                grid1.addWidget(self.lineElement[-1], i, 1)
+
+
+
 
         top.setLayout(grid1)
 
@@ -129,8 +140,12 @@ class PopUpDialog(QDialog):
 
     def cbOK(self):
         self.result = []
-        for lineEdit in self.lineEdit:
-            self.result.append(lineEdit.text())
+   
+        for lineElement in self.lineElement:
+            if isinstance(lineElement,QLineEdit):
+                self.result.append(lineElement.text())
+            elif isinstance(lineElement,QCheckBox):
+                self.result.append(lineElement.isChecked())
         self.close()
 
     def cbCancel(self):

@@ -47,7 +47,7 @@ def execute(self, content):
 
 class Project(object):
     header = "# +~+~+~ DXF2GCODE project file V%s ~+~+~+"
-    supported_versions = [1.1, 1.2]
+    supported_versions = [1.1, 1.2, 1.3]
     version = supported_versions[-1]
 
     def __init__(self, parent):
@@ -60,6 +60,8 @@ class Project(object):
         self.rot = None
         self.wpzero_x = None
         self.wpzero_y = None
+        self.mirrorx = None
+        self.mirrory = None
         self.split_lines = None
         self.aut_cut_com = None
         self.machine_type = None
@@ -131,6 +133,8 @@ d2g.scale = ''' + str(self.parent.cont_scale) + '''
 d2g.rot = ''' + str(self.parent.cont_rotate) + '''
 d2g.wpzero_x = ''' + str(self.parent.cont_dx) + '''
 d2g.wpzero_y = ''' + str(self.parent.cont_dy) + '''
+d2g.mirrorx = ''' + str(self.parent.cont_mirrorx) + '''
+d2g.mirrory = ''' + str(self.parent.cont_mirrory) + '''
 d2g.split_lines = ''' + str(self.parent.ui.actionSplitLineSegments.isChecked()) + '''
 d2g.aut_cut_com = ''' + str(self.parent.ui.actionAutomaticCutterCompensation.isChecked()) + '''
 d2g.machine_type = "''' + g.config.machine_type + '''"
@@ -155,6 +159,15 @@ d2g.layers = ''' + str(layers)
             self.parent.cont_rotate = self.rot
             self.parent.cont_dx = self.wpzero_x
             self.parent.cont_dy = self.wpzero_y
+
+            #New Variable with version 1.3
+            if version<1.3:
+                self.parent.cont_mirrorx = False
+                self.parent.cont_mirrory = False
+            else:
+                self.parent.cont_mirrorx = self.mirrorx
+                self.parent.cont_mirrory = self.mirrory
+
             g.config.vars.General['split_line_segments'] = self.split_lines
             g.config.vars.General['automatic_cutter_compensation'] = self.aut_cut_com
             g.config.machine_type = self.machine_type

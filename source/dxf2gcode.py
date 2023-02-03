@@ -137,6 +137,8 @@ class MainWindow(QMainWindow):
         self.cont_dy = 0.0
         self.cont_rotate = 0.0
         self.cont_scale = 1.0
+        self.cont_mirrorx = False
+        self.cont_mirrory = False
 
         self.restoreWindowState()
 
@@ -184,6 +186,7 @@ class MainWindow(QMainWindow):
         self.ui.actionTolerances.triggered.connect(self.setTolerances)
         self.ui.actionRotateAll.triggered.connect(self.rotateAll)
         self.ui.actionScaleAll.triggered.connect(self.scaleAll)
+        self.ui.actionMirrorAll.triggered.connect(self.MirrorAll)
         self.ui.actionMoveWorkpieceZero.triggered.connect(self.moveWorkpieceZero)
         self.ui.actionSplitLineSegments.toggled.connect(self.d2g.small_reload)
         self.ui.actionAutomaticCutterCompensation.toggled.connect(self.d2g.small_reload)
@@ -266,6 +269,7 @@ class MainWindow(QMainWindow):
         self.ui.actionTolerances.setEnabled(status)
         self.ui.actionRotateAll.setEnabled(status)
         self.ui.actionScaleAll.setEnabled(status)
+        self.ui.actionMirrorAll.setEnabled(status)
         self.ui.actionMoveWorkpieceZero.setEnabled(status)
 
     def deleteG0Paths(self):
@@ -594,9 +598,10 @@ class MainWindow(QMainWindow):
                  self.tr("Tolerance for curve fitting [%s]:") % units]
         value = [g.config.point_tolerance,
                  g.config.fitting_tolerance]
+        wtype = ["lineEdit", "lineEdit"]
 
         logger.debug(self.tr("set Tolerances"))
-        SetTolDialog = PopUpDialog(title, label, value)
+        SetTolDialog = PopUpDialog(title, label, value, wtype)
 
         if SetTolDialog.result is None:
             return
@@ -606,11 +611,32 @@ class MainWindow(QMainWindow):
 
         self.d2g.reload()  # set tolerances requires a complete reload
 
+
+
+    def MirrorAll(self):
+        title = self.tr('Mirror all X / Y-Axis')
+        label = [self.tr("Mirror all on X-Axis:"), self.tr("Mirror all on Y-Axis:")]
+        value = [self.cont_mirrorx, self.cont_mirrory]
+        wtype = ["checkBox","checkBox"]
+        MirrorDialog = PopUpDialog(title, label, value, wtype)
+
+        if MirrorDialog.result is None:
+            return
+
+        self.cont_mirrorx = MirrorDialog.result[0]
+        self.cont_mirrory = MirrorDialog.result[1]
+
+        self.entityRoot.mirrorx = self.cont_mirrorx
+        self.entityRoot.mirrory = self.cont_mirrory
+
+        self.d2g.small_reload()
+
     def scaleAll(self):
         title = self.tr('Scale Contour')
         label = [self.tr("Scale Contour by factor:")]
         value = [self.cont_scale]
-        ScaEntDialog = PopUpDialog(title, label, value)
+        wtype = ["lineEdit"]
+        ScaEntDialog = PopUpDialog(title, label, value, wtype)
 
         if ScaEntDialog.result is None:
             return
@@ -625,7 +651,8 @@ class MainWindow(QMainWindow):
         # TODO should we support radians for drawing unit non metric?
         label = [self.tr("Rotate Contour by deg:")]
         value = [degrees(self.cont_rotate)]
-        RotEntDialog = PopUpDialog(title, label, value)
+        wtype = ["lineEdit"]
+        RotEntDialog = PopUpDialog(title, label, value, wtype)
 
         if RotEntDialog.result is None:
             return
@@ -644,7 +671,8 @@ class MainWindow(QMainWindow):
         label = [self.tr("Offset %s axis %s:") % (g.config.vars.Axis_letters['ax1_letter'], units),
                  self.tr("Offset %s axis %s:") % (g.config.vars.Axis_letters['ax2_letter'], units)]
         value = [self.cont_dx, self.cont_dy]
-        MoveWpzDialog = PopUpDialog(title, label, value, True)
+        wtype = ["lineEdit","lineEdit"]
+        MoveWpzDialog = PopUpDialog(title, label, value, wtype, True)
 
         if MoveWpzDialog.result is None:
             return
@@ -762,6 +790,8 @@ class MainWindow(QMainWindow):
             self.cont_dy = 0.0
             self.cont_rotate = 0.0
             self.cont_scale = 1.0
+            self.cont_mirrorx = False
+            self.cont_mirrory = False
 
             self.load()
 
@@ -953,7 +983,9 @@ class MainWindow(QMainWindow):
     def makeShapes(self):
         self.entityRoot = EntityContent(nr=0, name='Entities', parent=None,
                                         p0=Point(self.cont_dx, self.cont_dy), pb=Point(),
-                                        sca=[self.cont_scale, self.cont_scale, self.cont_scale], rot=self.cont_rotate)
+                                        sca=[self.cont_scale, self.cont_scale, self.cont_scale], rot=self.cont_rotate,
+                                        mirrorx = self.cont_mirrorx, mirrory = self.cont_mirrory)
+
         self.layerContents = Layers([])
         self.shapes = Shapes([])
 
@@ -996,6 +1028,8 @@ class MainWindow(QMainWindow):
                 p0 = ent_geos[cont.order[0][0]].Point
                 sca = ent_geos[cont.order[0][0]].Scale
                 rot = ent_geos[cont.order[0][0]].rot
+                #mirrorx = False #ent_geos[cont.order[0][0]].mirrorx
+                #mirrory = False #ent_geos[cont.order[0][0]].mirrory
 
                 # Creating the new Entitie Contents for the insert
                 newEntityContent = EntityContent(nr=0,
@@ -1005,6 +1039,9 @@ class MainWindow(QMainWindow):
                                                  pb=pb,
                                                  sca=sca,
                                                  rot=rot)
+
+                                                #mirrorx=mirrorx,
+                                                #mirrory=mirrory
 
                 parent.append(newEntityContent)
 

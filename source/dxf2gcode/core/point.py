@@ -321,12 +321,20 @@ class Point(object):
             pb = parent.pb
             sca = parent.sca
             rot = parent.rot
+            mirrorx = parent.mirrorx
+            mirrory = parent.mirrory
 
             pc = self - pb
             cos_rot = cos(rot)
             sin_rot = sin(rot)
             rotx = (pc.x * cos_rot + pc.y * -sin_rot) * sca[0]
             roty = (pc.x * sin_rot + pc.y * cos_rot) * sca[1]
+
+            if mirrorx:
+                rotx=-rotx
+            if mirrory:
+                roty=-roty
+
             p1 = Point(rotx, roty) + p0
 
             # Recursive loop if the point self is  introduced
