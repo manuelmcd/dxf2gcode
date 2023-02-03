@@ -401,6 +401,10 @@ class MyPostProcessor(object):
                         "%-ext": 'self.fnprint(degrees(-self.ext))',
                         "%comment": 'self.sprint(self.comment)'}
 
+        for c_name in self.vars.Custom_GCode:
+            c_code=self.vars.Custom_GCode[c_name]['gcode'] 
+            self.keyvars.update({c_name: 'self.cgcprint('"'%s'"')' %c_name})
+
     def write_gcode_be(self, load_filename):
         """
         Adding the begin to a new variable. If the exported file is from the
@@ -690,6 +694,16 @@ class MyPostProcessor(object):
         @return: Returns the character set required to get a new line
         """
         return '\n'
+
+    def cgcprint(self, cgcnr):
+        """
+        This method is called to retrun a string of a custom G-Code which was added to the post-
+        processor configuration.
+        @param cgcnr: The name of the called custom g-code line
+        @return: The value of the line.
+        """
+        c_code=self.vars.Custom_GCode[cgcnr]['gcode'] 
+        return c_code
 
     def fnprint(self, number):
         """
