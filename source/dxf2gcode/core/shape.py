@@ -411,7 +411,7 @@ class Shape(object):
             initial_mill_depth=self.axis3_mill_depth
 
         if max_slice == 0:
-            logger.error(self.tr("ERROR: Z infeed depth is null!"))
+            logger.warning(self.tr("WARNING: Z infeed depth is null!"))
 
         if initial_mill_depth < depth:
             logger.warning(self.tr(

@@ -65,6 +65,7 @@ class MyPostProcessor(object):
         """
         self.version_mismatch = '' # no problem for now
         self.postprocessor_files = [] # store the postprocessors filenames
+        self.postpro_file_used = None
         self.output_format = [] # store the postprocessors filenames extensions
         self.output_text = [] # store the postprocessors descriptions
 
@@ -250,6 +251,7 @@ class MyPostProcessor(object):
         @param file_index: The index of the file to read and write variables in
         self.vars.
         """
+        self.postpro_file_used=self.postprocessor_files[file_index]
         PostProConfig = MyPostProConfig(filename=self.postprocessor_files[file_index])
         PostProConfig.load_config()
         self.vars = PostProConfig.vars
@@ -411,8 +413,9 @@ class MyPostProcessor(object):
         exported.
         """
         if self.vars.General["output_type"] == 'g-code':
-            exstr = self.tr("(Generated with: %s, Version: %s, Date: %s)\n") % (c.APPNAME, c.VERSION, c.DATE)
+            exstr = self.tr("(Generated with: %s)\n(Version: %s, Date: %s)\n") % (c.APPNAME, c.VERSION, c.DATE)
             exstr += self.tr("(Created from file: %s)\n") % re.sub('[()]', '_', load_filename)
+            exstr += self.tr("(Used Postprocessor: %s) \n") % (self.postpro_file_used)
             if self.vars.General["output_text"]:
                 exstr += self.tr("(Output format description: %s)\n") % re.sub('[()]', '', self.vars.General["output_text"])
             exstr += self.tr("(Time: %s)\n") % time.asctime()
