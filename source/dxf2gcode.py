@@ -359,12 +359,12 @@ class MainWindow(QMainWindow):
         """
 
         # Prepare if any exception happens during export
-        try:
-            self.MyPostProcessor.exportShapes(self.filename,
-                                              save_filename,
-                                              self.layerContents)
-        except Exception as e:
-            logger.error(self.tr('Error exporting shapes: %s') % str (e))
+        #try:
+        self.MyPostProcessor.exportShapes(self.filename,
+                                        save_filename,
+                                        self.layerContents)
+        #except Exception as e:
+        #    logger.error(self.tr('Error exporting shapes: %s') % str (e))
 
         self.unsetCursor()
 

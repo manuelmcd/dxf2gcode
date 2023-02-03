@@ -40,7 +40,9 @@ from PyQt5 import QtCore
 import logging
 logger = logging.getLogger("PostPro.PostProcessorConfig")
 
-POSTPRO_VERSION = "8"
+SUPPORTED_CONFIGS = [8, 8.1]
+CONFIG_VERSION = SUPPORTED_CONFIGS[-1]
+
 """
 version tag - increment this each time you edit CONFIG_SPEC
 
@@ -55,9 +57,8 @@ POSTPRO_SPEC = str('''
 # do not edit the following section name:
     [Version]
     # do not edit the following value:
-    config_version = string(default="'''  +
-    str(POSTPRO_VERSION) + '")\n' +
-    '''
+    config_version = float(default = "''' + str(CONFIG_VERSION) + '''")
+
     [General]
     # This extension is used in the save file export dialog.
     output_format = string(default=".ngc")
@@ -140,6 +141,14 @@ POSTPRO_SPEC = str('''
     # Defines comments' format. Comments are written at some places during the export in order to make the g-code better readable.
     comment = string(default=%nl(%comment)%nl)
 
+    # Define here custom GCODE actions:
+    # - name: this is the unique name of the action
+    # - gcode: the text that will be inserted in the final program (each new line is also translated as a new line in the output file)
+    # Custom actions can be inserted in the program by using right-click contextual menu on the treeview.
+    [Custom_GCode]
+    [[__many__]]
+    gcode = string(default = "(change subsection name and insert your custom GCode here. Use triple quote to place the code on several lines)")
+
 ''').splitlines()
 """ format, type and default value specification of the global config file"""
 
@@ -193,16 +202,20 @@ class MyPostProConfig(object):
                 raise BadConfigFileError(self.tr("syntax errors in postpro_config file"))
 
             # check config file version against internal version
+            if CONFIG_VERSION:
+                fileversion = self.var_dict['Version']['config_version']  # this could raise KeyError
+                if fileversion not in  SUPPORTED_CONFIGS:
+                    raise VersionMismatchError(fileversion, SUPPORTED_CONFIGS)
+                else:
+                    self.var_dict['Version']['config_version']=CONFIG_VERSION
 
-            if POSTPRO_VERSION:
-                fileversion = self.var_dict['Version']['config_version'] # this could raise KeyError
-
-                if fileversion != POSTPRO_VERSION:
-                    raise VersionMismatchError(fileversion, POSTPRO_VERSION)
+                #if fileversion != CONFIG_VERSION:
+                #   raise VersionMismatchError(fileversion, CONFIG_VERSION)
 
         except VersionMismatchError:
+            #raise VersionMismatchError(fileversion, CONFIG_VERSION)
             # version mismatch flag, it will be used to display an error.
-            self.version_mismatch = self.tr("The postprocessor configuration file version ({0}) doesn't match the software expected version ({1}).\n\nYou have to delete (or carefully edit) the configuration file \"{2}\" to solve the problem.").format(fileversion, POSTPRO_VERSION, self.filename)
+            self.version_mismatch = self.tr("The postprocessor configuration file version ({0}) doesn't match any of the software expected version ({1}).\n\nYou have to delete (or carefully edit) the configuration file \"{2}\" to solve the problem.").format(fileversion, SUPPORTED_CONFIGS, self.filename)
 
         except Exception as inst:
             #logger.error(inst)
@@ -292,6 +305,12 @@ class MyPostProConfig(object):
         If a name is declared in the configfile but not here, it simply won't appear in the config window (the config_version for example must not be modified by the user, so it is not declared here)
         """
         cfg_widget_def = OrderedDict([
+
+            ('__section_title__', {
+                # This section is only used for assigning titles to the keys of the dictionnary (= name of the sections used in the config file).
+                # This name is displayed in the tabs of the configuration window ; if no name is provided, the key name is used. A same title may be used for several keys : in this case, all the items that belongs to this section are regrouped into the same tab.
+                # Note: the title may be specified in the section itselt too, using special entry "'__section_title__': Title to use"
+                'Custom_GCode' : MyPostProConfig.tr("Custom GCode")}),
             ('General', OrderedDict([
                 ('__section_title__', MyPostProConfig.tr("Software config")),
                 ('__subtitle__', CfgSubtitle(MyPostProConfig.tr("Output specifications"))),
@@ -348,7 +367,8 @@ class MyPostProConfig(object):
                 ('pre_shape_cut', CfgLineEdit(MyPostProConfig.tr('Placed in front of any shape:'))),
                 ('post_shape_cut', CfgLineEdit(MyPostProConfig.tr('Placed after any shape:'))),
                 ('comment', CfgLineEdit(MyPostProConfig.tr('Comment for current shape:')))
-            ]))
+            ])),
+            ('Custom_GCode', CfgTableCustomActions(MyPostProConfig.tr('Define here custom GCODE that can be inserted anywhere in the program:'))),
         ])
 
         return cfg_widget_def
