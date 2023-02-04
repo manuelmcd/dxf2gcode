@@ -1,4 +1,4 @@
 # .gitattributes
 # Map file extensions to git filters
 
-constants.py ident
+constants.py filter=rcs-keywords
