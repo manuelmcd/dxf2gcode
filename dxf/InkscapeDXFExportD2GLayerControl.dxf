@@ -91,7 +91,7 @@ STANDARD
   9
 $CLAYER
   8
-Mill:1 Md:18 Sd: 2 Rh: 5 Sm: 5 Fz: 450 Tn: 1 Td: 3.17  S: 18000
+MILL:1 Md:18 Sd: 2 Rh: 5 Sm: 5 Fz: 450 Tn: 1 Td: 3.17  S: 18000
   9
 $CELTYPE
   6
@@ -1115,7 +1115,7 @@ AcDbViewportTableRecord
  21
 1
  12
-158.9856672134153
+159.0963044209403
  22
 150.9091510640908
  13
@@ -2255,7 +2255,7 @@ AcDbSymbolTableRecord
 100
 AcDbLayerTableRecord
   2
-Drill:1 Md:18 Sd: 2 Rh: 5 Sm: 5 Fz: 450 Tn: 1 Td: 3.17  S: 18000
+DRILL:1 Md:18 Sd: 2 Rh: 5 Sm: 5 Fz: 450 Tn: 1 Td: 3.17  S: 18000
  70
     0
  62
@@ -2299,7 +2299,7 @@ AcDbSymbolTableRecord
 100
 AcDbLayerTableRecord
   2
-Mill:1 Md:18 Sd: 2 Rh: 5 Sm: 5 Fz: 450 Tn: 1 Td: 3.17  S: 18000
+MILL:1 Md:18 Sd: 2 Rh: 5 Sm: 5 Fz: 450 Tn: 1 Td: 3.17  S: 18000
  70
     0
  62
@@ -2721,7 +2721,7 @@ CIRCLE
 100
 AcDbEntity
   8
-Drill:1 Md:18 Sd: 2 Rh: 5 Sm: 5 Fz: 450 Tn: 1 Td: 3.17  S: 18000
+DRILL:1 Md:18 Sd: 2 Rh: 5 Sm: 5 Fz: 450 Tn: 1 Td: 3.17  S: 18000
   6
 ByLayer
  62
@@ -2743,7 +2743,7 @@ CIRCLE
 100
 AcDbEntity
   8
-Drill:1 Md:18 Sd: 2 Rh: 5 Sm: 5 Fz: 450 Tn: 1 Td: 3.17  S: 18000
+DRILL:1 Md:18 Sd: 2 Rh: 5 Sm: 5 Fz: 450 Tn: 1 Td: 3.17  S: 18000
   6
 ByLayer
  62
@@ -2765,7 +2765,7 @@ CIRCLE
 100
 AcDbEntity
   8
-Drill:1 Md:18 Sd: 2 Rh: 5 Sm: 5 Fz: 450 Tn: 1 Td: 3.17  S: 18000
+DRILL:1 Md:18 Sd: 2 Rh: 5 Sm: 5 Fz: 450 Tn: 1 Td: 3.17  S: 18000
   6
 ByLayer
  62
@@ -2787,7 +2787,7 @@ LWPOLYLINE
 100
 AcDbEntity
   8
-Mill:1 Md:18 Sd: 2 Rh: 5 Sm: 5 Fz: 450 Tn: 1 Td: 3.17  S: 18000
+MILL:1 Md:18 Sd: 2 Rh: 5 Sm: 5 Fz: 450 Tn: 1 Td: 3.17  S: 18000
   6
 ByLayer
  62
@@ -2825,7 +2825,7 @@ SPLINE
 100
 AcDbEntity
   8
-Mill:1 Md:18 Sd: 2 Rh: 5 Sm: 5 Fz: 450 Tn: 1 Td: 3.17  S: 18000
+MILL:1 Md:18 Sd: 2 Rh: 5 Sm: 5 Fz: 450 Tn: 1 Td: 3.17  S: 18000
   6
 ByLayer
  62
@@ -2901,7 +2901,7 @@ SPLINE
 100
 AcDbEntity
   8
-Mill:1 Md:18 Sd: 2 Rh: 5 Sm: 5 Fz: 450 Tn: 1 Td: 3.17  S: 18000
+MILL:1 Md:18 Sd: 2 Rh: 5 Sm: 5 Fz: 450 Tn: 1 Td: 3.17  S: 18000
   6
 ByLayer
  62
@@ -2977,7 +2977,7 @@ SPLINE
 100
 AcDbEntity
   8
-Mill:1 Md:18 Sd: 2 Rh: 5 Sm: 5 Fz: 450 Tn: 1 Td: 3.17  S: 18000
+MILL:1 Md:18 Sd: 2 Rh: 5 Sm: 5 Fz: 450 Tn: 1 Td: 3.17  S: 18000
   6
 ByLayer
  62
@@ -3053,7 +3053,7 @@ SPLINE
 100
 AcDbEntity
   8
-Mill:1 Md:18 Sd: 2 Rh: 5 Sm: 5 Fz: 450 Tn: 1 Td: 3.17  S: 18000
+MILL:1 Md:18 Sd: 2 Rh: 5 Sm: 5 Fz: 450 Tn: 1 Td: 3.17  S: 18000
   6
 ByLayer
  62
@@ -3129,7 +3129,7 @@ SPLINE
 100
 AcDbEntity
   8
-Mill:1 Md:18 Sd: 2 Rh: 5 Sm: 5 Fz: 450 Tn: 1 Td: 3.17  S: 18000
+MILL:1 Md:18 Sd: 2 Rh: 5 Sm: 5 Fz: 450 Tn: 1 Td: 3.17  S: 18000
   6
 ByLayer
  62
@@ -3205,7 +3205,7 @@ SPLINE
 100
 AcDbEntity
   8
-Mill:1 Md:18 Sd: 2 Rh: 5 Sm: 5 Fz: 450 Tn: 1 Td: 3.17  S: 18000
+MILL:1 Md:18 Sd: 2 Rh: 5 Sm: 5 Fz: 450 Tn: 1 Td: 3.17  S: 18000
   6
 ByLayer
  62

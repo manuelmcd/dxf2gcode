@@ -135,6 +135,12 @@ class LayerContent(object):
             # Disable shape by default, if it lives on an ignored layer
             for shape in self.shapes:
                 shape.setDisable(True)
+        if self.isDrillLayer():
+            # If the shape is on a DRILL Layer set it to Drill = True
+            for shape in self.shapes:
+                shape.Drill=True
+
+
 
     def optimize(self):
         """
