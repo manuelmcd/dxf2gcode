@@ -147,12 +147,12 @@ class TreeView(QTreeView):
         drag_item_parent = drag_item.parent()
         drag_item_level = 1
         # parent is 0, so we need to get the root item of the tree as parent...
-        if not drag_item_parent:
+        if not drag_item.parent():
             drag_item_parent = drag_item.model().invisibleRootItem()
             drag_item_level = 0
             drag_parent_row = -1
         else:
-            drag_parent_row = self.drag_item.parent()
+            drag_parent_row = drag_item.parent()
 
         logger.debug("drag_item_level: {0}, drag_row: {1}, drag_parent_row: {2}"\
                      .format(drag_item_level, drag_row, drag_parent_row))
