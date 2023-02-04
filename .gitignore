@@ -76,3 +76,12 @@ target/
 # Generated files:
 dxf2gcode_images*_rc.py*
 dxf2gcode_ui*.py
+.vscode/launch.json
+.vscode/launch.json
+.gitignore
+dxf/InkscapeDXFExportD2GLayerControl.dxf
+.gitignore
+source/i18n/dxf2gcode_fr.ts
+source/i18n/dxf2gcode_ru.ts
+source/i18n/dxf2gcode_de.ts
+.gitattributes

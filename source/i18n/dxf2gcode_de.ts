@@ -664,7 +664,7 @@ zurückgegebener Fehlercode: {1}</translation>
     </message>
     <message>
         <source>Error exporting shapes: %s</source>
-        <translation>Fehler beim Exportieren von Shapes: %s</translation>
+        <translation type="obsolete">Fehler beim Exportieren von Shapes: %s</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -814,6 +814,22 @@ zurückgegebener Fehlercode: {1}</translation>
         <source>&lt;html&gt;&lt;h2&gt;&lt;center&gt;You are using&lt;/center&gt;&lt;/h2&gt;&lt;body bgcolor=&lt;center&gt;&lt;img src=&apos;:images/dxf2gcode_logo.png&apos; border=&apos;1&apos; color=&apos;white&apos;&gt;&lt;/center&gt;&lt;/body&gt;&lt;h2&gt;Version:&lt;/h2&gt;&lt;body&gt;%s: %s&lt;br&gt;Last change: %s&lt;br&gt;Changed by: %s&lt;br&gt;&lt;/body&gt;&lt;h2&gt;Where to get help:&lt;/h2&gt;For more information and updates, please visit &lt;a href=&apos;http://sourceforge.net/projects/dxf2gcode/&apos;&gt;http://sourceforge.net/projects/dxf2gcode/&lt;/a&gt;&lt;br&gt;For any questions on how to use dxf2gcode please use the &lt;a href=&apos;https://www.ltspiceusers.ch/forums/english-section.67/&apos;&gt;https://www.ltspiceusers.ch/forums/english-section.67/&lt;/a&gt;&lt;br&gt;To log bugs, or request features please use the &lt;a href=&apos;http://sourceforge.net/p/dxf2gcode/tickets/&apos;&gt;issue tracking system&lt;/a&gt;&lt;br&gt;&lt;h2&gt;License and copyright:&lt;/h2&gt;&lt;body&gt;This program is written in Python and is published under the &lt;a href=&apos;http://www.gnu.org/licenses/&apos;&gt;GNU GPLv3 license.&lt;/a&gt;&lt;br&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>&amp;Mirror All</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Mirror all X / Y-Axis</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Mirror all on X-Axis:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Mirror all on Y-Axis:</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>MessageBox</name>
@@ -860,7 +876,7 @@ zurückgegebener Fehlercode: {1}</translation>
         <source>The configuration file version ({0}) doesn&apos;t match the software expected version ({1}).
 
 You have to delete (or carefully edit) the configuration file &quot;{2}&quot; to solve the problem.</source>
-        <translation>Die Version der Konfigurationsdatei ({0}) stimmt nicht mit der erwarteten Softwareversion ({1}) überein.
+        <translation type="obsolete">Die Version der Konfigurationsdatei ({0}) stimmt nicht mit der erwarteten Softwareversion ({1}) überein.
 
 Sie müssen die Konfigurationsdatei &quot;{2}&quot; löschen (oder sorgfältig bearbeiten), um das Problem zu lösen.</translation>
     </message>
@@ -974,7 +990,7 @@ Sie müssen die Konfigurationsdatei &quot;{2}&quot; löschen (oder sorgfältig b
     </message>
     <message>
         <source>Start and end&apos;s coordinate</source>
-        <translation>Start- und Endkoordinaten</translation>
+        <translation type="obsolete">Start- und Endkoordinaten</translation>
     </message>
     <message>
         <source>Third axis&apos; defaults</source>
@@ -1152,6 +1168,28 @@ Sie müssen die Konfigurationsdatei &quot;{2}&quot; löschen (oder sorgfältig b
         <source>Update paths with last used path: </source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>The configuration file version ({0}) doesn&apos;t match any of the software expected version ({1}).
+
+You have to delete (or carefully edit) the configuration file &quot;{2}&quot; to solve the problem.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Start and end&apos;s coordinate and scaling standard multiplier</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>First axis start/end coordiante:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Second axis start/end coordinate:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Scale first and second axis:</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>MyDropDownMenu</name>
@@ -1281,7 +1319,7 @@ Sie müssen die Konfigurationsdatei &quot;{2}&quot; löschen (oder sorgfältig b
         <source>The postprocessor configuration file version ({0}) doesn&apos;t match the software expected version ({1}).
 
 You have to delete (or carefully edit) the configuration file &quot;{2}&quot; to solve the problem.</source>
-        <translation>Die Version der Postprozessor-Konfigurationsdatei ({0}) stimmt nicht mit der erwarteten Softwareversion ({1}) überein.
+        <translation type="obsolete">Die Version der Postprozessor-Konfigurationsdatei ({0}) stimmt nicht mit der erwarteten Softwareversion ({1}) überein.
 
 Sie müssen die Konfigurationsdatei &quot;{2}&quot; löschen (oder sorgfältig bearbeiten), um das Problem zu lösen.</translation>
     </message>
@@ -1473,6 +1511,20 @@ Sie müssen die Konfigurationsdatei &quot;{2}&quot; löschen (oder sorgfältig b
         <source>Linear feed move for drilling:</source>
         <translation>Lineare Vorschubbewegung zum Bohren:</translation>
     </message>
+    <message>
+        <source>The postprocessor configuration file version ({0}) doesn&apos;t match any of the software expected version ({1}).
+
+You have to delete (or carefully edit) the configuration file &quot;{2}&quot; to solve the problem.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Custom GCode</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Define here custom GCODE that can be inserted anywhere in the program:</source>
+        <translation type="unfinished">Definieren Sie hier benutzerdefinierten GCODE, der überall im Programm eingefügt werden kann:</translation>
+    </message>
 </context>
 <context>
     <name>MyPostProcessor</name>
@@ -1511,7 +1563,7 @@ Sie müssen die Konfigurationsdatei &quot;{2}&quot; löschen (oder sorgfältig b
     <message>
         <source>(Generated with: %s, Version: %s, Date: %s)
 </source>
-        <translation>(Generiert mit: %s, Version: %s, Datum: %s)
+        <translation type="obsolete">(Generiert mit: %s, Version: %s, Datum: %s)
 </translation>
     </message>
     <message>
@@ -1535,6 +1587,17 @@ Sie müssen die Konfigurationsdatei &quot;{2}&quot; löschen (oder sorgfältig b
 </source>
         <translation>(Beschreibung des Ausgabeformats: %s)
 </translation>
+    </message>
+    <message>
+        <source>(Generated with: %s)
+(Version: %s, Date: %s)
+</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>(Used Postprocessor: %s) 
+</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -1649,7 +1712,7 @@ Die Länge muss größer der Toleranz sein.
     </message>
     <message>
         <source>ERROR: Z infeed depth is null!</source>
-        <translation>FEHLER: Z Zustelltiefe is null!</translation>
+        <translation type="obsolete">FEHLER: Z Zustelltiefe is null!</translation>
     </message>
     <message>
         <source>WARNING: initial mill depth (%i) is lower than end mill depth (%i). Using end mill depth as final depth.</source>
@@ -1662,6 +1725,10 @@ Die Länge muss größer der Toleranz sein.
     <message>
         <source>WARNING: initial mill depth (%f0.2) is lower than end mill depth (%f0.2). Using end mill depth as final depth.</source>
         <translation>WARNUNG: Die anfängliche Frästiefe (%f0.2) ist geringer als die Schaftfrästiefe (%f0.2). Schaftfräsertiefe als Endtiefe verwenden.</translation>
+    </message>
+    <message>
+        <source>WARNING: Z infeed depth is null!</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

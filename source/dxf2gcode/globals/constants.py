@@ -43,7 +43,7 @@ APPNAME = "DXF2GCODE"
 VERSION = "Py%s PyQt%s" % (platform.python_version(), QtCore.PYQT_VERSION_STR)
 
 DATE     =  "$Date$"
-REVISION =  "$ID: 10566a$"
+REVISION =  "$Revision$"
 AUTHOR   = u"$Author$"
 
 CONFIG_EXTENSION = '.cfg'
