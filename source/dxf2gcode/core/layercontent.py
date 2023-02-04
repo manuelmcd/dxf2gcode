@@ -34,6 +34,8 @@ import logging
 import dxf2gcode.globals.globals as g
 from dxf2gcode.core.point import Point
 
+from dxf2gcode.core.arcgeo import ArcGeo
+
 logger = logging.getLogger("Core.LayerContent")
 
 class LayerContent(object):
@@ -138,7 +140,18 @@ class LayerContent(object):
         if self.isDrillLayer():
             # If the shape is on a DRILL Layer set it to Drill = True
             for shape in self.shapes:
-                shape.Drill=True
+                allClosed = True
+                allArcs = True
+                if shape.closed == False:
+                    allClosed == False
+                for geo in shape.geos:
+                    if not(isinstance(geo, ArcGeo)):
+                        allArcs = False
+                
+                if allClosed and allArcs:
+                    shape.Drill=True
+                else: 
+                    logger.warn("Warning none closed / Arc shapes on Drill layer")
 
 
 
