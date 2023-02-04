@@ -317,11 +317,12 @@ class ArcGeo(object):
         if parent is not None and parent.sca[0] * parent.sca[1] < 0.0:
            direction *= -1
 
-        while not(parent.parent==None):
-            parent=parent.parent
+        if not(parent==None):
+            while not(parent.parent==None):
+                parent=parent.parent
 
-        if (not (parent.mirrorx and parent.mirrory)) and (parent.mirrorx or parent.mirrory):
-            direction *= -1
+            if (not (parent.mirrorx and parent.mirrory)) and (parent.mirrorx or parent.mirrory):
+                direction *= -1
 
         self.abs_geo = ArcGeo(Ps=Ps, Pe=Pe, O=O, r=r, direction=direction, drag=self.drag)
 

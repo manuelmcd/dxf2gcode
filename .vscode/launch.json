@@ -1,6 +1,7 @@
 {
     "version": "0.2.0",
     "configurations": [
+        
         {
             "name": "Python: Current File",
             "type": "python",
@@ -8,7 +9,7 @@
             "program": "${file}",
             "console": "integratedTerminal",
             "justMyCode": true,
-            ]
+            "args": ["D:/GIT/dxf2gcode-sourcecode/dxf/InkscapeDXFExportD2GLayerControl.dxf"]
         },
         {
             "name": "Python: File",

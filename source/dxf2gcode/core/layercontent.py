@@ -86,14 +86,15 @@ class LayerContent(object):
 
     def overrideDefaults(self):
         # search for layer commands to override defaults
+        logger.debug(self.isParameterizableLayer())
         if self.isParameterizableLayer():
             layer_commands = self.name.replace(",", ".")
             lopts_re = re.compile("([a-zA-Z]+ *"+g.config.vars.Layer_Options['id_float_separator']+" *[\-\.0-9]+)")
-            # print lopts_re.findall(layer_commands)
+            logger.debug(lopts_re.findall(layer_commands))
             for lc in lopts_re.findall(layer_commands):
                 name, value = lc.split(g.config.vars.Layer_Options['id_float_separator'])
                 name = name.strip()
-                # print '\"%s\" \"%s\"' %(name, value)
+                logger.debug('\"%s\" \"%s\"' %(name, value))
                 default_tool = 1 # Tool 1 normally always exists
                 if name in g.config.vars.Layer_Options['tool_nr_identifiers']:
                     self.tool_nr = int(value)
