@@ -99,7 +99,7 @@ class Shape(object):
         @return: A string
         """
 
-        logger.debug(self.closed)
+        #logger.debug(self.closed)
         return "Shape (nr=%i, closed=%s, geos=%s)" % \
                 (self.nr, self.closed, self.geos)
 

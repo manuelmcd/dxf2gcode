@@ -77,7 +77,7 @@ class Project(object):
         return str(QtCore.QCoreApplication.translate('Project',
                                                            string_to_translate))
 
-    def get_hash(self, shape, version):
+    def get_hash(self, shape, version, compleet=True):
         reverse = False
         if not shape.cw:
             reverse = True
@@ -87,9 +87,15 @@ class Project(object):
         geos = [geo.save_v1() for geo in shape_iter]
         if reverse:
             shape.reverse()
-        return hashlib.sha1(''.join(sorted(geos)).encode('utf-8')).hexdigest()
+        if compleet:
+            return hashlib.sha1(''.join(sorted(geos)).encode('utf-8')).hexdigest()
+        #If it's not a compleet reload change the hash to something more identical. This might enable a reload with previous settings
+        #For Rot / sca / wp move etc. hash will not be identical with above algorithm as they are changed. but the Shape.nr will stay the same.
+        else:
+            return hashlib.sha1(('%s' %(shape.nr)).encode('utf-8')).hexdigest()
+        
 
-    def export(self):
+    def export(self,compleet=True):
         self.parent.TreeHandler.updateExportOrder(True)
         layers = []
         for layer in self.parent.layerContents:
@@ -102,7 +108,7 @@ class Project(object):
                                    'disabled': shape.disabled})
                 else:
                     stpoint = shape.get_start_end_points(True)
-                    shapes.append({'hash_': self.get_hash(shape, Project.version),
+                    shapes.append({'hash_': self.get_hash(shape, Project.version, compleet),
                                    'cut_cor': shape.cut_cor,
                                    'Pocket_Mill': shape.Pocket,
                                    'Drill': shape.Drill,
@@ -155,6 +161,9 @@ d2g.layers = ''' + str(layers)
             self.parent.filename = self.file
             g.config.point_tolerance = self.point_tol
             g.config.fitting_tolerance = self.fitting_tol
+
+        # If one of scale / move / rot variables has changed the reload will not identify the shape to be similar.
+        # Therefore try to move those variables at the end and do a second reload afterwards.
             self.parent.cont_scale = self.scale
             self.parent.cont_rotate = self.rot
             self.parent.cont_dx = self.wpzero_x
@@ -198,11 +207,13 @@ d2g.layers = ''' + str(layers)
                 # hash_shapes = {self.get_hash(shape): shape for shape in layer.shapes}
                 hash_shapes = dict()
                 for shape in layer.shapes:
-                    shape_hash = self.get_hash(shape, version)
+                    shape_hash = self.get_hash(shape, version, compleet)
                     if shape_hash in hash_shapes:
                         hash_shapes[shape_hash].insert(0, shape)
                     else:
                         hash_shapes[shape_hash] = [shape]
+
+                
 
                 shapes = []
                 for parent_shape in parent_layer['shapes']:
@@ -249,9 +260,9 @@ d2g.layers = ''' + str(layers)
             self.parent.setCursor(QtCore.Qt.WaitCursor)
             self.parent.canvas.resetAll()
             self.parent.app.processEvents()
-            pyCode = self.export()
+            pyCode = self.export(compleet)
             self.parent.makeShapes()
             self.load(pyCode, compleet)
 
-    def small_reload(self):
+    def small_reload(self,):
         self.reload(False)

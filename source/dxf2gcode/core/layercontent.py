@@ -96,7 +96,7 @@ class LayerContent(object):
             for lc in lopts_re.findall(layer_commands):
                 name, value = lc.split(g.config.vars.Layer_Options['id_float_separator'])
                 name = name.strip()
-                logger.debug('\"%s\" \"%s\"' %(name, value))
+                #logger.debug('\"%s\" \"%s\"' %(name, value))
                 default_tool = 1 # Tool 1 normally always exists
                 if name in g.config.vars.Layer_Options['tool_nr_identifiers']:
                     self.tool_nr = int(value)
