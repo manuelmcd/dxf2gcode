@@ -369,6 +369,7 @@ class MyPostProcessor(object):
 
         self.ze = g.config.vars.Depth_Coordinates['axis3_retract']
         self.lz = self.ze
+        self.zs = self.ze
 
         self.keyvars = {"%feed": 'self.iprint(self.feed)',
                         "%speed": 'self.iprint(self.speed)',
@@ -382,6 +383,8 @@ class MyPostProcessor(object):
                         "%-YE": 'self.fnprint(-self.Pe.y*fac)',
                         "%YS": 'self.fnprint(self.Ps.y*fac)',
                         "%-YS": 'self.fnprint(-self.Ps.y*fac)',
+                        "%ZS": "self.fnprint(self.zs)",
+                        "%-ZS": "self.fnprint(-self.zs)",
                         "%ZE": 'self.fnprint(self.ze)',
                         "%-ZE": 'self.fnprint(-self.ze)',
                         "%I": 'self.fnprint(self.IJ.x)',
@@ -562,6 +565,9 @@ class MyPostProcessor(object):
         @param z_pos: the value at which shall be positioned
         @return: Returns the string which shall be added.
         """
+        #Store the last Z value as the start value
+        self.zs=self.ze
+
         if not self.abs_export:
             self.ze = z_pos - self.lz
             self.lz = z_pos
@@ -592,6 +598,9 @@ class MyPostProcessor(object):
         @param z_pos: the value at which shall be positioned
         @return: Returns the string which shall be added.
         """
+        #Store the last Z value as the start value
+        self.zs=self.ze
+
         if not self.abs_export:
             self.ze = z_pos - self.lz
             self.lz = z_pos
@@ -606,6 +615,10 @@ class MyPostProcessor(object):
         @param z_pos: the value at which shall be positioned
         @return: Returns the string which shall be added.
         """
+
+        #Store the last Z value as the start value
+        self.zs=self.ze
+
         if not self.abs_export:
             self.ze = z_pos - self.lz
             self.lz = z_pos
@@ -613,6 +626,25 @@ class MyPostProcessor(object):
             self.ze = z_pos
 
         return self.make_print_str(self.vars.Program["lin_mov_drill"])
+
+    def lin_ret_drill(self, z_pos):
+        """
+        Code to add if the machine is commanded to drill a HoleGeo
+        @param z_pos: the value at which shall be positioned
+        @return: Returns the string which shall be added.
+        """
+
+        #Store the last Z value as the start value
+        self.zs=self.ze
+
+        if not self.abs_export:
+            self.ze = z_pos - self.lz
+            self.lz = z_pos
+        else:
+            self.ze = z_pos
+
+        return self.make_print_str(self.vars.Program["lin_ret_drill"])
+
 
     def lin_pol_xy(self, Ps, Pe):
         """

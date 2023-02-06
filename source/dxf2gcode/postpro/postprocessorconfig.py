@@ -79,6 +79,8 @@ POSTPRO_SPEC = str('''
     max_arc_radius = float(min = 0, default=10000)
     # Set this to true if you want to export als arcs as line segment
     export_arcs_as_lines = boolean(default=False)
+    # If you want to repeat the Drill Move for each slice depth set this to True, for false it will be only be performed onece
+    repeat_drill_move = boolean(default=True)
 
     code_begin_units_mm = string(default="G21 (Units in millimeters)")
     code_begin_units_in = string(default="G20 (Units in inches)")
@@ -123,8 +125,10 @@ POSTPRO_SPEC = str('''
     lin_mov_plane = string(default= G1 X%XE Y%YE%nl)
     # This will be used for shape cutting.
     lin_mov_depth = string(default= G1 Z%ZE%nl)
-    # This will be used to do the drilling of a Bore Hole.
-    lin_mov_drill = string(default= G1 Z%ZE%nl)
+    # This will be used to do the drilling of Dill Geometry (for each slice depth)
+    lin_mov_drill = string(default=G1 Z%ZE%nl)
+    # This will be used to retract while drilling operation (after each slice depth)
+    lin_ret_drill = string(default=F1000%nlG1 Z%ZE%nlF1000%nlG1 Z%ZS%nlF%feed%nl)
     arc_int_cw = string(default=G2 X%XE Y%YE I%I J%J%nl)
     # This will be used for shape cutting.
     arc_int_ccw = string(default=G3 X%XE Y%YE I%I J%J%nl)
@@ -324,6 +328,7 @@ class MyPostProConfig(object):
                 ('export_ccw_arcs_only', CfgCheckBox(MyPostProConfig.tr('Export only counter clockwise arcs'))),
                 ('max_arc_radius', CfgDoubleSpinBox(MyPostProConfig.tr('Maximum arc radius:'))),
                 ('export_arcs_as_lines', CfgCheckBox(MyPostProConfig.tr('Export all arcs as line seg'))),
+                ('repeat_drill_move', CfgCheckBox(MyPostProConfig.tr('Repeat Drill move for slices (only use wit abs coordinates)'))),
                 ('__subtitle3__', CfgSubtitle(MyPostProConfig.tr("G-code constants"))),
                 ('code_begin_units_mm', CfgLineEdit(MyPostProConfig.tr('Units in millimeters:'))),
                 ('code_begin_units_in', CfgLineEdit(MyPostProConfig.tr('Units in inch:'))),
@@ -359,6 +364,7 @@ class MyPostProConfig(object):
                 ('lin_mov_plane', CfgLineEdit(MyPostProConfig.tr('Linear feed move for XY plane:'))),
                 ('lin_mov_depth', CfgLineEdit(MyPostProConfig.tr('Linear feed move for Z plane:'))),
                 ('lin_mov_drill', CfgLineEdit(MyPostProConfig.tr('Linear feed move for drilling:'))),
+                ('lin_ret_drill', CfgLineEdit(MyPostProConfig.tr('Linear retract move during drilling:'))),
                 ('arc_int_cw', CfgLineEdit(MyPostProConfig.tr('Clockwise feed move:'))),
                 ('arc_int_ccw', CfgLineEdit(MyPostProConfig.tr('Counter clockwise feed move:'))),
                 ('cutter_comp_off', CfgLineEdit(MyPostProConfig.tr('Disable cutter compensation:'))),

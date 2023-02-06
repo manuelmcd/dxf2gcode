@@ -43,6 +43,7 @@ from dxf2gcode.core.pocketmove import PocketMove
 
 import dxf2gcode.globals.constants as c
 from PyQt5 import QtCore
+from PyQt5.QtWidgets import QMessageBox
 
 logger = logging.getLogger("Core.Shape")
 
@@ -405,26 +406,42 @@ class Shape(object):
         # Save the initial Cutter correction in a variable
         has_reversed = False
 
-        # If the Output Format is DXF do not perform more then one cut.
-        if ((PostPro.vars.General["output_type"] == 'dxf') or (self.Drill)):
+        # If the Output Format is DXF do not perform more then one cut or specially defined for Drill move..
+        if ((PostPro.vars.General["output_type"] == 'dxf') or ((self.Drill) and PostPro.vars.General["repeat_drill_move"]==False)):
             #depth = abs(max_slice)
             initial_mill_depth=self.axis3_mill_depth
 
         if max_slice == 0:
-            logger.warning(self.tr("WARNING: Z infeed depth is null!"))
+            logger.warning(self.tr("Z infeed depth is null!"))
+            QMessageBox.warning(g.window,
+                                self.tr("Warning during Export"),
+                                self.tr(self.tr("Error: Z infeed depth is null!")))
 
+        if workpiece_top_Z < depth:
+            logger.warning(self.tr(
+                "Workpiece Top Z (%f0.2) is lower than end mill depth (%f0.2)") % (
+                workpiece_top_Z, depth))
+            QMessageBox.warning(g.window,
+                        self.tr("Warning during Export"),
+                        self.tr(self.tr("Workpiece Top Z (%f0.2) is lower than end mill depth (%f0.2)") % (
+                                        workpiece_top_Z, depth)))
+        # Compute the safe margin from the initial mill depth
         if initial_mill_depth < depth:
             logger.warning(self.tr(
-                "WARNING: initial mill depth (%f0.2) is lower than end mill depth (%f0.2). Using end mill depth as final depth.") % (
+                "Initial mill depth (%f0.2) is lower than end mill depth (%f0.2)") % (
                 initial_mill_depth, depth))
+            QMessageBox.warning(g.window,
+                                    self.tr("Warning during Export"),
+                                    self.tr(self.tr("Initial mill depth (%f0.2) is lower than end mill depth (%f0.2)") % (
+                                                    initial_mill_depth, depth)))
 
             # Do not cut below the depth.
-            initial_mill_depth = depth
+            # initial_mill_depth = depth
 
         mom_depth = initial_mill_depth
 
 
-        # Compute the safe margin from the initial mill depth
+        # This will be performed for "normal shapes only"
         if not(self.Drill):
             
             # This will position the cutter on the first geometry with or without cutter comp. G1 move.
@@ -492,7 +509,7 @@ class Shape(object):
         #logger.debug(max_slice)
         #logger.debug(mom_depth)
         # Loops for the number of cuts
-        while mom_depth > depth and max_slice != 0.0:
+        while mom_depth > depth and max_slice < 0.0:
             snr += 1
             mom_depth = mom_depth + max_slice
             if mom_depth < depth:
@@ -506,44 +523,52 @@ class Shape(object):
                 #print("Pop from geos %s." % (popped))
 
             # Erneutes Eintauchen
-            exstr += PostPro.chg_feed_rate(f_g1_depth)
-            exstr += PostPro.lin_pol_z(mom_depth)
-            exstr += PostPro.chg_feed_rate(f_g1_plane)
+            # This will be performed for "normal shapes only"
+            if not(self.Drill):
+                exstr += PostPro.chg_feed_rate(f_g1_depth)
+                exstr += PostPro.lin_pol_z(mom_depth)
+                exstr += PostPro.chg_feed_rate(f_g1_plane)
 
-            # If it is not a closed contour
-            if not self.closed:
-                self.reverse(new_geos)
-                self.switch_cut_cor()
-                # switch the "reversed" state (in order to restore it at the
-                # end)
-                has_reversed = not has_reversed
+                # If it is not a closed contour
+                if not self.closed:
+                    self.reverse(new_geos)
+                    self.switch_cut_cor()
+                    # switch the "reversed" state (in order to restore it at the
+                    # end)
+                    has_reversed = not has_reversed
 
-                # If cutter radius compensation is turned on. Turn it off - because some interpreters cannot handle
-                # a switch
-                if self.cut_cor != 40 and not PostPro.vars.General["cancel_cc_for_depth"]:
-                    exstr += PostPro.deactivate_cut_cor()
+                    # If cutter radius compensation is turned on. Turn it off - because some interpreters cannot handle
+                    # a switch
+                    if self.cut_cor != 40 and not PostPro.vars.General["cancel_cc_for_depth"]:
+                        exstr += PostPro.deactivate_cut_cor()
+                        exstr += PostPro.set_cut_cor(self.cut_cor)
+
+                # If cutter correction is enabled
+                if self.cut_cor != 40 and PostPro.vars.General["cancel_cc_for_depth"]:
                     exstr += PostPro.set_cut_cor(self.cut_cor)
+                
+                for geo in new_geos.abs_iter():
+                    if isinstance(geo, PocketMove):
+                        geo.setZMove(f_g1_depth, f_g1_plane, workpiece_top_Z + abs(safe_margin), mom_depth, safe_retract_depth)
+                        exstr += geo.Write_GCode(PostPro)
+                    else:
+                        exstr += self.Write_GCode_for_geo(geo, PostPro)
+                                
+                # Turning off the cutter radius compensation if needed
+                if self.cut_cor != 40 and PostPro.vars.General["cancel_cc_for_depth"]:
+                    exstr += PostPro.deactivate_cut_cor()
 
-            # If cutter correction is enabled
-            if self.cut_cor != 40 and PostPro.vars.General["cancel_cc_for_depth"]:
-                exstr += PostPro.set_cut_cor(self.cut_cor)
-            
-            for geo in new_geos.abs_iter():
-                if isinstance(geo, PocketMove):
-                    geo.setZMove(f_g1_depth, f_g1_plane, workpiece_top_Z + abs(safe_margin), mom_depth, safe_retract_depth)
-                    exstr += geo.Write_GCode(PostPro)
-                else:
-                    exstr += self.Write_GCode_for_geo(geo, PostPro)
-                            
-            # Turning off the cutter radius compensation if needed
-            if self.cut_cor != 40 and PostPro.vars.General["cancel_cc_for_depth"]:
-                exstr += PostPro.deactivate_cut_cor()
+                # Turning off the cutter radius compensation if needed
+                if self.cut_cor != 40 and PostPro.vars.General["cancel_cc_for_depth"]:
+                    exstr += PostPro.deactivate_cut_cor()
 
-            # Turning off the cutter radius compensation if needed
-            if self.cut_cor != 40 and PostPro.vars.General["cancel_cc_for_depth"]:
-                exstr += PostPro.deactivate_cut_cor()
+            # If its a drill do intermediate retraction and drill operation again
+            else:
+                exstr += PostPro.lin_ret_drill(workpiece_top_Z + abs(safe_margin))
+                exstr += PostPro.lin_pol_drill(mom_depth)
+        
 
-        # Do the tool retraction
+        # Do the tool retraction for a "normal" shape and Drill
         exstr += PostPro.chg_feed_rate(f_g1_depth)
         exstr += PostPro.lin_pol_z(workpiece_top_Z + abs(safe_margin))
         exstr += PostPro.rap_pos_z(safe_retract_depth)
@@ -713,6 +738,10 @@ class Geos(list):
     def abs_iter(self):
         for geo in list.__iter__(self):
             yield geo.abs_geo if geo.abs_geo else geo
+
+    def rel_iter(self):
+        for geo in list.__iter__(self):
+            yield geo
 
     def abs_el(self, element):
         return self[element].abs_geo if self[element].abs_geo else self[element]
