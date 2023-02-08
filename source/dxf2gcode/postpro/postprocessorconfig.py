@@ -128,7 +128,7 @@ POSTPRO_SPEC = str('''
     # This will be used to do the drilling of Dill Geometry (for each slice depth)
     lin_mov_drill = string(default=G1 Z%ZE%nl)
     # This will be used to retract while drilling operation (after each slice depth)
-    lin_ret_drill = string(default=F1000%nlG1 Z%ZE%nlF1000%nlG1 Z%ZS%nlF%feed%nl)
+    lin_ret_drill = string(default=G0 Z%ZE%nlG0 Z%ZS%nl)
     arc_int_cw = string(default=G2 X%XE Y%YE I%I J%J%nl)
     # This will be used for shape cutting.
     arc_int_ccw = string(default=G3 X%XE Y%YE I%I J%J%nl)
