@@ -630,6 +630,7 @@ class TreeHandler(QWidget):
             # we found the matching index for the shape in our layers treeView model
             self.ui.layersShapesTreeView.blockSignals(True)  # Avoid signal loops (we dont want the treeView to re-emit selectionChanged signal)
             self.columnsSelectDeselect(selection_model, item_index, select)
+            self.ui.layersShapesTreeView.setCurrentIndex(item_index)
             self.ui.layersShapesTreeView.blockSignals(False)
 
         # Entities treeView
@@ -640,6 +641,7 @@ class TreeHandler(QWidget):
             # we found the matching index for the shape in our entities treeView model
             self.ui.entitiesTreeView.blockSignals(True)  # Avoid signal loops (we dont want the treeView to re-emit selectionChanged signal)
             self.columnsSelectDeselect(selection_model, item_index, select)
+            self.ui.entitiesTreeView.setCurrentIndex(item_index)
             self.ui.entitiesTreeView.blockSignals(False)
 
         # Update the tool parameters fields
@@ -1160,6 +1162,7 @@ class TreeHandler(QWidget):
         selection = treeview.selectionModel()
         selection.select(item_sel, QItemSelectionModel.Select | QItemSelectionModel.Rows)
         selection.select(item_desel, QItemSelectionModel.Deselect | QItemSelectionModel.Rows)
+
         del self.updateSelectionInProgress
 
     def updateSelectionRecursive(self, model, root, item_sel, item_desel):
