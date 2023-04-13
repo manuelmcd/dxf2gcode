@@ -356,7 +356,7 @@ class Spline2Arcs:
                                           self.NURBS.knt_m_change[:])
 
         # Step mu� ungerade sein, sonst gibts ein Rundungsproblem um 1
-        self.max_step = float(self.NURBS.Knots[-1] / (float(self.segments)))
+        self.max_step = float((self.NURBS.Knots[-1] - self.NURBS.Knots[0] )/ (float(self.segments)))
 
         # Berechnen des ersten Biarcs f�rs Fitting
         BiarcCurves = []
@@ -417,10 +417,13 @@ class Spline2Arcs:
         """
         #max_tol=0.1
         #print(max_tol)
-        min_u = 1e-12
+        min_u = 1e-10
         BiarcCurve = []
         cur_step = self.max_step
         u = u_sect[0] + min_u
+
+        logger.debug("max_step: %0.5e" ,self.max_step)
+        logger.debug("u_sect: %s" ,u_sect)
 
         PtsVec = [self.NURBS.NURBS_evaluate(n=1, u=u)]
         step = 0
@@ -435,29 +438,34 @@ class Spline2Arcs:
             if u > u_sect[-1]:
                 cur_step = u_sect[-1] - (u - cur_step) - min_u
                 u = u_sect[-1] - min_u
+                logger.debug("Limit u to: %0.5e" ,u)
 
+            logger.debug("u: %0.5e", u )
             PtVec = self.NURBS.NURBS_evaluate(n=1, u=u)
 
             # Aus den letzten 2 Punkten den n�chsten Biarc berechnen
             Biarc = (BiarcClass(PtsVec[-1][0], PtsVec[-1][1], PtVec[0], PtVec[1], nom_tol * 0.5))
 
             if Biarc.shape == "Zero":
-                # print("zero")
-                # self.cur_step = min([cur_step * 2, self.max_step])
-                cur_step = min([cur_step * 2, self.max_step])
+                logger.debug("zero, cur_step: %0.5e" %cur_step)
+                if cur_step<=min_u:
+                    cur_step=min_u
+                else:
+                    self.cur_step = min([cur_step * 2, self.max_step])
+                #cur_step = min([cur_step * 2])
             elif Biarc.shape == "LineGeo":
-                # print("LineGeo")
+                logger.debug("LineGeo")
                 BiarcCurve.append(Biarc)
                 cur_step = min([cur_step * 2, self.max_step])
                 PtsVec.append(PtVec)
             else:
                 if self.check_biarc_fitting_tolerance(Biarc, max_tol, u - cur_step, u):
-                    # print("fit1")
+                    logger.debug("fit1")
                     PtsVec.append(PtVec)
                     BiarcCurve.append(Biarc)
                     cur_step = min([cur_step / 0.7, self.max_step])
                 else:
-                    # print("else")
+                    logger.debug("else")
                     u -= cur_step
                     cur_step *= 0.7
             # print cur_step

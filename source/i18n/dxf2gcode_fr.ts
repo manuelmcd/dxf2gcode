@@ -1450,6 +1450,14 @@ You have to delete (or carefully edit) the configuration file &quot;{2}&quot; to
         <source>Define here custom GCODE that can be inserted anywhere in the program:</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Repeat Drill move for slices (only use wit abs coordinates)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Linear retract move during drilling:</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>MyPostProcessor</name>
@@ -1643,11 +1651,19 @@ La longueur doit être supérieure à la tolérance</translation>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>WARNING: initial mill depth (%f0.2) is lower than end mill depth (%f0.2). Using end mill depth as final depth.</source>
+        <source>Z infeed depth is null!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>WARNING: Z infeed depth is null!</source>
+        <source>Warning during Export</source>
+        <translation type="unfinished">Attention pendant exportation</translation>
+    </message>
+    <message>
+        <source>Workpiece Top Z (%f0.2) is lower than end mill depth (%f0.2)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Initial mill depth (%f0.2) is lower than end mill depth (%f0.2)</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -1683,6 +1699,21 @@ La longueur doit être supérieure à la tolérance</translation>
     </message>
     <message>
         <source>Rotation</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>self.self</name>
+    <message>
+        <source>Error: Z infeed depth is null!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Workpiece Top Z (%f0.2) is lower than end mill depth (%f0.2)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Initial mill depth (%f0.2) is lower than end mill depth (%f0.2)</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
