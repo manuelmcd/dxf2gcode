@@ -39,7 +39,7 @@ from dxf2gcode.core.shape import Shape
 
 logger = logging.getLogger('core.shapeoffset')
 
-eps = 1e-8
+eps = 1e-6
 min_length=0.01
 
 
@@ -1110,7 +1110,13 @@ class OffArcGeo(ArcGeo):
         elif typ == "TIP" and self.Pe.distance(other.Ps) < eps * 5:
             return other.Ps
 
+
         O_dis = self.O.distance(other.O)
+
+
+        # logger.debug(self.Ps.distance(other.Pe))
+        # logger.debug(self.Pe.distance(other.Ps))
+        # logger.debug(O_dis)
 
         # If self circle is surrounded by the other no intersection
         if(O_dis < abs(self.r - other.r)):
