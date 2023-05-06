@@ -7,6 +7,8 @@
 #    Christian Kohlöffel
 #    Jean-Paul Schouwstra
 #
+#   German translation & Python 3.10+ compatibility by Daniel Luginbühl
+#
 #   This file is part of DXF2GCODE.
 #
 #   DXF2GCODE is free software: you can redistribute it and/or modify

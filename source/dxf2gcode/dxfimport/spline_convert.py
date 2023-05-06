@@ -355,7 +355,7 @@ class Spline2Arcs:
                                           self.NURBS.ignor,
                                           self.NURBS.knt_m_change[:])
 
-        # Step mu� ungerade sein, sonst gibts ein Rundungsproblem um 1
+        # Step muss ungerade sein, sonst gibts ein Rundungsproblem um 1
         self.max_step = float((self.NURBS.Knots[-1] - self.NURBS.Knots[0] )/ (float(self.segments)))
 
         # Berechnen des ersten Biarcs f�rs Fitting
