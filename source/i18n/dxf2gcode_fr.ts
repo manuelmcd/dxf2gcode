@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS>
-<TS version="2.1" language="fr_FR" sourcelanguage="en">
+<!DOCTYPE TS><TS version="2.0" language="fr_FR" sourcelanguage="en">
 <context>
     <name>ArcGeo</name>
     <message>
@@ -14,7 +13,9 @@
         <source>
 Not enough chars (expected {0}, found {1}) for the field &quot;{2}&quot;
 </source>
-        <translation type="unfinished"></translation>
+        <translation>
+Pas assez de caractère(exception de {0},trouve {1} pour le Champ &quot;{2}&quot;
+</translation>
     </message>
 </context>
 <context>
@@ -23,13 +24,17 @@ Not enough chars (expected {0}, found {1}) for the field &quot;{2}&quot;
         <source>
 The cell at line {0}, column 0 must not be empty for the table &quot;{1}&quot;
 </source>
-        <translation type="unfinished"></translation>
+        <translation>
+la cellule de la ligne{0},colonne 0 non vide pour cette table &quot;{1}&quot;
+</translation>
     </message>
     <message>
         <source>
 Found {0} duplicate elements for the table &quot;{1}&quot;
 </source>
-        <translation type="unfinished"></translation>
+        <translation>
+Trouve {0} éléments dupliqué dans la table &quot;{1}&quot;
+</translation>
     </message>
 </context>
 <context>
@@ -38,19 +43,25 @@ Found {0} duplicate elements for the table &quot;{1}&quot;
         <source>
 The cell at line {0}, column 0 must not be empty for the table &quot;{1}&quot;
 </source>
-        <translation type="unfinished"></translation>
+        <translation>
+la cellule de la ligne{0},colonne 0 non vide pour cette table &quot;{1}&quot;
+</translation>
     </message>
     <message>
         <source>
 Found {0} duplicate elements for the table &quot;{1}&quot;
 </source>
-        <translation type="unfinished"></translation>
+        <translation>
+Trouve {0} éléments dupliqué dans la table &quot;{1}&quot;
+</translation>
     </message>
     <message>
         <source>
 The table &quot;{0}&quot; must always contains tool number &apos;1&apos;
 </source>
-        <translation type="unfinished"></translation>
+        <translation>
+La table &quot;{0}&quot; doit toujours contenir le numéro de l&apos;outils &apos;1&apos;
+</translation>
     </message>
 </context>
 <context>
@@ -59,7 +70,9 @@ The table &quot;{0}&quot; must always contains tool number &apos;1&apos;
         <source>
 Not enough chars (expected {0}, found {1}) for the field &quot;{2}&quot;
 </source>
-        <translation type="unfinished"></translation>
+        <translation>
+Pas assez de caractère(exception de {0},trouve {1} pour le Champ &quot;{2}&quot;
+</translation>
     </message>
 </context>
 <context>
@@ -67,88 +80,88 @@ Not enough chars (expected {0}, found {1}) for the field &quot;{2}&quot;
     <message>
         <source>Please correct the following error(s):
 </source>
-        <translation type="unfinished">Corriger les erreurs suivantes :
+        <translation>Corriger les erreurs suivantes :
 </translation>
     </message>
     <message>
         <source>Invalid changes</source>
-        <translation type="unfinished"></translation>
+        <translation>Changement Invalide</translation>
     </message>
     <message>
         <source>Duplicate the current post-processor</source>
-        <translation type="unfinished"></translation>
+        <translation>Dupliquer le post-processeur courant</translation>
     </message>
     <message>
         <source>Add a new post-processor with default values</source>
-        <translation type="unfinished"></translation>
+        <translation>Ajouter un nouveau post-processeur avec les valeurs par defaut</translation>
     </message>
     <message>
         <source>Remove the current post-processor</source>
-        <translation type="unfinished"></translation>
+        <translation>Retirer le post-processeur courant</translation>
     </message>
     <message>
         <source>Duplicate a configuration file</source>
-        <translation type="unfinished"></translation>
+        <translation>Dupliquer un fichier de configuration</translation>
     </message>
     <message>
         <source>Enter a new filename (without extension):</source>
-        <translation type="unfinished"></translation>
+        <translation>Entrer un nouveau nom de fichier(sans extension):</translation>
     </message>
     <message>
         <source>An error occured while duplicating the file &quot;{0}&quot;. Check that it doesn&apos;t already exists for example</source>
-        <translation type="unfinished"></translation>
+        <translation>Une erreur est apparue durant la duplication du fichier&quot;{0}&quot;.Vérifier si il n&apos;existe pas déja par exemple</translation>
     </message>
     <message>
         <source>Add a configuration file</source>
-        <translation type="unfinished"></translation>
+        <translation>Ajouter un fichier de configuration</translation>
     </message>
     <message>
         <source>Enter filename (without extension):</source>
-        <translation type="unfinished"></translation>
+        <translation>Entrer un nom de fichier(sans extension):</translation>
     </message>
     <message>
         <source>An error occured while creating the file &quot;{0}&quot;. Check that it doesn&apos;t already exists for example</source>
-        <translation type="unfinished"></translation>
+        <translation>Une erreur est apparue durant la création du fichier&quot;{0}&quot;.Vérifier si il n&apos;existe pas déja par exemple</translation>
     </message>
     <message>
         <source>Delete configuration file?</source>
-        <translation type="unfinished"></translation>
+        <translation>Destruction du fichier de configuration?</translation>
     </message>
     <message>
         <source>Are you sure you want to permanently remove the file &quot;{0}&quot;</source>
-        <translation type="unfinished"></translation>
+        <translation>Etes vous sur de vouloir détruire définitivement le fichier &quot;{0}&quot;</translation>
     </message>
     <message>
         <source>An error occured while removing the file &quot;{0}&quot;. Remove it manually</source>
-        <translation type="unfinished"></translation>
+        <translation>Une erreur est apparue durant la destruction du fichier&quot;{0}&quot;.Détruisez le manuelement</translation>
     </message>
 </context>
 <context>
     <name>GLWidget</name>
     <message>
         <source>Using OpenGL version: %s</source>
-        <translation type="unfinished"></translation>
+        <translation>Utilisation d&apos;OpenGL version:%s</translation>
     </message>
 </context>
 <context>
     <name>GeoentArc</name>
     <message>
         <source>Found extrusion direction: %s</source>
-        <translation type="unfinished"></translation>
+        <translation>Trouve une extrusion direction:%s</translation>
     </message>
 </context>
 <context>
     <name>GeoentCircle</name>
     <message>
         <source>Found extrusion direction: %s</source>
-        <translation type="unfinished"></translation>
+        <translation>Trouve une extrusion direction:%s</translation>
     </message>
 </context>
 <context>
     <name>GeoentLine</name>
     <message>
         <source>Found extrusion direction: %s</source>
-        <translation type="unfinished"></translation>
+        <translation>Trouve une extrusion direction:%s</translation>
     </message>
 </context>
 <context>
@@ -203,7 +216,7 @@ Not enough chars (expected {0}, found {1}) for the field &quot;{2}&quot;
     </message>
     <message>
         <source>New Export Order after TSP: %s</source>
-        <translation>Nouvel ordre d'exportation après TSP: %s</translation>
+        <translation>Nouvel ordre d&apos;exportation après TSP: %s</translation>
     </message>
     <message>
         <source>Export the enabled shapes</source>
@@ -279,7 +292,7 @@ Not enough chars (expected {0}, found {1}) for the field &quot;{2}&quot;
     </message>
     <message>
         <source>Loaded %i entity geometries; reduced to %i contours; used layers: %s; number of inserts %i</source>
-        <translation>Chargé %i Entités géométriques; réduit à %i Contours; calques utilisés: %s; nombre d'inserts: %i</translation>
+        <translation>Chargé %i Entités géométriques; réduit à %i Contours; calques utilisés: %s; nombre d&apos;inserts: %i</translation>
     </message>
     <message>
         <source>Closing</source>
@@ -291,15 +304,15 @@ Not enough chars (expected {0}, found {1}) for the field &quot;{2}&quot;
     </message>
     <message>
         <source>Z Drag depth</source>
-        <translation type="unfinished"></translation>
+        <translation>tirer Prof. Z</translation>
     </message>
     <message>
         <source>&lt;html&gt;&lt;h2&gt;&lt;center&gt;You are using&lt;/center&gt;&lt;/h2&gt;&lt;body bgcolor=&lt;center&gt;&lt;img src=&apos;:images/dxf2gcode_logo.png&apos; border=&apos;1&apos; color=&apos;white&apos;&gt;&lt;/center&gt;&lt;/body&gt;&lt;h2&gt;Version:&lt;/h2&gt;&lt;body&gt;%s: %s&lt;br&gt;Last change: %s&lt;br&gt;Changed by: %s&lt;br&gt;&lt;/body&gt;&lt;h2&gt;Where to get help:&lt;/h2&gt;For more information and updates, please visit &lt;a href=&apos;http://sourceforge.net/projects/dxf2gcode/&apos;&gt;http://sourceforge.net/projects/dxf2gcode/&lt;/a&gt;&lt;br&gt;For any questions on how to use dxf2gcode please use the &lt;a href=&apos;https://groups.google.com/forum/?fromgroups#!forum/dxf2gcode-users&apos;&gt;mailing list&lt;/a&gt;&lt;br&gt;To log bugs, or request features please use the &lt;a href=&apos;http://sourceforge.net/projects/dxf2gcode/tickets/&apos;&gt;issue tracking system&lt;/a&gt;&lt;br&gt;&lt;h2&gt;License and copyright:&lt;/h2&gt;&lt;body&gt;This program is written in Python and is published under the &lt;a href=&apos;http://www.gnu.org/licenses/&apos;&gt;GNU GPLv3 license.&lt;/a&gt;&lt;br&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="obsolete">&lt;html&gt;&lt;h2&gt;&lt;center&gt;Vous utilisez&lt;/center&gt;&lt;/h2&gt;&lt;body bgcolor=&lt;center&gt;&lt;img src=':images/dxf2gcode_logo.png; border='1' color='white'&gt;&lt;/center&gt;&lt;/body&gt;&lt;h2&gt;Version:&lt;/h2&gt;&lt;body&gt;%s: %s&lt;br&gt;Dernière modification: %s&lt;br&gt;Modifié par: %s&lt;br&gt;&lt;/body&gt;&lt;h2&gt;Ou trouver de l'aide:&lt;/h2&gt;Pour plus d'informationds et mises à jour, aller sur &lt;a href='http://sourceforge.net/projects/dxf2gcode/'&gt;http://sourceforge.net/projects/dxf2gcode/&lt;/a&gt;&lt;br&gt;Pour toute questions sur l'utilisation de dxf2gcode aller voir &lt;a href='https://groups.google.com/forum/?fromgroups#!forum/dxf2gcode-users'&gt;mailing list&lt;/a&gt;&lt;br&gt;Pour rapporter un bug ou toute autre demande se rendre sur &lt;a href='http://sourceforge.net/projects/dxf2gcode/tickets/'&gt;issue tracking system&lt;/a&gt;&lt;br&gt;&lt;h2&gt;Licence et copyright:&lt;/h2&gt;&lt;body&gt;Ce programme est écrit en Python et est publié sous &lt;a href='http://www.gnu.org/licenses/'&gt;GNU GPLv3 license.&lt;/a&gt;&lt;br&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation type="obsolete">&lt;html&gt;&lt;h2&gt;&lt;center&gt;Vous utilisez&lt;/center&gt;&lt;/h2&gt;&lt;body bgcolor=&lt;center&gt;&lt;img src=&apos;:images/dxf2gcode_logo.png; border=&apos;1&apos; color=&apos;white&apos;&gt;&lt;/center&gt;&lt;/body&gt;&lt;h2&gt;Version:&lt;/h2&gt;&lt;body&gt;%s: %s&lt;br&gt;Dernière modification: %s&lt;br&gt;Modifié par: %s&lt;br&gt;&lt;/body&gt;&lt;h2&gt;Ou trouver de l&apos;aide:&lt;/h2&gt;Pour plus d&apos;informationds et mises à jour, aller sur &lt;a href=&apos;http://sourceforge.net/projects/dxf2gcode/&apos;&gt;http://sourceforge.net/projects/dxf2gcode/&lt;/a&gt;&lt;br&gt;Pour toute questions sur l&apos;utilisation de dxf2gcode aller voir &lt;a href=&apos;https://groups.google.com/forum/?fromgroups#!forum/dxf2gcode-users&apos;&gt;mailing list&lt;/a&gt;&lt;br&gt;Pour rapporter un bug ou toute autre demande se rendre sur &lt;a href=&apos;http://sourceforge.net/projects/dxf2gcode/tickets/&apos;&gt;issue tracking system&lt;/a&gt;&lt;br&gt;&lt;h2&gt;Licence et copyright:&lt;/h2&gt;&lt;body&gt;Ce programme est écrit en Python et est publié sous &lt;a href=&apos;http://www.gnu.org/licenses/&apos;&gt;GNU GPLv3 license.&lt;/a&gt;&lt;br&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <source>No Z-Axis for lathe</source>
-        <translation type="unfinished"></translation>
+        <translation>Pas d&apos;axe Z pour un tour</translation>
     </message>
     <message>
         <source>Cannot Save the File</source>
@@ -479,7 +492,7 @@ Not enough chars (expected {0}, found {1}) for the field &quot;{2}&quot;
     </message>
     <message>
         <source>Feed rate XY</source>
-        <translation>Vitesse d'avance XY</translation>
+        <translation>Vitesse d&apos;avance XY</translation>
     </message>
     <message>
         <source>Z Final mill depth</source>
@@ -519,23 +532,23 @@ Not enough chars (expected {0}, found {1}) for the field &quot;{2}&quot;
     </message>
     <message>
         <source>Cannot locate file: %s</source>
-        <translation type="unfinished"></translation>
+        <translation>Fichier non trouvé: %s)</translation>
     </message>
     <message>
         <source>Manually open file: %s</source>
-        <translation type="unfinished"></translation>
+        <translation>Ouvrir le fichier Manuellement: %s</translation>
     </message>
     <message>
         <source>Save project to file</source>
-        <translation type="unfinished"></translation>
+        <translation>Sauvez le projet dans le fichier</translation>
     </message>
     <message>
         <source>Save project to FILE was successful</source>
-        <translation type="unfinished"></translation>
+        <translation>Sauvez le projet dans le fichier est réussi</translation>
     </message>
     <message>
         <source>Warning during Save Project As</source>
-        <translation type="unfinished"></translation>
+        <translation>Alerte durant la suvegarde du projet</translation>
     </message>
     <message>
         <source>Ctrl+V, A</source>
@@ -555,61 +568,67 @@ Not enough chars (expected {0}, found {1}) for the field &quot;{2}&quot;
     </message>
     <message>
         <source>About DXF2GCODE</source>
-        <translation type="unfinished"></translation>
+        <translation>A propos de DXF2GCODE</translation>
     </message>
     <message>
         <source>Drawing units: inches</source>
-        <translation type="unfinished"></translation>
+        <translation>Unités du dessin: inches</translation>
     </message>
     <message>
         <source>[in]</source>
-        <translation type="unfinished"></translation>
+        <translation>[in]</translation>
     </message>
     <message>
         <source>[IPM]</source>
-        <translation type="unfinished"></translation>
+        <translation>[IPM]</translation>
     </message>
     <message>
         <source>Drawing units: millimeters</source>
-        <translation type="unfinished"></translation>
+        <translation>Unités du dessin: millimètre</translation>
     </message>
     <message>
         <source>[mm]</source>
-        <translation type="unfinished"></translation>
+        <translation>[mm]</translation>
     </message>
     <message>
         <source>[mm/min]</source>
-        <translation type="unfinished"></translation>
+        <translation>[mm/min]</translation>
     </message>
     <message>
         <source>Ctrl+Shift+C</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+Shift+C</translation>
     </message>
     <message>
         <source>Ctrl+Shift+P</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+Shift+P</translation>
     </message>
     <message>
         <source>No differences found. Ergo, workpiece zero is not moved</source>
-        <translation type="unfinished"></translation>
+        <translation>Pas trouvé de différence. Ergo Zero plan de travail n&apos;a pas bougé</translation>
     </message>
     <message>
         <source>Command:
 {0}
 returned error code: {1}</source>
-        <translation type="unfinished"></translation>
+        <translation>Commande:
+{0}
+renvoi le code erreur:{1}</translation>
     </message>
     <message>
         <source>Please make sure you have installed {0}, and configured it in the config file.</source>
-        <translation type="unfinished"></translation>
+        <translation>Soyez sur d&apos;avoir installé {0},et de l&apos;avoir configuré dans le fichier config</translation>
     </message>
     <message>
         <source>Converting {0} to {1}</source>
-        <translation type="unfinished"></translation>
+        <translation>Conversion de {0} vers {1}</translation>
     </message>
     <message>
         <source>Python version 2 is not supported, please use it with python version 3.</source>
-        <translation type="unfinished"></translation>
+        <translation>Python version 2 n&apos;est pas supporté, s&apos;il vous plait utilisez python 3</translation>
+    </message>
+    <message>
+        <source>Error exporting shapes: %s</source>
+        <translation>Erreur lors de l&apos;exportation couche :%s</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -629,11 +648,11 @@ returned error code: {1}</source>
     </message>
     <message>
         <source>Mac&amp;hine Type</source>
-        <translation type="unfinished"></translation>
+        <translation>Type Mac&amp;hine</translation>
     </message>
     <message>
         <source>Measurement &amp;units</source>
-        <translation type="unfinished"></translation>
+        <translation>Dimensions &amp;unités</translation>
     </message>
     <message>
         <source>&amp;Help</source>
@@ -661,15 +680,15 @@ returned error code: {1}</source>
     </message>
     <message>
         <source>&amp;Delete G0 Paths</source>
-        <translation>&amp;Effacer déplacements G0 </translation>
+        <translation>&amp;Effacer G0 chemin</translation>
     </message>
     <message>
         <source>&amp;Configuration...</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Configuration...</translation>
     </message>
     <message>
         <source>&amp;Postprocessor configuration...</source>
-        <translation type="unfinished"></translation>
+        <translation>Configuration &amp;Postprocesseur</translation>
     </message>
     <message>
         <source>&amp;Tolerances</source>
@@ -721,59 +740,43 @@ returned error code: {1}</source>
     </message>
     <message>
         <source>&amp;Milling</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Fraisage</translation>
     </message>
     <message>
         <source>&amp;Drag Knife</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Cutter </translation>
     </message>
     <message>
         <source>&amp;Lathe</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Tour</translation>
     </message>
     <message>
         <source>&amp;Top View</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Vue de dessus</translation>
     </message>
     <message>
         <source>&amp;Isometric View</source>
-        <translation type="unfinished"></translation>
+        <translation>Vue &amp;Isometric</translation>
     </message>
     <message>
         <source>&amp;Save Project As...</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Sauvegarde du projet </translation>
     </message>
     <message>
         <source>&amp;Millimeters</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Milimètres</translation>
     </message>
     <message>
         <source>&amp;Inches</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Inches</translation>
     </message>
     <message>
         <source>Filter: %s selected</source>
-        <translation type="unfinished"></translation>
+        <translation>Filter: %s selectioné</translation>
     </message>
     <message>
         <source>&lt;html&gt;&lt;h2&gt;&lt;center&gt;You are using&lt;/center&gt;&lt;/h2&gt;&lt;body bgcolor=&lt;center&gt;&lt;img src=&apos;:images/dxf2gcode_logo.png&apos; border=&apos;1&apos; color=&apos;white&apos;&gt;&lt;/center&gt;&lt;/body&gt;&lt;h2&gt;Version:&lt;/h2&gt;&lt;body&gt;%s: %s&lt;br&gt;Last change: %s&lt;br&gt;Changed by: %s&lt;br&gt;&lt;/body&gt;&lt;h2&gt;Where to get help:&lt;/h2&gt;For more information and updates, please visit &lt;a href=&apos;http://sourceforge.net/projects/dxf2gcode/&apos;&gt;http://sourceforge.net/projects/dxf2gcode/&lt;/a&gt;&lt;br&gt;For any questions on how to use dxf2gcode please use the &lt;a href=&apos;https://www.ltspiceusers.ch/forums/english-section.67/&apos;&gt;https://www.ltspiceusers.ch/forums/english-section.67/&lt;/a&gt;&lt;br&gt;To log bugs, or request features please use the &lt;a href=&apos;http://sourceforge.net/p/dxf2gcode/tickets/&apos;&gt;issue tracking system&lt;/a&gt;&lt;br&gt;&lt;h2&gt;License and copyright:&lt;/h2&gt;&lt;body&gt;This program is written in Python and is published under the &lt;a href=&apos;http://www.gnu.org/licenses/&apos;&gt;GNU GPLv3 license.&lt;/a&gt;&lt;br&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>&amp;Mirror All</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Mirror all X / Y-Axis</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Mirror all on X-Axis:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Mirror all on Y-Axis:</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;h2&gt;&lt;center&gt;Vous utilisez&lt;/center&gt;&lt;/h2&gt;&lt;body bgcolor=&lt;center&gt;&lt;img src=&apos;:images/dxf2gcode_logo.png&apos; border=&apos;1&apos; color=&apos;white&apos;&gt;&lt;/center&gt;&lt;/body&gt;&lt;h2&gt;Version:&lt;/h2&gt;&lt;body&gt;%s: %s&lt;br&gt;Dernier Changements: %s&lt;br&gt;Changé par: %s&lt;br&gt;&lt;/body&gt;&lt;h2&gt;Où trouver de l&apos;aide:&lt;/h2&gt;Pour plus d&apos;informations et mises a jour , Visitez s&apos;il vous plait &lt;a href=&apos;http://sourceforge.net/projects/dxf2gcode/&apos;&gt;http://sourceforge.net/projects/dxf2gcode/&lt;/a&gt;&lt;br&gt;Pour toutes questions sur l&apos;utilisation de dxf2gcode s&apos;il vous plait utilisez le &lt;a href=&apos;https://www.ltspiceusers.ch/forums/english-section.67/&apos;&gt;https://www.ltspiceusers.ch/forums/english-section.67/&lt;/a&gt;&lt;br&gt;To log bugs, or request features please use the &lt;a href=&apos;http://sourceforge.net/p/dxf2gcode/tickets/&apos;&gt;issue tracking system&lt;/a&gt;&lt;br&gt;&lt;h2&gt;License and copyright:&lt;/h2&gt;&lt;body&gt;Ce programme est écrit en Python et publié sous  &lt;a href=&apos;http://www.gnu.org/licenses/&apos;&gt;GNU GPLv3 license.&lt;/a&gt;&lt;br&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
 </context>
 <context>
@@ -784,11 +787,11 @@ returned error code: {1}</source>
     </message>
     <message>
         <source>Version %s (%s)</source>
-        <translation type="unfinished"></translation>
+        <translation>Version %s(%s)</translation>
     </message>
     <message>
         <source>For more information and updates visit:</source>
-        <translation type="unfinished"></translation>
+        <translation>Pour plus d&apos;informations et mise a jour visite:</translation>
     </message>
 </context>
 <context>
@@ -811,317 +814,306 @@ returned error code: {1}</source>
     </message>
     <message>
         <source>renamed bad varspace %s to &apos;%s&apos;</source>
-        <translation>renommage mauvais varspace %s à '%s'</translation>
+        <translation>renommage mauvais varspace %s à &apos;%s&apos;</translation>
     </message>
     <message>
         <source>created default varspace &apos;%s&apos;</source>
-        <translation>varspace '%s' par défaut créé</translation>
+        <translation>varspace &apos;%s&apos; par défaut créé</translation>
     </message>
     <message>
         <source>Tools table</source>
-        <translation type="unfinished"></translation>
+        <translation>Table outils</translation>
     </message>
     <message>
         <source>Custom actions</source>
-        <translation type="unfinished"></translation>
+        <translation>Actions personalisées</translation>
     </message>
     <message>
         <source>Software config</source>
-        <translation type="unfinished"></translation>
+        <translation>Configuration du logiciel</translation>
     </message>
     <message>
         <source>Machine config</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>G1 feed rate for first and second axis (2D plane):</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>G1 feed rate for third axis:</source>
-        <translation type="unfinished"></translation>
+        <translation>Configuration Machine</translation>
     </message>
     <message>
         <source>Output settings</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>DXF default import point tolerance:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>DXF import spline check:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>DXF default import fit tolerance:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>insert elements which are part of a block to layer where the block is inserted</source>
-        <translation type="unfinished"></translation>
+        <translation>Paramètres de Sortie</translation>
     </message>
     <message>
         <source>Automatic tool config</source>
-        <translation type="unfinished"></translation>
+        <translation>Outil de configuration automatique</translation>
     </message>
     <message>
         <source>Separator between identifier and value:</source>
-        <translation type="unfinished"></translation>
+        <translation>Séparateur entre Identifiant et Valeur</translation>
     </message>
     <message>
         <source>Define the tools here:</source>
-        <translation type="unfinished"></translation>
+        <translation>Définir l&apos;outil ici:</translation>
     </message>
     <message>
         <source>Define here custom GCODE that can be inserted anywhere in the program:</source>
-        <translation type="unfinished"></translation>
+        <translation>Définir ici GCODE perso qui peut etre inseré n&apos;importe ou dans le programe</translation>
     </message>
     <message>
         <source> mm</source>
-        <translation type="unfinished"></translation>
+        <translation> mm</translation>
     </message>
     <message>
         <source> in</source>
-        <translation type="unfinished"></translation>
+        <translation> in</translation>
     </message>
     <message>
         <source> mm/min</source>
-        <translation type="unfinished"></translation>
+        <translation> mm/min</translation>
     </message>
     <message>
         <source> IPS</source>
-        <translation type="unfinished"></translation>
+        <translation> IPS</translation>
     </message>
     <message>
         <source>By default look for DXF files in:</source>
-        <translation type="unfinished"></translation>
+        <translation>Par defaut recherche de fichiers DXF:</translation>
     </message>
     <message>
         <source>By default export generated G-Code to:</source>
-        <translation type="unfinished"></translation>
+        <translation>Par defaut export G-CODE générer vers:</translation>
     </message>
     <message>
         <source>Location of executable:</source>
-        <translation type="unfinished"></translation>
+        <translation>Position de l&apos;executable</translation>
     </message>
     <message>
         <source>Command-line options:</source>
-        <translation type="unfinished"></translation>
+        <translation>Options sur ligne de commande</translation>
     </message>
     <message>
         <source>Axes&apos; identifiers</source>
-        <translation type="unfinished"></translation>
+        <translation>Identificateur des Axes</translation>
     </message>
     <message>
         <source>First axis:</source>
-        <translation type="unfinished"></translation>
+        <translation>Premier Axe:</translation>
     </message>
     <message>
         <source>Second axis:</source>
-        <translation type="unfinished"></translation>
+        <translation>Second Axe</translation>
     </message>
     <message>
         <source>Third axis:</source>
-        <translation type="unfinished"></translation>
+        <translation>Troisième Axe:</translation>
     </message>
     <message>
-        <source>Third axis&apos; defaults</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Retraction coordinate:</source>
-        <translation type="unfinished"></translation>
+        <source>Start and end&apos;s coordinate</source>
+        <translation>Coordonnées de début et fin</translation>
     </message>
     <message>
         <source>Safety margin:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Workpiece origin coordinate:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Slice depth:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Final mill depth:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>G1 feed rates</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>First and second axis (2D plane):</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>General settings</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>3D mode (requires OpenGL - restart needed)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Display disabled paths (default)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Live update export route (default)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Milling</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Split line segments (default)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Automatic cutter compensation (default)</source>
-        <translation type="unfinished"></translation>
+        <translation>Marge de sécurité:</translation>
     </message>
     <message>
         <source>Machine type (default):</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Configuration values use the unit (restart needed):</source>
-        <translation type="unfinished"></translation>
+        <translation>type de Machine(défaut)</translation>
     </message>
     <message>
         <source>Output</source>
-        <translation type="unfinished"></translation>
+        <translation>Sorties</translation>
     </message>
     <message>
-        <source>Export the G-Code to stdout (instead of a file)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Retract to drag depth (&quot;Third axis slice depth&quot;) if angle exceeds:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>By default enable the TSP optimization for ordering shapes (TSP = Travelling Salesman Problem)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>TSP optimizer</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Optimizer behaviour:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Mutation rate:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Max population:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Max iterations:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Starting point:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Parameters&apos; identifiers</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Infeed depth:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Workpiece top:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Retraction area:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Tool number:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Tool diameter:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Spindle speed:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Start radius (cutter compensation):</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>File used for logging (restart needed):</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>On stderr console log messages with importance minimal to level (restart needed):</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>For log-file log messages with importance minimal to level (restart needed):</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>For message box log messages with importance minimal to level (restart needed):</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Cutter compensation</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Drag Knife options</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Cutter compensation is done by machine (check box if machine reconizes G41 and G42 commands / uncheck otherwise. This also disables pocket milling.)</source>
-        <translation type="unfinished"></translation>
+        <source>The configuration file version ({0}) doesn&apos;t match the software expected version ({1}).
+
+You have to delete (or carefully edit) the configuration file &quot;{2}&quot; to solve the problem.</source>
+        <translation>Le fichier de configuration ({0}) ne colle avec les exeptions de version ({1}).
+Vous devez détruire(ou éditer soigneusement) le fichier de configuration &quot;{2}&quot; pour résoudre le problème.</translation>
     </message>
     <message>
         <source>By default save Project files to:</source>
-        <translation type="unfinished"></translation>
+        <translation>Par défaut sauvez les fichiers du projet vers:</translation>
     </message>
     <message>
         <source>Update paths with last used path: </source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
-        <source>The configuration file version ({0}) doesn&apos;t match any of the software expected version ({1}).
-
-You have to delete (or carefully edit) the configuration file &quot;{2}&quot; to solve the problem.</source>
-        <translation type="unfinished"></translation>
+        <source>General settings</source>
+        <translation>Paramètres Généraux</translation>
     </message>
     <message>
-        <source>Start and end&apos;s coordinate and scaling standard multiplier</source>
-        <translation type="unfinished"></translation>
+        <source>3D mode (requires OpenGL - restart needed)</source>
+        <translation>Mode 3D (Requiert OpenGL - Necessite redémarrage)</translation>
     </message>
     <message>
-        <source>First axis start/end coordiante:</source>
-        <translation type="unfinished"></translation>
+        <source>Display disabled paths (default)</source>
+        <translation>Montre les chemins déselectionnés(Defaut)</translation>
     </message>
     <message>
-        <source>Second axis start/end coordinate:</source>
-        <translation type="unfinished"></translation>
+        <source>Live update export route (default)</source>
+        <translation>Route de mise à jour réseau (Defaut)</translation>
     </message>
     <message>
-        <source>Scale first and second axis:</source>
-        <translation type="unfinished"></translation>
+        <source>Milling</source>
+        <translation>Fraisage</translation>
+    </message>
+    <message>
+        <source>Split line segments (default)</source>
+        <translation>Diviser ligne en segments (defauts)</translation>
+    </message>
+    <message>
+        <source>Automatic cutter compensation (default)</source>
+        <translation>Compensation outil automatique (defaut)</translation>
+    </message>
+    <message>
+        <source>Configuration values use the unit (restart needed):</source>
+        <translation>valeur des Unité de configuration (Redémarrage nécessaire):</translation>
+    </message>
+    <message>
+        <source>Export the G-Code to stdout (instead of a file)</source>
+        <translation>Export du G-CODE sur la sortie ( a la place d&apos;un fichier )</translation>
+    </message>
+    <message>
+        <source>Third axis&apos; defaults</source>
+        <translation>Troisième axe&apos; defaut</translation>
+    </message>
+    <message>
+        <source>Retraction coordinate:</source>
+        <translation>Coordonnées de repos:</translation>
+    </message>
+    <message>
+        <source>Workpiece origin coordinate:</source>
+        <translation></translation>
+    </message>
+    <message>
+        <source>Slice depth:</source>
+        <translation>Profondeur de la tranche:</translation>
+    </message>
+    <message>
+        <source>Final mill depth:</source>
+        <translation>Profondeur de perçage final:</translation>
+    </message>
+    <message>
+        <source>G1 feed rates</source>
+        <translation>Vitesse de déplacement G1</translation>
+    </message>
+    <message>
+        <source>First and second axis (2D plane):</source>
+        <translation>Premier et second axe (plan 2D):</translation>
+    </message>
+    <message>
+        <source>Cutter compensation</source>
+        <translation>Compensation outil cutter</translation>
+    </message>
+    <message>
+        <source>Cutter compensation is done by machine (check box if machine reconizes G41 and G42 commands / uncheck otherwise. This also disables pocket milling.)</source>
+        <translation>La Coupe de compensation est donnée par la machine(Vérifié si la machine reconnait les commandes G41 et G42/sinon corrigé.Cela désactive aussi la fraiseuse)</translation>
+    </message>
+    <message>
+        <source>Drag Knife options</source>
+        <translation>options de glissement du Couteau</translation>
+    </message>
+    <message>
+        <source>Retract to drag depth (&quot;Third axis slice depth&quot;) if angle exceeds:</source>
+        <translation>Retour a la profondeur de coupe(&quot;profondeur de coupe Troisième axe&quot;)si l&apos;angle est dépassé:</translation>
+    </message>
+    <message>
+        <source>By default enable the TSP optimization for ordering shapes (TSP = Travelling Salesman Problem)</source>
+        <translation>Par défaut l&apos;optimisation TSP pour ordonner les couches(TSP = problème du voyageur de commerce. )</translation>
+    </message>
+    <message>
+        <source>TSP optimizer</source>
+        <translation>Optimiseur TSP</translation>
+    </message>
+    <message>
+        <source>Optimizer behaviour:</source>
+        <translation>Comportement de l&apos;optimiseur:</translation>
+    </message>
+    <message>
+        <source>Mutation rate:</source>
+        <translation>Taux de mutation:</translation>
+    </message>
+    <message>
+        <source>Max population:</source>
+        <translation>Population Maximum:</translation>
+    </message>
+    <message>
+        <source>Max iterations:</source>
+        <translation>Itérations Maximum:</translation>
+    </message>
+    <message>
+        <source>Starting point:</source>
+        <translation>Point de départ:</translation>
+    </message>
+    <message>
+        <source>DXF default import point tolerance:</source>
+        <translation>DXF import point de tolérance par défaut:</translation>
+    </message>
+    <message>
+        <source>DXF import spline check:</source>
+        <translation>DXF import et controle des lignes:</translation>
+    </message>
+    <message>
+        <source>DXF default import fit tolerance:</source>
+        <translation>DXF import par défaut des limites de tolérance:</translation>
+    </message>
+    <message>
+        <source>insert elements which are part of a block to layer where the block is inserted</source>
+        <translation>Insérez des éléments qui sont des morceaux du bloc vers le calque ou le bloc est inséré</translation>
+    </message>
+    <message>
+        <source>Parameters&apos; identifiers</source>
+        <translation>Paramètres d &apos; Identification</translation>
+    </message>
+    <message>
+        <source>Infeed depth:</source>
+        <translation>Profondeur de passe:</translation>
+    </message>
+    <message>
+        <source>Workpiece top:</source>
+        <translation>Dessus de la pièce:</translation>
+    </message>
+    <message>
+        <source>Retraction area:</source>
+        <translation>Aire de repos:</translation>
+    </message>
+    <message>
+        <source>G1 feed rate for first and second axis (2D plane):</source>
+        <translation>Vitesse de déplacement G1 pour le premier et le second axe(Plan 2D):</translation>
+    </message>
+    <message>
+        <source>G1 feed rate for third axis:</source>
+        <translation>Vitesse de déplacement G1 pour le troisième axe:</translation>
+    </message>
+    <message>
+        <source>Tool number:</source>
+        <translation>Numéros de l&apos;outils :</translation>
+    </message>
+    <message>
+        <source>Tool diameter:</source>
+        <translation>Diamètre de l&apos;outils:</translation>
+    </message>
+    <message>
+        <source>Spindle speed:</source>
+        <translation>Vitesse du moteur d&apos;usinage:</translation>
+    </message>
+    <message>
+        <source>Start radius (cutter compensation):</source>
+        <translation>Angle de départ(Compensation coupe)</translation>
+    </message>
+    <message>
+        <source>File used for logging (restart needed):</source>
+        <translation>Fichier utilisé pour les journeaux(Redémarage nécéssaire)</translation>
+    </message>
+    <message>
+        <source>On stderr console log messages with importance minimal to level (restart needed):</source>
+        <translation>sur terminal affichage message avec un niveau d&apos;importance minimal(Redémarrage nécéssaire):</translation>
+    </message>
+    <message>
+        <source>For log-file log messages with importance minimal to level (restart needed):</source>
+        <translation>Pour fichier des journeaux message avec un niveau d&apos;importance minimal(Redémarrage nécéssaire):</translation>
+    </message>
+    <message>
+        <source>For message box log messages with importance minimal to level (restart needed):</source>
+        <translation>Pour boite a message affichage message avec un niveau d&apos;importance minimal(Redémarrage nécéssaire):</translation>
     </message>
 </context>
 <context>
@@ -1184,27 +1176,27 @@ You have to delete (or carefully edit) the configuration file &quot;{2}&quot; to
     </message>
     <message>
         <source>Pocket Mill</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Set to True for Pocket Mill for shape: %i</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Set to False for Pocket Mill for shape: %i</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Set to True for G73 Drill, for shape: %i</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Set to False for G73 Drill, for shape: %i</source>
-        <translation type="unfinished"></translation>
+        <translation>Fraiseuse de poche</translation>
     </message>
     <message>
         <source>Drill Bore</source>
-        <translation type="unfinished"></translation>
+        <translation>Perceuse,Alésage</translation>
+    </message>
+    <message>
+        <source>Set to True for Pocket Mill for shape: %i</source>
+        <translation>Vrai pour fraiseuse de poche pour forme: %i</translation>
+    </message>
+    <message>
+        <source>Set to False for Pocket Mill for shape: %i</source>
+        <translation>Faux pour fraiseuse de poche sur forme: %i</translation>
+    </message>
+    <message>
+        <source>Set to True for G73 Drill, for shape: %i</source>
+        <translation>Vrai pour perceuse G73,sur forme: %i</translation>
+    </message>
+    <message>
+        <source>Set to False for G73 Drill, for shape: %i</source>
+        <translation>Faux pour perceuse G73,sur forme: %i</translation>
     </message>
 </context>
 <context>
@@ -1238,232 +1230,216 @@ You have to delete (or carefully edit) the configuration file &quot;{2}&quot; to
     </message>
     <message>
         <source>renamed bad varspace %s to &apos;%s&apos;</source>
-        <translation>renommage mauvais varspace %s à '%s'</translation>
+        <translation>renommage mauvais varspace %s à &apos;%s&apos;</translation>
     </message>
     <message>
         <source>created default varspace &apos;%s&apos;</source>
-        <translation>varspace '%s' créé par défaut</translation>
+        <translation>varspace &apos;%s&apos; créé par défaut</translation>
     </message>
     <message>
         <source>read existing varspace &apos;%s&apos;</source>
-        <translation>lecture varspace '%s' existant</translation>
+        <translation>lecture varspace &apos;%s&apos; existant</translation>
     </message>
     <message>
         <source>Software config</source>
-        <translation type="unfinished"></translation>
+        <translation>Configuration du logiciel</translation>
     </message>
     <message>
         <source>Output specifications</source>
-        <translation type="unfinished"></translation>
+        <translation>Préconnisations de Sortie</translation>
     </message>
     <message>
         <source>Output format description:</source>
-        <translation type="unfinished"></translation>
+        <translation>Description du format de Sortie</translation>
     </message>
     <message>
         <source>Output file extension:</source>
-        <translation type="unfinished"></translation>
+        <translation>Extension du Fichier de sortie:</translation>
     </message>
     <message>
         <source>Output type:</source>
-        <translation type="unfinished"></translation>
+        <translation>Type de Sortie:</translation>
     </message>
     <message>
         <source>Output options</source>
-        <translation type="unfinished"></translation>
+        <translation>Options des Sorties</translation>
     </message>
     <message>
         <source>Export absolute coordinates</source>
-        <translation type="unfinished"></translation>
+        <translation>Export des coordonnées absolues</translation>
+    </message>
+    <message>
+        <source>The postprocessor configuration file version ({0}) doesn&apos;t match the software expected version ({1}).
+
+You have to delete (or carefully edit) the configuration file &quot;{2}&quot; to solve the problem.</source>
+        <translation>Le fichier de configuration du post-processeur({0}) ne correspond pas au exception de la version du soft ({1}).Vous devez détruire(ou soigneusement éditez) le fichier de configuration&quot;{2}&quot; pour resoudre le problème.</translation>
     </message>
     <message>
         <source>Cancel cutter compensation at each slice</source>
-        <translation type="unfinished"></translation>
+        <translation>Abandon de la compensation de coupe a chaque couche</translation>
     </message>
     <message>
         <source>Perform cutter compensation outside the piece</source>
-        <translation type="unfinished"></translation>
+        <translation>Mise en place compensation de coupe en dehors de la piece</translation>
     </message>
     <message>
         <source>Export only counter clockwise arcs</source>
-        <translation type="unfinished"></translation>
+        <translation>Export uniquement des arcs sens des aiguilles de montre</translation>
     </message>
     <message>
         <source>Maximum arc radius:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>G-code constants</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Units in millimeters:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Units in inch:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Absolute programming:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Incremental programming:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Startup:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>End:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Output formatting</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Prepend numbers with the &apos;+&apos; sign for positive values</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Number of digits before the decimal separator:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Padding with &apos;0&apos; digit before the decimal separator</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Number of digits after the decimal separator:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Padding with &apos;0&apos; digit after the decimal separator</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Decimal separator:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Line numbers</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Export line numbers</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Line number starts at:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Line number step:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>G-code codes</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Tool change:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Feed rate change:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Rapid positioning for XY plane:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Rapid positioning for Z plane:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Linear feed move for XY plane:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Linear feed move for Z plane:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Clockwise feed move:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Counter clockwise feed move:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Disable cutter compensation:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Left cutter compensation:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Right cutter compensation:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Placed in front of any shape:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Placed after any shape:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Comment for current shape:</source>
-        <translation type="unfinished"></translation>
+        <translation>Angle maxi de l&apos;arc:</translation>
     </message>
     <message>
         <source>Export all arcs as line seg</source>
-        <translation type="unfinished"></translation>
+        <translation>Export de tous les arcs comme segment de lingne</translation>
+    </message>
+    <message>
+        <source>G-code constants</source>
+        <translation>Constantes G-CODE</translation>
+    </message>
+    <message>
+        <source>Units in millimeters:</source>
+        <translation>Unités en millimètre:</translation>
+    </message>
+    <message>
+        <source>Units in inch:</source>
+        <translation>Unités en Pouce:</translation>
+    </message>
+    <message>
+        <source>Absolute programming:</source>
+        <translation>Programmation Absolue:</translation>
+    </message>
+    <message>
+        <source>Incremental programming:</source>
+        <translation>Programation incrémental:</translation>
+    </message>
+    <message>
+        <source>Startup:</source>
+        <translation>Départ:</translation>
+    </message>
+    <message>
+        <source>End:</source>
+        <translation>Fin:</translation>
+    </message>
+    <message>
+        <source>Output formatting</source>
+        <translation>Formatage de la sortie</translation>
     </message>
     <message>
         <source>Windows line-endings</source>
-        <translation type="unfinished"></translation>
+        <translation>Fenètre des lignes de fin</translation>
+    </message>
+    <message>
+        <source>Prepend numbers with the &apos;+&apos; sign for positive values</source>
+        <translation>Précédez les nombres du signe &apos;+&apos; pour une valeur positive</translation>
+    </message>
+    <message>
+        <source>Number of digits before the decimal separator:</source>
+        <translation>Nombre de chiffre avant le séparateur décimal:</translation>
+    </message>
+    <message>
+        <source>Padding with &apos;0&apos; digit before the decimal separator</source>
+        <translation>Mettre a &apos;0&apos; les chiffres avant le séparateur décimal</translation>
+    </message>
+    <message>
+        <source>Number of digits after the decimal separator:</source>
+        <translation>Nombre de chiffre après le séparateur décimal:</translation>
+    </message>
+    <message>
+        <source>Padding with &apos;0&apos; digit after the decimal separator</source>
+        <translation>Mettre a &apos;0&apos; les chiffres après le séparateur décimal</translation>
+    </message>
+    <message>
+        <source>Decimal separator:</source>
+        <translation>Séparateur Décimale:</translation>
+    </message>
+    <message>
+        <source>Line numbers</source>
+        <translation>Numéros de ligne</translation>
+    </message>
+    <message>
+        <source>Export line numbers</source>
+        <translation>Export des numéros de lignes</translation>
+    </message>
+    <message>
+        <source>Line number starts at:</source>
+        <translation>Numérotation des lignes commence à:</translation>
+    </message>
+    <message>
+        <source>Line number step:</source>
+        <translation>Pas des numéros de ligne:</translation>
+    </message>
+    <message>
+        <source>G-code codes</source>
+        <translation>Codes G-Code</translation>
+    </message>
+    <message>
+        <source>Tool change:</source>
+        <translation>Changement d&apos;outils:</translation>
+    </message>
+    <message>
+        <source>Feed rate change:</source>
+        <translation>Changement vitesse de déplacement:</translation>
+    </message>
+    <message>
+        <source>Rapid positioning for XY plane:</source>
+        <translation>Positionnement rapide pour le plan XY:</translation>
+    </message>
+    <message>
+        <source>Rapid positioning for Z plane:</source>
+        <translation>Positionnement rapide pour le plan Z:</translation>
+    </message>
+    <message>
+        <source>Linear feed move for XY plane:</source>
+        <translation>Vitesse de déplacement lineaire pour le plan XY:</translation>
+    </message>
+    <message>
+        <source>Linear feed move for Z plane:</source>
+        <translation>Vitesse de déplacement lineaire pour le plan Z:</translation>
     </message>
     <message>
         <source>Linear feed move for drilling:</source>
-        <translation type="unfinished"></translation>
+        <translation>Vitesse mouvement linéaire pour perceuse:</translation>
     </message>
     <message>
-        <source>The postprocessor configuration file version ({0}) doesn&apos;t match any of the software expected version ({1}).
-
-You have to delete (or carefully edit) the configuration file &quot;{2}&quot; to solve the problem.</source>
-        <translation type="unfinished"></translation>
+        <source>Clockwise feed move:</source>
+        <translation>Vitesse de Mouvement sens des aiguilles de montre:</translation>
     </message>
     <message>
-        <source>Custom GCode</source>
-        <translation type="unfinished"></translation>
+        <source>Counter clockwise feed move:</source>
+        <translation>Affichage Vitesse de Mouvement sens des aiguilles de montre:</translation>
     </message>
     <message>
-        <source>Define here custom GCODE that can be inserted anywhere in the program:</source>
-        <translation type="unfinished"></translation>
+        <source>Disable cutter compensation:</source>
+        <translation>Désactiver la compensation de coupe:</translation>
     </message>
     <message>
-        <source>Repeat Drill move for slices (only use wit abs coordinates)</source>
-        <translation type="unfinished"></translation>
+        <source>Left cutter compensation:</source>
+        <translation>Compensation de coupe a gauche:</translation>
     </message>
     <message>
-        <source>Linear retract move during drilling:</source>
-        <translation type="unfinished"></translation>
+        <source>Right cutter compensation:</source>
+        <translation>Compensateion de coupe a droite:</translation>
+    </message>
+    <message>
+        <source>Placed in front of any shape:</source>
+        <translation>Placez sur la face avant de chaque forme:</translation>
+    </message>
+    <message>
+        <source>Placed after any shape:</source>
+        <translation>Placez après chaque forme:</translation>
+    </message>
+    <message>
+        <source>Comment for current shape:</source>
+        <translation>Commentaire pour la forme courante:</translation>
     </message>
 </context>
 <context>
     <name>MyPostProcessor</name>
     <message>
         <source>created default varspace</source>
-        <translation>varspace créé par défaut</translation>
+        <translation>Espace variables créé par défaut</translation>
     </message>
     <message>
         <source>Beginning export of Layer Nr. %s, Name %s</source>
@@ -1496,7 +1472,7 @@ You have to delete (or carefully edit) the configuration file &quot;{2}&quot; to
     <message>
         <source>(Generated with: %s, Version: %s, Date: %s)
 </source>
-        <translation type="obsolete">(Généré avec: %s, Version: %s, Date: %s)</translation>
+        <translation>(Généré avec: %s, Version: %s, Date: %s)</translation>
     </message>
     <message>
         <source>(Time: %s)
@@ -1510,66 +1486,56 @@ You have to delete (or carefully edit) the configuration file &quot;{2}&quot; to
     </message>
     <message>
         <source>Postprocessor configuration</source>
-        <translation type="unfinished"></translation>
+        <translation>Configuratiion du Postprocesseur</translation>
     </message>
     <message>
         <source>(Output format description: %s)
 </source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>(Generated with: %s)
-(Version: %s, Date: %s)
-</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>(Used Postprocessor: %s) 
-</source>
-        <translation type="unfinished"></translation>
+        <translation>(Description du format de Sortie:%s)
+</translation>
     </message>
 </context>
 <context>
     <name>OffArcGeo</name>
     <message>
         <source>Unsupported geometry type: %s</source>
-        <translation type="unfinished"></translation>
+        <translation>Types de géométries :%s Non supporté</translation>
     </message>
 </context>
 <context>
     <name>OffLineGeo</name>
     <message>
         <source>Unsupported geometry type: %s</source>
-        <translation type="unfinished"></translation>
+        <translation>Types de géométries :%s Non supporté</translation>
     </message>
 </context>
 <context>
     <name>PopUpDialog</name>
     <message>
         <source>Auto</source>
-        <translation type="unfinished"></translation>
+        <translation>Auto</translation>
     </message>
     <message>
         <source>OK</source>
-        <translation type="unfinished"></translation>
+        <translation>Ok</translation>
     </message>
     <message>
         <source>Cancel</source>
-        <translation type="unfinished"></translation>
+        <translation>Abandon</translation>
     </message>
 </context>
 <context>
     <name>PopulationClass</name>
     <message>
         <source>Wrong begin art of TSP chosen</source>
-        <translation>Mauvais begin art de TSP choisi</translation>
+        <translation>Mauvais début art de TSP choisi</translation>
     </message>
 </context>
 <context>
     <name>Project</name>
     <message>
         <source>New/Unrecognized shapes added for layer:%s; %s</source>
-        <translation type="unfinished"></translation>
+        <translation>Nouveau/Formes inconnues ajoutées au calques;%s;%s</translation>
     </message>
 </context>
 <context>
@@ -1609,11 +1575,11 @@ La longueur doit être supérieure à la tolérance</translation>
     </message>
     <message>
         <source>Did read %i of linepairs from DXF</source>
-        <translation type="unfinished"></translation>
+        <translation>Lire %i  des lignes paires du DXF</translation>
     </message>
     <message>
         <source>Element ignored: %s</source>
-        <translation type="unfinished"></translation>
+        <translation>Elément ignoré: %s</translation>
     </message>
 </context>
 <context>
@@ -1624,7 +1590,7 @@ La longueur doit être supérieure à la tolérance</translation>
     </message>
     <message>
         <source>Had to reverse the shape to be CW</source>
-        <translation>Obligation d'inverser la forme pour etre CW</translation>
+        <translation>Obligation d&apos;inverser la forme pour etre CW</translation>
     </message>
     <message>
         <source>Clicked Point: %s</source>
@@ -1640,81 +1606,54 @@ La longueur doit être supérieure à la tolérance</translation>
     </message>
     <message>
         <source>ERROR: Z infeed depth is null!</source>
-        <translation type="obsolete">ERREUR: Profondeur de passe Z nulle!</translation>
+        <translation>ERREUR: Profondeur de passe Z nulle!</translation>
     </message>
     <message>
         <source>WARNING: initial mill depth (%i) is lower than end mill depth (%i). Using end mill depth as final depth.</source>
-        <translation type="obsolete">ATTENTION: profondeur d'usinage initiale (%i) inférieure à la profondeur d'usinage totale (%i). Utilisation de cette dernière.</translation>
+        <translation type="obsolete">ATTENTION: profondeur d&apos;usinage initiale (%i) inférieure à la profondeur d&apos;usinage totale (%i). Utilisation de cette dernière.</translation>
     </message>
     <message>
         <source>Shoelace method cannot (directly) be applied to this shape</source>
-        <translation type="unfinished"></translation>
+        <translation>La méthode Shoelace ne peux pas être appliqué (directement) a cette forme</translation>
     </message>
     <message>
-        <source>Z infeed depth is null!</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Warning during Export</source>
-        <translation type="unfinished">Attention pendant exportation</translation>
-    </message>
-    <message>
-        <source>Workpiece Top Z (%f0.2) is lower than end mill depth (%f0.2)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Initial mill depth (%f0.2) is lower than end mill depth (%f0.2)</source>
-        <translation type="unfinished"></translation>
+        <source>WARNING: initial mill depth (%f0.2) is lower than end mill depth (%f0.2). Using end mill depth as final depth.</source>
+        <translation>DANGER:Profondeur de perçage initiale (%f0.2) est inférieur à la profondeur perçage (%f0.2). Utilisez la profondeur de perçage total</translation>
     </message>
 </context>
 <context>
     <name>TreeHandler</name>
     <message>
         <source>[en]</source>
-        <translation type="unfinished"></translation>
+        <translation>[fr]</translation>
     </message>
     <message>
         <source>Name</source>
-        <translation type="unfinished"></translation>
+        <translation>Nom</translation>
     </message>
     <message>
         <source>Nr</source>
-        <translation type="unfinished"></translation>
+        <translation>Nr</translation>
     </message>
     <message>
         <source>Optimal path</source>
-        <translation type="unfinished"></translation>
+        <translation>Chemin optimum</translation>
     </message>
     <message>
         <source>Type</source>
-        <translation type="unfinished"></translation>
+        <translation>Type</translation>
     </message>
     <message>
         <source>Base point</source>
-        <translation type="unfinished"></translation>
+        <translation>Point de Base</translation>
     </message>
     <message>
         <source>Scale</source>
-        <translation type="unfinished"></translation>
+        <translation>Echelle</translation>
     </message>
     <message>
         <source>Rotation</source>
-        <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
-    <name>self.self</name>
-    <message>
-        <source>Error: Z infeed depth is null!</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Workpiece Top Z (%f0.2) is lower than end mill depth (%f0.2)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Initial mill depth (%f0.2) is lower than end mill depth (%f0.2)</source>
-        <translation type="unfinished"></translation>
+        <translation>Rotation</translation>
     </message>
 </context>
 </TS>
