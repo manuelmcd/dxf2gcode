@@ -138,6 +138,7 @@ class MyDropDownMenu(QMenu):
 
         swdirectionAction = self.addAction(self.tr("Switch Direction"))
         SetNxtStPAction = self.addAction(self.tr("Set Nearest StartPoint"))
+        setSharStAction = self.addAction(self.tr("Set Sharpes StartPoint"))
 
         self.addSeparator()
         
@@ -205,6 +206,7 @@ class MyDropDownMenu(QMenu):
 
         swdirectionAction.triggered.connect(self.switchDirection)
         SetNxtStPAction.triggered.connect(self.setNearestStPoint)
+        setSharStAction.triggered.connect(self.setSharpestStPoint)
 
 
 
@@ -314,6 +316,14 @@ class MyDropDownMenu(QMenu):
             self.canvas_scene.repaint_shape(shape)
         g.window.updateExportRoute()
 
+    def setSharpestStPoint(self):
+        """
+        Search the sharpest StartPoint of all selected shapes.
+        """
+        for shape in self.selectedItems:
+            shape.setSharpestStPoint()
+            self.canvas_scene.repaint_shape(shape)
+        g.window.updateExportRoute()
 
     def setNoComp(self):
         """
