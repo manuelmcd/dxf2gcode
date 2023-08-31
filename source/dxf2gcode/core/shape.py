@@ -228,17 +228,18 @@ class Shape(object):
         for i in range(len(self.geos)):
              end_point, end_ang = self.geos[i-1].get_start_end_points(0,1) 
              st_point,  st_ang  = self.geos[i].get_start_end_points(1,1)
-             ang_diff=(end_ang-st_ang)/(2*pi)
              
-             if ang_diff < 0: 
-                 ang_diff += 2*pi
-             if ang_diff > 2*pi:
-                 ang_diff -=2*pi
-                
+             ang_diff=(st_ang-end_ang-pi)
+             
+             if ang_diff < -pi: 
+                ang_diff += 2*pi
+             if ang_diff > pi:
+                ang_diff -=2*pi
+                      
              logger.debug("st_point: %s; end_ang: %0.2f; st_ang: %0.2f; ang_diff: %0.2f" %(st_point, st_ang, end_ang, ang_diff))
-             logger.debug(ang_diff)
+
              if sharpest_ang<abs(ang_diff):
-                 sharpest_ang=ang_diff
+                 sharpest_ang=abs(ang_diff)
                  sharpest_geo_nr=i             
              
         logger.debug("sharpest_ang: %0.2f " %(sharpest_ang))     
