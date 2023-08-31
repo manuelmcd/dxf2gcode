@@ -138,7 +138,7 @@ class MyDropDownMenu(QMenu):
 
         swdirectionAction = self.addAction(self.tr("Switch Direction"))
         SetNxtStPAction = self.addAction(self.tr("Set Nearest StartPoint"))
-        setSharStAction = self.addAction(self.tr("Set Sharpes StartPoint"))
+        setSharStAction = self.addAction(self.tr("Set Sharpest StartPoint"))
 
         self.addSeparator()
         
