@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS><TS version="2.0" language="fr_FR" sourcelanguage="en">
+<!DOCTYPE TS>
+<TS version="2.1" language="fr_FR" sourcelanguage="en">
 <context>
     <name>ArcGeo</name>
     <message>
@@ -60,7 +61,7 @@ Trouve {0} éléments dupliqué dans la table &quot;{1}&quot;
 The table &quot;{0}&quot; must always contains tool number &apos;1&apos;
 </source>
         <translation>
-La table &quot;{0}&quot; doit toujours contenir le numéro de l&apos;outils &apos;1&apos;
+La table &quot;{0}&quot; doit toujours contenir le numéro de l'outils '1'
 </translation>
     </message>
 </context>
@@ -109,7 +110,7 @@ Pas assez de caractère(exception de {0},trouve {1} pour le Champ &quot;{2}&quot
     </message>
     <message>
         <source>An error occured while duplicating the file &quot;{0}&quot;. Check that it doesn&apos;t already exists for example</source>
-        <translation>Une erreur est apparue durant la duplication du fichier&quot;{0}&quot;.Vérifier si il n&apos;existe pas déja par exemple</translation>
+        <translation>Une erreur est apparue durant la duplication du fichier&quot;{0}&quot;.Vérifier si il n'existe pas déja par exemple</translation>
     </message>
     <message>
         <source>Add a configuration file</source>
@@ -121,7 +122,7 @@ Pas assez de caractère(exception de {0},trouve {1} pour le Champ &quot;{2}&quot
     </message>
     <message>
         <source>An error occured while creating the file &quot;{0}&quot;. Check that it doesn&apos;t already exists for example</source>
-        <translation>Une erreur est apparue durant la création du fichier&quot;{0}&quot;.Vérifier si il n&apos;existe pas déja par exemple</translation>
+        <translation>Une erreur est apparue durant la création du fichier&quot;{0}&quot;.Vérifier si il n'existe pas déja par exemple</translation>
     </message>
     <message>
         <source>Delete configuration file?</source>
@@ -140,7 +141,7 @@ Pas assez de caractère(exception de {0},trouve {1} pour le Champ &quot;{2}&quot
     <name>GLWidget</name>
     <message>
         <source>Using OpenGL version: %s</source>
-        <translation>Utilisation d&apos;OpenGL version:%s</translation>
+        <translation>Utilisation d'OpenGL version:%s</translation>
     </message>
 </context>
 <context>
@@ -216,7 +217,7 @@ Pas assez de caractère(exception de {0},trouve {1} pour le Champ &quot;{2}&quot
     </message>
     <message>
         <source>New Export Order after TSP: %s</source>
-        <translation>Nouvel ordre d&apos;exportation après TSP: %s</translation>
+        <translation>Nouvel ordre d'exportation après TSP: %s</translation>
     </message>
     <message>
         <source>Export the enabled shapes</source>
@@ -292,7 +293,7 @@ Pas assez de caractère(exception de {0},trouve {1} pour le Champ &quot;{2}&quot
     </message>
     <message>
         <source>Loaded %i entity geometries; reduced to %i contours; used layers: %s; number of inserts %i</source>
-        <translation>Chargé %i Entités géométriques; réduit à %i Contours; calques utilisés: %s; nombre d&apos;inserts: %i</translation>
+        <translation>Chargé %i Entités géométriques; réduit à %i Contours; calques utilisés: %s; nombre d'inserts: %i</translation>
     </message>
     <message>
         <source>Closing</source>
@@ -308,11 +309,11 @@ Pas assez de caractère(exception de {0},trouve {1} pour le Champ &quot;{2}&quot
     </message>
     <message>
         <source>&lt;html&gt;&lt;h2&gt;&lt;center&gt;You are using&lt;/center&gt;&lt;/h2&gt;&lt;body bgcolor=&lt;center&gt;&lt;img src=&apos;:images/dxf2gcode_logo.png&apos; border=&apos;1&apos; color=&apos;white&apos;&gt;&lt;/center&gt;&lt;/body&gt;&lt;h2&gt;Version:&lt;/h2&gt;&lt;body&gt;%s: %s&lt;br&gt;Last change: %s&lt;br&gt;Changed by: %s&lt;br&gt;&lt;/body&gt;&lt;h2&gt;Where to get help:&lt;/h2&gt;For more information and updates, please visit &lt;a href=&apos;http://sourceforge.net/projects/dxf2gcode/&apos;&gt;http://sourceforge.net/projects/dxf2gcode/&lt;/a&gt;&lt;br&gt;For any questions on how to use dxf2gcode please use the &lt;a href=&apos;https://groups.google.com/forum/?fromgroups#!forum/dxf2gcode-users&apos;&gt;mailing list&lt;/a&gt;&lt;br&gt;To log bugs, or request features please use the &lt;a href=&apos;http://sourceforge.net/projects/dxf2gcode/tickets/&apos;&gt;issue tracking system&lt;/a&gt;&lt;br&gt;&lt;h2&gt;License and copyright:&lt;/h2&gt;&lt;body&gt;This program is written in Python and is published under the &lt;a href=&apos;http://www.gnu.org/licenses/&apos;&gt;GNU GPLv3 license.&lt;/a&gt;&lt;br&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="obsolete">&lt;html&gt;&lt;h2&gt;&lt;center&gt;Vous utilisez&lt;/center&gt;&lt;/h2&gt;&lt;body bgcolor=&lt;center&gt;&lt;img src=&apos;:images/dxf2gcode_logo.png; border=&apos;1&apos; color=&apos;white&apos;&gt;&lt;/center&gt;&lt;/body&gt;&lt;h2&gt;Version:&lt;/h2&gt;&lt;body&gt;%s: %s&lt;br&gt;Dernière modification: %s&lt;br&gt;Modifié par: %s&lt;br&gt;&lt;/body&gt;&lt;h2&gt;Ou trouver de l&apos;aide:&lt;/h2&gt;Pour plus d&apos;informationds et mises à jour, aller sur &lt;a href=&apos;http://sourceforge.net/projects/dxf2gcode/&apos;&gt;http://sourceforge.net/projects/dxf2gcode/&lt;/a&gt;&lt;br&gt;Pour toute questions sur l&apos;utilisation de dxf2gcode aller voir &lt;a href=&apos;https://groups.google.com/forum/?fromgroups#!forum/dxf2gcode-users&apos;&gt;mailing list&lt;/a&gt;&lt;br&gt;Pour rapporter un bug ou toute autre demande se rendre sur &lt;a href=&apos;http://sourceforge.net/projects/dxf2gcode/tickets/&apos;&gt;issue tracking system&lt;/a&gt;&lt;br&gt;&lt;h2&gt;Licence et copyright:&lt;/h2&gt;&lt;body&gt;Ce programme est écrit en Python et est publié sous &lt;a href=&apos;http://www.gnu.org/licenses/&apos;&gt;GNU GPLv3 license.&lt;/a&gt;&lt;br&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation type="obsolete">&lt;html&gt;&lt;h2&gt;&lt;center&gt;Vous utilisez&lt;/center&gt;&lt;/h2&gt;&lt;body bgcolor=&lt;center&gt;&lt;img src=':images/dxf2gcode_logo.png; border='1' color='white'&gt;&lt;/center&gt;&lt;/body&gt;&lt;h2&gt;Version:&lt;/h2&gt;&lt;body&gt;%s: %s&lt;br&gt;Dernière modification: %s&lt;br&gt;Modifié par: %s&lt;br&gt;&lt;/body&gt;&lt;h2&gt;Ou trouver de l'aide:&lt;/h2&gt;Pour plus d'informationds et mises à jour, aller sur &lt;a href='http://sourceforge.net/projects/dxf2gcode/'&gt;http://sourceforge.net/projects/dxf2gcode/&lt;/a&gt;&lt;br&gt;Pour toute questions sur l'utilisation de dxf2gcode aller voir &lt;a href='https://groups.google.com/forum/?fromgroups#!forum/dxf2gcode-users'&gt;mailing list&lt;/a&gt;&lt;br&gt;Pour rapporter un bug ou toute autre demande se rendre sur &lt;a href='http://sourceforge.net/projects/dxf2gcode/tickets/'&gt;issue tracking system&lt;/a&gt;&lt;br&gt;&lt;h2&gt;Licence et copyright:&lt;/h2&gt;&lt;body&gt;Ce programme est écrit en Python et est publié sous &lt;a href='http://www.gnu.org/licenses/'&gt;GNU GPLv3 license.&lt;/a&gt;&lt;br&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <source>No Z-Axis for lathe</source>
-        <translation>Pas d&apos;axe Z pour un tour</translation>
+        <translation>Pas d'axe Z pour un tour</translation>
     </message>
     <message>
         <source>Cannot Save the File</source>
@@ -492,7 +493,7 @@ Pas assez de caractère(exception de {0},trouve {1} pour le Champ &quot;{2}&quot
     </message>
     <message>
         <source>Feed rate XY</source>
-        <translation>Vitesse d&apos;avance XY</translation>
+        <translation>Vitesse d'avance XY</translation>
     </message>
     <message>
         <source>Z Final mill depth</source>
@@ -604,7 +605,7 @@ Pas assez de caractère(exception de {0},trouve {1} pour le Champ &quot;{2}&quot
     </message>
     <message>
         <source>No differences found. Ergo, workpiece zero is not moved</source>
-        <translation>Pas trouvé de différence. Ergo Zero plan de travail n&apos;a pas bougé</translation>
+        <translation>Pas trouvé de différence. Ergo Zero plan de travail n'a pas bougé</translation>
     </message>
     <message>
         <source>Command:
@@ -616,7 +617,7 @@ renvoi le code erreur:{1}</translation>
     </message>
     <message>
         <source>Please make sure you have installed {0}, and configured it in the config file.</source>
-        <translation>Soyez sur d&apos;avoir installé {0},et de l&apos;avoir configuré dans le fichier config</translation>
+        <translation>Soyez sur d'avoir installé {0},et de l'avoir configuré dans le fichier config</translation>
     </message>
     <message>
         <source>Converting {0} to {1}</source>
@@ -624,11 +625,11 @@ renvoi le code erreur:{1}</translation>
     </message>
     <message>
         <source>Python version 2 is not supported, please use it with python version 3.</source>
-        <translation>Python version 2 n&apos;est pas supporté, s&apos;il vous plait utilisez python 3</translation>
+        <translation>Python version 2 n'est pas supporté, s'il vous plait utilisez python 3</translation>
     </message>
     <message>
         <source>Error exporting shapes: %s</source>
-        <translation>Erreur lors de l&apos;exportation couche :%s</translation>
+        <translation type="obsolete">Erreur lors de l'exportation couche :%s</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -776,7 +777,23 @@ renvoi le code erreur:{1}</translation>
     </message>
     <message>
         <source>&lt;html&gt;&lt;h2&gt;&lt;center&gt;You are using&lt;/center&gt;&lt;/h2&gt;&lt;body bgcolor=&lt;center&gt;&lt;img src=&apos;:images/dxf2gcode_logo.png&apos; border=&apos;1&apos; color=&apos;white&apos;&gt;&lt;/center&gt;&lt;/body&gt;&lt;h2&gt;Version:&lt;/h2&gt;&lt;body&gt;%s: %s&lt;br&gt;Last change: %s&lt;br&gt;Changed by: %s&lt;br&gt;&lt;/body&gt;&lt;h2&gt;Where to get help:&lt;/h2&gt;For more information and updates, please visit &lt;a href=&apos;http://sourceforge.net/projects/dxf2gcode/&apos;&gt;http://sourceforge.net/projects/dxf2gcode/&lt;/a&gt;&lt;br&gt;For any questions on how to use dxf2gcode please use the &lt;a href=&apos;https://www.ltspiceusers.ch/forums/english-section.67/&apos;&gt;https://www.ltspiceusers.ch/forums/english-section.67/&lt;/a&gt;&lt;br&gt;To log bugs, or request features please use the &lt;a href=&apos;http://sourceforge.net/p/dxf2gcode/tickets/&apos;&gt;issue tracking system&lt;/a&gt;&lt;br&gt;&lt;h2&gt;License and copyright:&lt;/h2&gt;&lt;body&gt;This program is written in Python and is published under the &lt;a href=&apos;http://www.gnu.org/licenses/&apos;&gt;GNU GPLv3 license.&lt;/a&gt;&lt;br&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;h2&gt;&lt;center&gt;Vous utilisez&lt;/center&gt;&lt;/h2&gt;&lt;body bgcolor=&lt;center&gt;&lt;img src=&apos;:images/dxf2gcode_logo.png&apos; border=&apos;1&apos; color=&apos;white&apos;&gt;&lt;/center&gt;&lt;/body&gt;&lt;h2&gt;Version:&lt;/h2&gt;&lt;body&gt;%s: %s&lt;br&gt;Dernier Changements: %s&lt;br&gt;Changé par: %s&lt;br&gt;&lt;/body&gt;&lt;h2&gt;Où trouver de l&apos;aide:&lt;/h2&gt;Pour plus d&apos;informations et mises a jour , Visitez s&apos;il vous plait &lt;a href=&apos;http://sourceforge.net/projects/dxf2gcode/&apos;&gt;http://sourceforge.net/projects/dxf2gcode/&lt;/a&gt;&lt;br&gt;Pour toutes questions sur l&apos;utilisation de dxf2gcode s&apos;il vous plait utilisez le &lt;a href=&apos;https://www.ltspiceusers.ch/forums/english-section.67/&apos;&gt;https://www.ltspiceusers.ch/forums/english-section.67/&lt;/a&gt;&lt;br&gt;To log bugs, or request features please use the &lt;a href=&apos;http://sourceforge.net/p/dxf2gcode/tickets/&apos;&gt;issue tracking system&lt;/a&gt;&lt;br&gt;&lt;h2&gt;License and copyright:&lt;/h2&gt;&lt;body&gt;Ce programme est écrit en Python et publié sous  &lt;a href=&apos;http://www.gnu.org/licenses/&apos;&gt;GNU GPLv3 license.&lt;/a&gt;&lt;br&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;h2&gt;&lt;center&gt;Vous utilisez&lt;/center&gt;&lt;/h2&gt;&lt;body bgcolor=&lt;center&gt;&lt;img src=':images/dxf2gcode_logo.png' border='1' color='white'&gt;&lt;/center&gt;&lt;/body&gt;&lt;h2&gt;Version:&lt;/h2&gt;&lt;body&gt;%s: %s&lt;br&gt;Dernier Changements: %s&lt;br&gt;Changé par: %s&lt;br&gt;&lt;/body&gt;&lt;h2&gt;Où trouver de l'aide:&lt;/h2&gt;Pour plus d'informations et mises a jour , Visitez s'il vous plait &lt;a href='http://sourceforge.net/projects/dxf2gcode/'&gt;http://sourceforge.net/projects/dxf2gcode/&lt;/a&gt;&lt;br&gt;Pour toutes questions sur l'utilisation de dxf2gcode s'il vous plait utilisez le &lt;a href='https://www.ltspiceusers.ch/forums/english-section.67/'&gt;https://www.ltspiceusers.ch/forums/english-section.67/&lt;/a&gt;&lt;br&gt;To log bugs, or request features please use the &lt;a href='http://sourceforge.net/p/dxf2gcode/tickets/'&gt;issue tracking system&lt;/a&gt;&lt;br&gt;&lt;h2&gt;License and copyright:&lt;/h2&gt;&lt;body&gt;Ce programme est écrit en Python et publié sous  &lt;a href='http://www.gnu.org/licenses/'&gt;GNU GPLv3 license.&lt;/a&gt;&lt;br&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+    </message>
+    <message>
+        <source>&amp;Mirror All</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Mirror all X / Y-Axis</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Mirror all on X-Axis:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Mirror all on Y-Axis:</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -791,7 +808,7 @@ renvoi le code erreur:{1}</translation>
     </message>
     <message>
         <source>For more information and updates visit:</source>
-        <translation>Pour plus d&apos;informations et mise a jour visite:</translation>
+        <translation>Pour plus d'informations et mise a jour visite:</translation>
     </message>
 </context>
 <context>
@@ -814,11 +831,11 @@ renvoi le code erreur:{1}</translation>
     </message>
     <message>
         <source>renamed bad varspace %s to &apos;%s&apos;</source>
-        <translation>renommage mauvais varspace %s à &apos;%s&apos;</translation>
+        <translation>renommage mauvais varspace %s à '%s'</translation>
     </message>
     <message>
         <source>created default varspace &apos;%s&apos;</source>
-        <translation>varspace &apos;%s&apos; par défaut créé</translation>
+        <translation>varspace '%s' par défaut créé</translation>
     </message>
     <message>
         <source>Tools table</source>
@@ -850,11 +867,11 @@ renvoi le code erreur:{1}</translation>
     </message>
     <message>
         <source>Define the tools here:</source>
-        <translation>Définir l&apos;outil ici:</translation>
+        <translation>Définir l'outil ici:</translation>
     </message>
     <message>
         <source>Define here custom GCODE that can be inserted anywhere in the program:</source>
-        <translation>Définir ici GCODE perso qui peut etre inseré n&apos;importe ou dans le programe</translation>
+        <translation>Définir ici GCODE perso qui peut etre inseré n'importe ou dans le programe</translation>
     </message>
     <message>
         <source> mm</source>
@@ -882,7 +899,7 @@ renvoi le code erreur:{1}</translation>
     </message>
     <message>
         <source>Location of executable:</source>
-        <translation>Position de l&apos;executable</translation>
+        <translation>Position de l'executable</translation>
     </message>
     <message>
         <source>Command-line options:</source>
@@ -906,7 +923,7 @@ renvoi le code erreur:{1}</translation>
     </message>
     <message>
         <source>Start and end&apos;s coordinate</source>
-        <translation>Coordonnées de début et fin</translation>
+        <translation type="obsolete">Coordonnées de début et fin</translation>
     </message>
     <message>
         <source>Safety margin:</source>
@@ -924,7 +941,7 @@ renvoi le code erreur:{1}</translation>
         <source>The configuration file version ({0}) doesn&apos;t match the software expected version ({1}).
 
 You have to delete (or carefully edit) the configuration file &quot;{2}&quot; to solve the problem.</source>
-        <translation>Le fichier de configuration ({0}) ne colle avec les exeptions de version ({1}).
+        <translation type="obsolete">Le fichier de configuration ({0}) ne colle avec les exeptions de version ({1}).
 Vous devez détruire(ou éditer soigneusement) le fichier de configuration &quot;{2}&quot; pour résoudre le problème.</translation>
     </message>
     <message>
@@ -969,11 +986,11 @@ Vous devez détruire(ou éditer soigneusement) le fichier de configuration &quot
     </message>
     <message>
         <source>Export the G-Code to stdout (instead of a file)</source>
-        <translation>Export du G-CODE sur la sortie ( a la place d&apos;un fichier )</translation>
+        <translation>Export du G-CODE sur la sortie ( a la place d'un fichier )</translation>
     </message>
     <message>
         <source>Third axis&apos; defaults</source>
-        <translation>Troisième axe&apos; defaut</translation>
+        <translation>Troisième axe' defaut</translation>
     </message>
     <message>
         <source>Retraction coordinate:</source>
@@ -1013,11 +1030,11 @@ Vous devez détruire(ou éditer soigneusement) le fichier de configuration &quot
     </message>
     <message>
         <source>Retract to drag depth (&quot;Third axis slice depth&quot;) if angle exceeds:</source>
-        <translation>Retour a la profondeur de coupe(&quot;profondeur de coupe Troisième axe&quot;)si l&apos;angle est dépassé:</translation>
+        <translation>Retour a la profondeur de coupe(&quot;profondeur de coupe Troisième axe&quot;)si l'angle est dépassé:</translation>
     </message>
     <message>
         <source>By default enable the TSP optimization for ordering shapes (TSP = Travelling Salesman Problem)</source>
-        <translation>Par défaut l&apos;optimisation TSP pour ordonner les couches(TSP = problème du voyageur de commerce. )</translation>
+        <translation>Par défaut l'optimisation TSP pour ordonner les couches(TSP = problème du voyageur de commerce. )</translation>
     </message>
     <message>
         <source>TSP optimizer</source>
@@ -1025,7 +1042,7 @@ Vous devez détruire(ou éditer soigneusement) le fichier de configuration &quot
     </message>
     <message>
         <source>Optimizer behaviour:</source>
-        <translation>Comportement de l&apos;optimiseur:</translation>
+        <translation>Comportement de l'optimiseur:</translation>
     </message>
     <message>
         <source>Mutation rate:</source>
@@ -1061,7 +1078,7 @@ Vous devez détruire(ou éditer soigneusement) le fichier de configuration &quot
     </message>
     <message>
         <source>Parameters&apos; identifiers</source>
-        <translation>Paramètres d &apos; Identification</translation>
+        <translation>Paramètres d ' Identification</translation>
     </message>
     <message>
         <source>Infeed depth:</source>
@@ -1085,15 +1102,15 @@ Vous devez détruire(ou éditer soigneusement) le fichier de configuration &quot
     </message>
     <message>
         <source>Tool number:</source>
-        <translation>Numéros de l&apos;outils :</translation>
+        <translation>Numéros de l'outils :</translation>
     </message>
     <message>
         <source>Tool diameter:</source>
-        <translation>Diamètre de l&apos;outils:</translation>
+        <translation>Diamètre de l'outils:</translation>
     </message>
     <message>
         <source>Spindle speed:</source>
-        <translation>Vitesse du moteur d&apos;usinage:</translation>
+        <translation>Vitesse du moteur d'usinage:</translation>
     </message>
     <message>
         <source>Start radius (cutter compensation):</source>
@@ -1105,15 +1122,37 @@ Vous devez détruire(ou éditer soigneusement) le fichier de configuration &quot
     </message>
     <message>
         <source>On stderr console log messages with importance minimal to level (restart needed):</source>
-        <translation>sur terminal affichage message avec un niveau d&apos;importance minimal(Redémarrage nécéssaire):</translation>
+        <translation>sur terminal affichage message avec un niveau d'importance minimal(Redémarrage nécéssaire):</translation>
     </message>
     <message>
         <source>For log-file log messages with importance minimal to level (restart needed):</source>
-        <translation>Pour fichier des journeaux message avec un niveau d&apos;importance minimal(Redémarrage nécéssaire):</translation>
+        <translation>Pour fichier des journeaux message avec un niveau d'importance minimal(Redémarrage nécéssaire):</translation>
     </message>
     <message>
         <source>For message box log messages with importance minimal to level (restart needed):</source>
-        <translation>Pour boite a message affichage message avec un niveau d&apos;importance minimal(Redémarrage nécéssaire):</translation>
+        <translation>Pour boite a message affichage message avec un niveau d'importance minimal(Redémarrage nécéssaire):</translation>
+    </message>
+    <message>
+        <source>The configuration file version ({0}) doesn&apos;t match any of the software expected version ({1}).
+
+You have to delete (or carefully edit) the configuration file &quot;{2}&quot; to solve the problem.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Start and end&apos;s coordinate and scaling standard multiplier</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>First axis start/end coordiante:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Second axis start/end coordinate:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Scale first and second axis:</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -1198,6 +1237,10 @@ Vous devez détruire(ou éditer soigneusement) le fichier de configuration &quot
         <source>Set to False for G73 Drill, for shape: %i</source>
         <translation>Faux pour perceuse G73,sur forme: %i</translation>
     </message>
+    <message>
+        <source>Set Sharpest StartPoint</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>MyGraphicsView</name>
@@ -1230,15 +1273,15 @@ Vous devez détruire(ou éditer soigneusement) le fichier de configuration &quot
     </message>
     <message>
         <source>renamed bad varspace %s to &apos;%s&apos;</source>
-        <translation>renommage mauvais varspace %s à &apos;%s&apos;</translation>
+        <translation>renommage mauvais varspace %s à '%s'</translation>
     </message>
     <message>
         <source>created default varspace &apos;%s&apos;</source>
-        <translation>varspace &apos;%s&apos; créé par défaut</translation>
+        <translation>varspace '%s' créé par défaut</translation>
     </message>
     <message>
         <source>read existing varspace &apos;%s&apos;</source>
-        <translation>lecture varspace &apos;%s&apos; existant</translation>
+        <translation>lecture varspace '%s' existant</translation>
     </message>
     <message>
         <source>Software config</source>
@@ -1272,7 +1315,7 @@ Vous devez détruire(ou éditer soigneusement) le fichier de configuration &quot
         <source>The postprocessor configuration file version ({0}) doesn&apos;t match the software expected version ({1}).
 
 You have to delete (or carefully edit) the configuration file &quot;{2}&quot; to solve the problem.</source>
-        <translation>Le fichier de configuration du post-processeur({0}) ne correspond pas au exception de la version du soft ({1}).Vous devez détruire(ou soigneusement éditez) le fichier de configuration&quot;{2}&quot; pour resoudre le problème.</translation>
+        <translation type="obsolete">Le fichier de configuration du post-processeur({0}) ne correspond pas au exception de la version du soft ({1}).Vous devez détruire(ou soigneusement éditez) le fichier de configuration&quot;{2}&quot; pour resoudre le problème.</translation>
     </message>
     <message>
         <source>Cancel cutter compensation at each slice</source>
@@ -1288,7 +1331,7 @@ You have to delete (or carefully edit) the configuration file &quot;{2}&quot; to
     </message>
     <message>
         <source>Maximum arc radius:</source>
-        <translation>Angle maxi de l&apos;arc:</translation>
+        <translation>Angle maxi de l'arc:</translation>
     </message>
     <message>
         <source>Export all arcs as line seg</source>
@@ -1332,7 +1375,7 @@ You have to delete (or carefully edit) the configuration file &quot;{2}&quot; to
     </message>
     <message>
         <source>Prepend numbers with the &apos;+&apos; sign for positive values</source>
-        <translation>Précédez les nombres du signe &apos;+&apos; pour une valeur positive</translation>
+        <translation>Précédez les nombres du signe '+' pour une valeur positive</translation>
     </message>
     <message>
         <source>Number of digits before the decimal separator:</source>
@@ -1340,7 +1383,7 @@ You have to delete (or carefully edit) the configuration file &quot;{2}&quot; to
     </message>
     <message>
         <source>Padding with &apos;0&apos; digit before the decimal separator</source>
-        <translation>Mettre a &apos;0&apos; les chiffres avant le séparateur décimal</translation>
+        <translation>Mettre a '0' les chiffres avant le séparateur décimal</translation>
     </message>
     <message>
         <source>Number of digits after the decimal separator:</source>
@@ -1348,7 +1391,7 @@ You have to delete (or carefully edit) the configuration file &quot;{2}&quot; to
     </message>
     <message>
         <source>Padding with &apos;0&apos; digit after the decimal separator</source>
-        <translation>Mettre a &apos;0&apos; les chiffres après le séparateur décimal</translation>
+        <translation>Mettre a '0' les chiffres après le séparateur décimal</translation>
     </message>
     <message>
         <source>Decimal separator:</source>
@@ -1376,7 +1419,7 @@ You have to delete (or carefully edit) the configuration file &quot;{2}&quot; to
     </message>
     <message>
         <source>Tool change:</source>
-        <translation>Changement d&apos;outils:</translation>
+        <translation>Changement d'outils:</translation>
     </message>
     <message>
         <source>Feed rate change:</source>
@@ -1434,6 +1477,28 @@ You have to delete (or carefully edit) the configuration file &quot;{2}&quot; to
         <source>Comment for current shape:</source>
         <translation>Commentaire pour la forme courante:</translation>
     </message>
+    <message>
+        <source>The postprocessor configuration file version ({0}) doesn&apos;t match any of the software expected version ({1}).
+
+You have to delete (or carefully edit) the configuration file &quot;{2}&quot; to solve the problem.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Custom GCode</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Repeat Drill move for slices (only use wit abs coordinates)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Linear retract move during drilling:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Define here custom GCODE that can be inserted anywhere in the program:</source>
+        <translation type="unfinished">Définir ici GCODE perso qui peut etre inseré n'importe ou dans le programe</translation>
+    </message>
 </context>
 <context>
     <name>MyPostProcessor</name>
@@ -1472,7 +1537,7 @@ You have to delete (or carefully edit) the configuration file &quot;{2}&quot; to
     <message>
         <source>(Generated with: %s, Version: %s, Date: %s)
 </source>
-        <translation>(Généré avec: %s, Version: %s, Date: %s)</translation>
+        <translation type="obsolete">(Généré avec: %s, Version: %s, Date: %s)</translation>
     </message>
     <message>
         <source>(Time: %s)
@@ -1493,6 +1558,17 @@ You have to delete (or carefully edit) the configuration file &quot;{2}&quot; to
 </source>
         <translation>(Description du format de Sortie:%s)
 </translation>
+    </message>
+    <message>
+        <source>(Generated with: %s)
+(Version: %s, Date: %s)
+</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>(Used Postprocessor: %s) 
+</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -1590,7 +1666,7 @@ La longueur doit être supérieure à la tolérance</translation>
     </message>
     <message>
         <source>Had to reverse the shape to be CW</source>
-        <translation>Obligation d&apos;inverser la forme pour etre CW</translation>
+        <translation>Obligation d'inverser la forme pour etre CW</translation>
     </message>
     <message>
         <source>Clicked Point: %s</source>
@@ -1606,11 +1682,11 @@ La longueur doit être supérieure à la tolérance</translation>
     </message>
     <message>
         <source>ERROR: Z infeed depth is null!</source>
-        <translation>ERREUR: Profondeur de passe Z nulle!</translation>
+        <translation type="obsolete">ERREUR: Profondeur de passe Z nulle!</translation>
     </message>
     <message>
         <source>WARNING: initial mill depth (%i) is lower than end mill depth (%i). Using end mill depth as final depth.</source>
-        <translation type="obsolete">ATTENTION: profondeur d&apos;usinage initiale (%i) inférieure à la profondeur d&apos;usinage totale (%i). Utilisation de cette dernière.</translation>
+        <translation type="obsolete">ATTENTION: profondeur d'usinage initiale (%i) inférieure à la profondeur d'usinage totale (%i). Utilisation de cette dernière.</translation>
     </message>
     <message>
         <source>Shoelace method cannot (directly) be applied to this shape</source>
@@ -1618,7 +1694,23 @@ La longueur doit être supérieure à la tolérance</translation>
     </message>
     <message>
         <source>WARNING: initial mill depth (%f0.2) is lower than end mill depth (%f0.2). Using end mill depth as final depth.</source>
-        <translation>DANGER:Profondeur de perçage initiale (%f0.2) est inférieur à la profondeur perçage (%f0.2). Utilisez la profondeur de perçage total</translation>
+        <translation type="obsolete">DANGER:Profondeur de perçage initiale (%f0.2) est inférieur à la profondeur perçage (%f0.2). Utilisez la profondeur de perçage total</translation>
+    </message>
+    <message>
+        <source>Z infeed depth is null!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Warning during Export</source>
+        <translation type="unfinished">Attention pendant exportation</translation>
+    </message>
+    <message>
+        <source>Workpiece Top Z (%f0.2) is lower than end mill depth (%f0.2)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Initial mill depth (%f0.2) is lower than end mill depth (%f0.2)</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -1654,6 +1746,21 @@ La longueur doit être supérieure à la tolérance</translation>
     <message>
         <source>Rotation</source>
         <translation>Rotation</translation>
+    </message>
+</context>
+<context>
+    <name>self.self</name>
+    <message>
+        <source>Error: Z infeed depth is null!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Workpiece Top Z (%f0.2) is lower than end mill depth (%f0.2)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Initial mill depth (%f0.2) is lower than end mill depth (%f0.2)</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>

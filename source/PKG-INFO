@@ -1,6 +1,6 @@
 Metadata-Version: 1.0
 Name: dxf2gcode
-Version: 2022-02-26 Release Candidate 1
+Version: 2022-09-03 Release Candidate 2
 Summary: 2D drawings to CNC machine compatible G-Code converter.
 Home-page: https://sourceforge.net/p/dxf2gcode/wiki/Home/
 Author: Christian Kohloeffel
