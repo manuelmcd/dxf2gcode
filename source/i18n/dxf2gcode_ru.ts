@@ -1428,6 +1428,10 @@ You have to delete (or carefully edit) the configuration file &quot;{2}&quot; to
         <source>Drill Bore</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Set Sharpest StartPoint</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>MyGraphicsScene</name>
